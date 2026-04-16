@@ -26,12 +26,12 @@ const GalleryItem = ({ img, text, index }: { img: string; text: string; index: n
       className="min-h-screen relative flex items-center bg-fixed bg-cover bg-center"
       style={{ backgroundImage: `url(${img})` }}
     >
-      <div className="absolute inset-0 bg-white/40" />
+      <div className="absolute inset-0 bg-background/50" />
       <div
         ref={ref}
         className={`reveal ${visible ? 'visible' : ''} relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 flex ${isEven ? 'justify-start' : 'justify-end'}`}
       >
-        <div className="max-w-lg p-8 md:p-12 bg-white/70 backdrop-blur-lg rounded-lg border border-foreground/10">
+        <div className="max-w-lg p-8 md:p-12 bg-background/70 backdrop-blur-lg rounded-lg border border-foreground/10">
           <p className="font-display text-2xl md:text-3xl mb-3">
             <span className="gold-text italic">Wonderful</span>
           </p>

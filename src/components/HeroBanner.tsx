@@ -14,7 +14,7 @@ const HeroBanner = () => {
       className="h-screen relative flex items-center justify-center bg-fixed bg-cover bg-center"
       style={{ backgroundImage: `url(${heroBanner})` }}
     >
-      <div className="absolute inset-0 bg-white/40" />
+      <div className="absolute inset-0 bg-background/50" />
       <div className="relative z-10 text-center px-6">
         <div className={`transition-all duration-[1.5s] ease-out ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl tracking-wider mb-6">
