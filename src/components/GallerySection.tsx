@@ -23,7 +23,7 @@ const GalleryItem = ({ img, text, index }: { img: string; text: string; index: n
 
   return (
     <div
-      className="min-h-[120vh] relative flex items-center bg-fixed bg-cover bg-center"
+      className="min-h-[110vh] relative flex items-center bg-fixed bg-cover bg-center"
       style={{ backgroundImage: `url(${img})` }}
     >
       <div className="absolute inset-0 bg-black/20" />
