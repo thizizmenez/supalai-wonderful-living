@@ -71,7 +71,7 @@ const ProjectListing = () => {
             Our Projects
           </p>
           <h2 className="font-display text-3xl md:text-4xl text-foreground">
-            โครงการคอนโด<span className="gold-text">ศุภาลัย</span>
+            โครงการคอนโด<span className="gold-text" style={{ fontFamily: "'Prompt', sans-serif" }}>ศุภาลัย</span>
           </h2>
         </div>
 
