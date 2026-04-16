@@ -101,7 +101,7 @@ const ProjectListing = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`stagger-item ${gridVisible ? 'visible' : ''} group block overflow-hidden rounded-lg border border-border hover:border-gold/50 hover:shadow-lg hover:shadow-gold/10 transition-all duration-300`}
+                className={`stagger-item ${gridVisible ? 'visible' : ''} group block w-full overflow-hidden rounded-lg border border-border hover:border-gold/50 hover:shadow-lg hover:shadow-gold/10 transition-all duration-300`}
                 style={{ animationDelay: `${i * 100}ms` }}
               >
                 <div className="w-full aspect-video bg-surface-elevated overflow-hidden">

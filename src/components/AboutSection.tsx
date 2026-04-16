@@ -82,7 +82,7 @@ const AboutSection = () => {
               {features.map((f, i) => (
                 <div
                   key={f.label}
-                  className={`stagger-item ${v5 ? 'visible' : ''} group text-center p-6 rounded-xl border border-border/50 bg-card/50 hover:border-primary/40 hover:bg-card transition-all duration-500`}
+                  className={`stagger-item ${v5 ? 'visible' : ''} group flex flex-col items-center text-center p-6 rounded-xl border border-border/50 bg-card/50 hover:border-primary/40 hover:bg-card transition-all duration-500`}
                   style={{ animationDelay: `${i * 150}ms` }}
                 >
                   <f.icon className="w-8 h-8 text-foreground/70 mb-4 mx-auto group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
