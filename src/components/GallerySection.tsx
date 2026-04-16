@@ -29,10 +29,16 @@ const GalleryItem = ({ img, text, index }: { img: string; text: string; index: n
       <div className="absolute inset-0 bg-black/20" />
       <div
         ref={ref}
-        className={`reveal ${visible ? 'visible' : ''} relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 flex ${isEven ? 'justify-start' : 'justify-end'}`}
+        className={`relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 flex ${isEven ? 'justify-start' : 'justify-end'} transition-all duration-1000 ease-out ${
+          visible
+            ? 'opacity-100 translate-x-0'
+            : isEven
+              ? 'opacity-0 -translate-x-16'
+              : 'opacity-0 translate-x-16'
+        }`}
       >
         <div className="max-w-lg p-8 md:p-12">
-          <p className="font-display text-3xl md:text-5xl mb-3">
+          <p className={`font-display text-3xl md:text-5xl mb-3 ${visible ? 'animate-float' : ''}`}>
             <span className="gold-text italic">Wonderful</span>
           </p>
           <p className="font-body text-lg md:text-xl text-foreground leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}>

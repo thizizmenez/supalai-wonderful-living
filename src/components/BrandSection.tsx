@@ -42,7 +42,7 @@ const BrandSection = () => {
           </h2>
         </div>
 
-        <div ref={gridRef} className={`reveal ${gridVisible ? 'visible' : ''}`}>
+        <div ref={gridRef} className={`${gridVisible ? '' : ''}`}>
           <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-5 gap-8">
             {brands.map((brand, i) => (
               <a
@@ -50,13 +50,13 @@ const BrandSection = () => {
                 href={brand.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center hover:scale-105 transition-transform duration-300"
-                style={{ transitionDelay: `${i * 50}ms` }}
+                className={`stagger-item ${gridVisible ? 'visible' : ''} flex items-center justify-center hover:scale-110 transition-transform duration-300`}
+                style={{ animationDelay: `${i * 80}ms` }}
               >
                 <img
                   src={brand.logo}
                   alt={brand.name}
-                  className="w-[200px] h-[100px] object-contain"
+                  className="w-[200px] h-[100px] object-contain drop-shadow-md"
                   loading="lazy"
                 />
               </a>
