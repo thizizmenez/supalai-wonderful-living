@@ -6,15 +6,15 @@ const brands = [
   // Row 1
   { name: 'Supalai City Home', logo: 'https://www.supalai.com/stocks/brand/d150x110/pv/ws/f8uxpvwsyby/city_home.svg', link: 'https://www.supalai.com/project/condo?brand=160205743769758' + UTM, scale: 'scale-[0.8]' },
   { name: 'Supalai City Resort', logo: 'https://www.supalai.com/stocks/brand/d150x110/m5/sq/qjijm5sqpdo/city_resort.svg', link: 'https://www.supalai.com/project/condo?brand=160205772852473' + UTM, scale: 'scale-90' },
-  { name: 'Supalai Veranda', logo: 'https://www.supalai.com/stocks/brand/d150x110/1e/9d/pis61e9dx0g/veranda.png', link: 'https://www.supalai.com/project/condo?brand=1600348133395399' + UTM, scale: 'scale-[0.65]' },
+  { name: 'Supalai Veranda', logo: 'https://www.supalai.com/stocks/brand/d150x110/1e/9d/pis61e9dx0g/veranda.png', link: 'https://www.supalai.com/project/condo?brand=1600348133395399' + UTM, scale: 'scale-[0.75]' },
   { name: 'Supalai Loft', logo: 'https://www.supalai.com/stocks/brand/d150x110/lk/v3/4ug2lkv3e0x/L-O-F-T.jpg', link: 'https://www.supalai.com/project/condo?brand=1605498616678779' + UTM, scale: 'scale-[0.8]' },
   { name: 'Supalai Lite', logo: 'https://www.supalai.com/stocks/brand/d150x110/ua/km/zzrbuakmxao/lite.png', link: 'https://www.supalai.com/project/condo?brand=1605498558877878' + UTM, scale: 'scale-[0.65]' },
   { name: 'Supalai Park', logo: 'https://www.supalai.com/stocks/brand/d150x110/c1/lb/nogic1lbedv/park.png', link: 'https://www.supalai.com/project/condo?brand=1605498754456560' + UTM, scale: 'scale-[0.65]' },
   // Row 2
   { name: 'Supalai Kram', logo: 'https://www.supalai.com/stocks/brand/d150x110/cr/oi/ueh0croiamu/LOGO-KRAM-s.png', link: 'https://www.supalai.com/project/condo?brand=1728974513583555' + UTM, scale: 'scale-[0.8]' },
-  { name: 'Supalai Parc', logo: 'https://www.supalai.com/stocks/brand/d150x110/uv/gr/q47huvgrjui/Untitled-1.jpg', link: 'https://www.supalai.com/project/condo?brand=1681785725347858' + UTM, scale: 'scale-100' },
-  { name: 'Supalai Tyme', logo: 'https://www.supalai.com/stocks/brand/d150x110/nd/ny/mitundnyd8a/Logo_Tyme.png', link: 'https://www.supalai.com/project/condo?brand=1712818283066581' + UTM, scale: 'scale-90' },
-  { name: 'Supalai Sense', logo: 'https://www.supalai.com/stocks/brand/d150x110/9a/wj/nc3l9awjxge/LOGO_1-1.png', link: 'https://www.supalai.com/project/condo?brand=1690431255456153' + UTM, scale: 'scale-100' },
+  { name: 'Supalai Parc', logo: 'https://www.supalai.com/stocks/brand/d150x110/uv/gr/q47huvgrjui/Untitled-1.jpg', link: 'https://www.supalai.com/project/condo?brand=1681785725347858' + UTM, scale: 'scale-110' },
+  { name: 'Supalai Tyme', logo: 'https://www.supalai.com/stocks/brand/d150x110/nd/ny/mitundnyd8a/Logo_Tyme.png', link: 'https://www.supalai.com/project/condo?brand=1712818283066581' + UTM, scale: 'scale-100' },
+  { name: 'Supalai Sense', logo: 'https://www.supalai.com/stocks/brand/d150x110/9a/wj/nc3l9awjxge/LOGO_1-1.png', link: 'https://www.supalai.com/project/condo?brand=1690431255456153' + UTM, scale: 'scale-110' },
   { name: 'Supalai Premier', logo: 'https://www.supalai.com/stocks/brand/d150x110/nd/yv/0csgndyvbxm/premier.png', link: 'https://www.supalai.com/project/condo?brand=1600348335702394' + UTM, scale: 'scale-[0.65]' },
   { name: 'Supalai Blu', logo: 'https://www.supalai.com/stocks/brand/d150x110/i5/bu/aiuai5buype/Logo-BLU-Thai.png', link: 'https://www.supalai.com/project/condo?brand=1724210441106953' + UTM, scale: 'scale-90' },
   // Row 3
