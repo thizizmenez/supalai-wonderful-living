@@ -53,7 +53,7 @@ const BrandSection = () => {
                 className={`stagger-item ${gridVisible ? 'visible' : ''} flex items-center justify-center hover:scale-110 transition-transform duration-300`}
                 style={{ animationDelay: `${i * 80}ms` }}
               >
-                <div className="bg-white rounded-lg w-[250px] h-[170px] flex items-center justify-center p-6">
+                <div className="bg-white rounded-lg w-[250px] h-[150px] flex items-center justify-center p-6">
                   <img
                     src={brand.logo}
                     alt={brand.name}
