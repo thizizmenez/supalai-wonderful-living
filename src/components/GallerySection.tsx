@@ -35,7 +35,7 @@ const GalleryItem = ({ img, text, index }: { img: string; text: string; index: n
           <p className="font-display text-2xl md:text-3xl mb-3">
             <span className="gold-text italic">Wonderful</span>
           </p>
-          <p className="font-body text-lg md:text-xl text-foreground/90 leading-relaxed">
+          <p className="font-body text-lg md:text-xl text-foreground leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}>
             {text.replace('Wonderful ', '')}
           </p>
         </div>
