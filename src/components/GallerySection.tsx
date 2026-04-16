@@ -31,7 +31,7 @@ const GalleryItem = ({ img, text, index }: { img: string; text: string; index: n
         ref={ref}
         className={`reveal ${visible ? 'visible' : ''} relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 flex ${isEven ? 'justify-start' : 'justify-end'}`}
       >
-        <div className="max-w-lg p-8 md:p-12 bg-black/15 backdrop-blur-sm rounded-lg border border-white/5">
+        <div className="max-w-lg p-8 md:p-12">
           <p className="font-display text-2xl md:text-3xl mb-3">
             <span className="gold-text italic">Wonderful</span>
           </p>
