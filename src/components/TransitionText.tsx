@@ -11,8 +11,8 @@ const TransitionText = () => {
         </p>
         <p className="font-display text-3xl md:text-5xl mt-8">
           <span className="gold-text italic">Wonderful</span>{' '}
-          <span className="text-foreground">ได้ทุกวัน</span>{' '}
-          <span className="text-2xl md:text-4xl">✨</span>
+          <span className="text-foreground text-xl md:text-3xl">ได้ทุกวัน</span>{' '}
+          <span className="text-lg md:text-2xl">✨</span>
         </p>
       </div>
     </section>
