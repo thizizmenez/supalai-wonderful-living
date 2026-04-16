@@ -7,7 +7,7 @@ interface Project {
   thumbnail: string;
 }
 
-const UTM = '?utm_source=website&utm_medium=landingpage&utm_campaign=supalaiwonderful';
+const UTM = '/?utm_source=website&utm_medium=landingpage&utm_campaign=supalaiwonderful';
 
 const projectsByLocation: Record<string, Project[]> = {
   'กรุงเทพและปริมณฑล': [
