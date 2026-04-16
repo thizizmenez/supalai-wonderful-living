@@ -1,24 +1,9 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-
-const brands = [
-  'SUPALAI PREMIER',
-  'SUPALAI ELITE',
-  'SUPALAI PRIME',
-  'SUPALAI VERANDA',
-  'SUPALAI CITY RESORT',
-  'SUPALAI PARK',
-  'SUPALAI LITE',
-  'SUPALAI LOFT',
-  'SUPALAI VISTA',
-  'SUPALAI MONTE',
-  'SUPALAI RIVER RESORT',
-  'SUPALAI ORIENTAL',
-  'SUPALAI CASA RIVA',
-];
+import brandLogos from '@/assets/brand-logos.png';
 
 const BrandSection = () => {
   const { ref: titleRef, visible: titleVisible } = useScrollReveal(0.2);
-  const { ref: gridRef, visible: gridVisible } = useScrollReveal(0.1);
+  const { ref: logoRef, visible: logoVisible } = useScrollReveal(0.1);
 
   return (
     <section className="py-24 px-6 bg-secondary">
@@ -33,20 +18,12 @@ const BrandSection = () => {
           </h2>
         </div>
 
-        <div ref={gridRef} className={`reveal ${gridVisible ? 'visible' : ''}`}>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {brands.map((brand, i) => (
-              <div
-                key={brand}
-                className="p-4 md:p-6 border border-border rounded-lg text-center hover:border-gold/50 hover:bg-surface-elevated transition-all duration-300 cursor-default"
-                style={{ transitionDelay: `${i * 50}ms` }}
-              >
-                <p className="font-body text-sm md:text-base text-secondary-foreground tracking-wide">
-                  {brand}
-                </p>
-              </div>
-            ))}
-          </div>
+        <div ref={logoRef} className={`reveal ${logoVisible ? 'visible' : ''} flex justify-center`}>
+          <img
+            src={brandLogos}
+            alt="Supalai Condominium Brand Logos"
+            className="w-full max-w-4xl rounded-lg"
+          />
         </div>
       </div>
     </section>
