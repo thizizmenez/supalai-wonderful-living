@@ -3,8 +3,8 @@ import aboutDivider from '@/assets/about-divider.jpg';
 import { MapPin, LayoutGrid, Trees, Shield } from 'lucide-react';
 
 const features = [
-  { icon: MapPin, label: 'โลเคชันคัดสรร', desc: 'เราเลือกโลเคชันมาอย่างดี' },
-  { icon: LayoutGrid, label: 'ออกแบบทุกห้อง', desc: 'ตั้งใจออกแบบพื้นที่ในทุกห้อง' },
+  { icon: MapPin, label: 'ทำเลคุณภาพ', desc: 'คัดเลือกทำเลศักยภาพอย่างพิถีพิถัน' },
+  { icon: LayoutGrid, label: 'การออกแบบที่ลงตัว', desc: 'ใส่ใจทุกพื้นที่ ทุกฟังก์ชันการใช้สอย' },
   { icon: Trees, label: 'ส่วนกลางครบครัน', desc: 'รองรับหลากหลายไลฟ์สไตล์' },
   { icon: Shield, label: 'มาตรฐานศุภาลัย', desc: 'ใส่ใจในทุกรายละเอียด' },
 ];
