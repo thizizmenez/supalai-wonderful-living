@@ -31,7 +31,7 @@ const BrandSection = () => {
   const { ref: gridRef, visible: gridVisible } = useScrollReveal(0.1);
 
   return (
-    <section className="py-24 px-6 bg-secondary">
+    <section className="py-24 px-6 bg-secondary bg-pattern">
       <div className="max-w-6xl mx-auto">
         <div ref={titleRef} className={`reveal ${titleVisible ? 'visible' : ''} text-center mb-16`}>
           <p className="font-body text-lg text-muted-foreground mb-4 tracking-widest uppercase">
