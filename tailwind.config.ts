@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'Noto Sans Thai', 'serif'],
-        body: ['Noto Sans Thai', 'Inter', 'sans-serif'],
+        display: ['Playfair Display', 'serif'],
+        body: ['Prompt', 'sans-serif'],
+        elegant: ['Playfair Display', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
