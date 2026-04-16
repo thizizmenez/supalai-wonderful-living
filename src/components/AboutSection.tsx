@@ -18,7 +18,7 @@ const AboutSection = () => {
   return (
     <>
       {/* Part 1: Headline + tagline */}
-      <section className="min-h-screen flex items-center justify-center bg-background py-24 px-6">
+      <section className="min-h-screen flex items-center justify-center bg-background bg-pattern py-24 px-6">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           <div ref={r1} className={`reveal ${v1 ? 'visible' : ''}`}>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight mb-4">
@@ -57,7 +57,7 @@ const AboutSection = () => {
       </section>
 
       {/* Part 2: Description - redesigned */}
-      <section className="min-h-[80vh] flex items-center justify-center bg-background py-24 px-6">
+      <section className="min-h-[80vh] flex items-center justify-center bg-background bg-pattern py-24 px-6">
         <div className="max-w-5xl mx-auto space-y-16">
           {/* Header */}
           <div ref={r4} className={`reveal ${v4 ? 'visible' : ''} text-center`}>

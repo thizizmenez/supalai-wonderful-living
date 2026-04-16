@@ -199,3 +199,24 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(40 60% 50% / 0.6);
 }
+
+/* Subtle pattern overlay for dark backgrounds */
+.bg-pattern {
+  position: relative;
+}
+.bg-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 25% 25%, white 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, white 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+.bg-pattern > * {
+  position: relative;
+  z-index: 1;
+}
