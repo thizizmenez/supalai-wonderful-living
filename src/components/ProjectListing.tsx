@@ -83,8 +83,8 @@ const ProjectListing = () => {
               onClick={() => setActiveTab(loc)}
               className={`px-4 py-2 rounded-full text-sm font-body transition-all duration-300 border ${
                 activeTab === loc
-                  ? 'bg-gold text-primary-foreground border-gold'
-                  : 'border-border text-muted-foreground hover:border-gold/50 hover:text-foreground'
+                  ? 'bg-gold text-primary-foreground border-gold shadow-lg shadow-gold/20'
+                  : 'border-border text-muted-foreground hover:border-gold/50 hover:text-foreground hover:shadow-md'
               }`}
             >
               {loc}
@@ -93,15 +93,16 @@ const ProjectListing = () => {
         </div>
 
         {/* Project grid */}
-        <div ref={gridRef} className={`reveal ${gridVisible ? 'visible' : ''}`}>
+        <div ref={gridRef}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projectsByLocation[activeTab].map((project) => (
+            {projectsByLocation[activeTab].map((project, i) => (
               <a
                 key={project.name}
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block overflow-hidden rounded-lg border border-border hover:border-gold/50 transition-all duration-300"
+                className={`stagger-item ${gridVisible ? 'visible' : ''} group block overflow-hidden rounded-lg border border-border hover:border-gold/50 hover:shadow-lg hover:shadow-gold/10 transition-all duration-300`}
+                style={{ animationDelay: `${i * 100}ms` }}
               >
                 <div className="w-[366px] h-[220px] max-w-full bg-surface-elevated overflow-hidden">
                   <img

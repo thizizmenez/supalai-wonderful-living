@@ -114,6 +114,72 @@
   font-style: italic;
 }
 
+/* Gold shimmer effect */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    hsl(40 80% 70%) 0%,
+    hsl(40 90% 85%) 25%,
+    hsl(40 70% 60%) 50%,
+    hsl(40 90% 85%) 75%,
+    hsl(40 80% 70%) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glow pulse for play button */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 15px hsl(40 60% 50% / 0.3); }
+  50% { box-shadow: 0 0 30px hsl(40 60% 50% / 0.6), 0 0 60px hsl(40 60% 50% / 0.2); }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2.5s ease-in-out infinite;
+}
+
+/* Staggered fade-in for grid items */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.stagger-item {
+  opacity: 0;
+}
+
+.stagger-item.visible {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+/* Scale in from center */
+@keyframes scale-fade-in {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.scale-fade-in.visible {
+  animation: scale-fade-in 0.5s ease-out forwards;
+}
+
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
