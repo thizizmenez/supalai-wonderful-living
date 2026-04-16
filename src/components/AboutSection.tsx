@@ -1,11 +1,12 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import aboutDivider from '@/assets/about-divider.jpg';
+import { MapPin, LayoutGrid, Trees, Shield } from 'lucide-react';
 
 const features = [
-  { icon: '📍', label: 'โลเคชันคัดสรร', desc: 'เราเลือกโลเคชันมาอย่างดี' },
-  { icon: '🏠', label: 'ออกแบบทุกห้อง', desc: 'ตั้งใจออกแบบพื้นที่ในทุกห้อง' },
-  { icon: '🏊', label: 'ส่วนกลางครบครัน', desc: 'รองรับหลากหลายไลฟ์สไตล์' },
-  { icon: '⭐', label: 'มาตรฐานศุภาลัย', desc: 'ใส่ใจในทุกรายละเอียด' },
+  { icon: MapPin, label: 'โลเคชันคัดสรร', desc: 'เราเลือกโลเคชันมาอย่างดี' },
+  { icon: LayoutGrid, label: 'ออกแบบทุกห้อง', desc: 'ตั้งใจออกแบบพื้นที่ในทุกห้อง' },
+  { icon: Trees, label: 'ส่วนกลางครบครัน', desc: 'รองรับหลากหลายไลฟ์สไตล์' },
+  { icon: Shield, label: 'มาตรฐานศุภาลัย', desc: 'ใส่ใจในทุกรายละเอียด' },
 ];
 
 const AboutSection = () => {
@@ -84,7 +85,7 @@ const AboutSection = () => {
                   className={`stagger-item ${v5 ? 'visible' : ''} group text-center p-6 rounded-xl border border-border/50 bg-card/50 hover:border-primary/40 hover:bg-card transition-all duration-500`}
                   style={{ animationDelay: `${i * 150}ms` }}
                 >
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{f.icon}</div>
+                  <f.icon className="w-8 h-8 text-foreground/70 mb-4 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   <p className="font-display text-sm md:text-base text-foreground mb-2">{f.label}</p>
                   <p className="font-body text-xs md:text-sm text-muted-foreground">{f.desc}</p>
                 </div>
