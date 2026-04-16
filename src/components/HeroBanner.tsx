@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useParallax } from '@/hooks/useScrollReveal';
 import heroBanner from '@/assets/hero-banner.jpg';
 
 const HeroBanner = () => {
-  const parallaxRef = useParallax();
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -12,9 +10,11 @@ const HeroBanner = () => {
   }, []);
 
   return (
-    <section ref={parallaxRef} className="parallax-section h-screen relative flex items-center justify-center">
-      <div className="parallax-bg" style={{ backgroundImage: `url(${heroBanner})` }} />
-      <div className="absolute inset-0 bg-background/60" />
+    <section
+      className="h-screen relative flex items-center justify-center bg-fixed bg-cover bg-center"
+      style={{ backgroundImage: `url(${heroBanner})` }}
+    >
+      <div className="absolute inset-0 bg-background/40" />
       <div className="relative z-10 text-center px-6">
         <div className={`transition-all duration-[1.5s] ease-out ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl tracking-wider mb-6">
@@ -25,7 +25,7 @@ const HeroBanner = () => {
           </h2>
         </div>
         <div className={`transition-all duration-[1.5s] delay-500 ease-out ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <p className="font-body text-lg md:text-xl text-muted-foreground tracking-wide">
+          <p className="font-body text-lg md:text-xl text-foreground/80 tracking-wide">
             ชีวิตจริงที่ Wonderful ได้ทุกวัน
           </p>
         </div>

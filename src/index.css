@@ -67,20 +67,6 @@
   }
 }
 
-/* Parallax sections */
-.parallax-section {
-  position: relative;
-  overflow: hidden;
-}
-
-.parallax-bg {
-  position: absolute;
-  inset: -20%;
-  background-size: cover;
-  background-position: center;
-  will-change: transform;
-}
-
 /* Scroll reveal animations */
 .reveal {
   opacity: 0;

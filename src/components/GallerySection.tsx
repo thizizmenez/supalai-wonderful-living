@@ -1,4 +1,4 @@
-import { useScrollReveal, useParallax } from '@/hooks/useScrollReveal';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 import galleryBalcony from '@/assets/gallery-balcony.jpg';
 import galleryLivingroom from '@/assets/gallery-livingroom.jpg';
 import galleryPet from '@/assets/gallery-pet.jpg';
@@ -18,25 +18,25 @@ const galleryItems = [
 ];
 
 const GalleryItem = ({ img, text, index }: { img: string; text: string; index: number }) => {
-  const parallaxRef = useParallax();
   const { ref, visible } = useScrollReveal(0.15);
   const isEven = index % 2 === 0;
 
   return (
-    <div ref={parallaxRef} className="parallax-section min-h-[80vh] relative flex items-center">
-      <div className="parallax-bg" style={{ backgroundImage: `url(${img})` }} />
-      <div className="absolute inset-0 bg-background/50" />
+    <div
+      className="min-h-screen relative flex items-center bg-fixed bg-cover bg-center"
+      style={{ backgroundImage: `url(${img})` }}
+    >
+      <div className="absolute inset-0 bg-background/40" />
       <div
         ref={ref}
         className={`reveal ${visible ? 'visible' : ''} relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 flex ${isEven ? 'justify-start' : 'justify-end'}`}
       >
-        <div className={`max-w-lg p-8 md:p-12 bg-background/70 backdrop-blur-md rounded-lg border border-border`}>
-          <p className="font-body text-xl md:text-2xl text-foreground leading-relaxed">
-            <span className="gold-text font-display italic text-2xl md:text-3xl">Wonderful</span>
-            <br />
-            <span className="mt-3 block text-lg md:text-xl text-secondary-foreground">
-              {text.replace('Wonderful ', '')}
-            </span>
+        <div className="max-w-lg p-8 md:p-12 bg-background/60 backdrop-blur-lg rounded-lg border border-foreground/10">
+          <p className="font-display text-2xl md:text-3xl mb-3">
+            <span className="gold-text italic">Wonderful</span>
+          </p>
+          <p className="font-body text-lg md:text-xl text-foreground/90 leading-relaxed">
+            {text.replace('Wonderful ', '')}
           </p>
         </div>
       </div>
@@ -53,7 +53,6 @@ const GallerySection = () => {
         <GalleryItem key={i} img={item.img} text={item.text} index={i} />
       ))}
 
-      {/* Closing text */}
       <div className="min-h-[60vh] flex items-center justify-center bg-background py-24 px-6">
         <div ref={ref} className={`reveal ${visible ? 'visible' : ''} text-center max-w-3xl mx-auto space-y-6`}>
           <p className="font-display text-2xl md:text-4xl text-foreground">
