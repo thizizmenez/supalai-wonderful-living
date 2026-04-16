@@ -1,42 +1,28 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import brandCityHome from '@/assets/brand-city-home.png';
-import brandCityResort from '@/assets/brand-city-resort.png';
-import brandVeranda from '@/assets/brand-veranda.png';
-import brandLoft from '@/assets/brand-loft.png';
-import brandLite from '@/assets/brand-lite.png';
-import brandPark from '@/assets/brand-park.png';
-import brandKram from '@/assets/brand-kram.png';
-import brandParc from '@/assets/brand-parc.png';
-import brandTyme from '@/assets/brand-tyme.png';
-import brandSense from '@/assets/brand-sense.png';
-import brandPremier from '@/assets/brand-premier.png';
-import brandBlu from '@/assets/brand-blu.png';
-import brandVista from '@/assets/brand-vista.png';
-import brandScenicBay from '@/assets/brand-scenic-bay.png';
-import brandBlueWhale from '@/assets/brand-blue-whale.png';
-import brandElite from '@/assets/brand-elite.png';
-import brandIcon from '@/assets/brand-icon.png';
-import brandOriental from '@/assets/brand-oriental.png';
+
+const UTM = '/?utm_source=website&utm_medium=landingpage&utm_campaign=supalaiwonderful';
 
 const brands = [
-  { name: 'Supalai City Home', logo: brandCityHome },
-  { name: 'Supalai City Resort', logo: brandCityResort },
-  { name: 'Supalai Veranda', logo: brandVeranda },
-  { name: 'Supalai Loft', logo: brandLoft },
-  { name: 'Supalai Lite', logo: brandLite },
-  { name: 'Supalai Park', logo: brandPark },
-  { name: 'Supalai Kram', logo: brandKram },
-  { name: 'Supalai Parc', logo: brandParc },
-  { name: 'Supalai Tyme', logo: brandTyme },
-  { name: 'Supalai Sense', logo: brandSense },
-  { name: 'Supalai Premier', logo: brandPremier },
-  { name: 'Supalai Blu', logo: brandBlu },
-  { name: 'Supalai Vista', logo: brandVista },
-  { name: 'Supalai Scenic Bay', logo: brandScenicBay },
-  { name: 'Supalai Blue Whale', logo: brandBlueWhale },
-  { name: 'Supalai Elite', logo: brandElite },
-  { name: 'Supalai Icon', logo: brandIcon },
-  { name: 'Supalai Oriental', logo: brandOriental },
+  { name: 'Supalai City Resort', logo: 'https://www.supalai.com/stocks/brand/d150x110/m5/sq/qjijm5sqpdo/city_resort.svg', link: 'https://www.supalai.com/project/condo?brand=160205772852473' + UTM },
+  { name: 'Supalai Parc', logo: 'https://www.supalai.com/stocks/brand/d150x110/uv/gr/q47huvgrjui/Untitled-1.jpg', link: 'https://www.supalai.com/project/condo?brand=1681785725347858' + UTM },
+  { name: 'Supalai Park', logo: 'https://www.supalai.com/stocks/brand/d150x110/c1/lb/nogic1lbedv/park.png', link: 'https://www.supalai.com/project/condo?brand=1605498754456560' + UTM },
+  { name: 'Supalai Veranda', logo: 'https://www.supalai.com/stocks/brand/d150x110/1e/9d/pis61e9dx0g/veranda.png', link: 'https://www.supalai.com/project/condo?brand=1600348133395399' + UTM },
+  { name: 'Supalai Loft', logo: 'https://www.supalai.com/stocks/brand/d150x110/lk/v3/4ug2lkv3e0x/L-O-F-T.jpg', link: 'https://www.supalai.com/project/condo?brand=1605498616678779' + UTM },
+  { name: 'Supalai Lite', logo: 'https://www.supalai.com/stocks/brand/d150x110/ua/km/zzrbuakmxao/lite.png', link: 'https://www.supalai.com/project/condo?brand=1605498558877878' + UTM },
+  { name: 'Supalai Premier', logo: 'https://www.supalai.com/stocks/brand/d150x110/nd/yv/0csgndyvbxm/premier.png', link: 'https://www.supalai.com/project/condo?brand=1600348335702394' + UTM },
+  { name: 'Supalai Elite', logo: 'https://www.supalai.com/stocks/brand/d150x110/id/uh/reqmiduhaji/elite.png', link: 'https://www.supalai.com/project/condo?brand=1605498506975561' + UTM },
+  { name: 'Supalai Oriental', logo: 'https://www.supalai.com/stocks/brand/d150x110/9v/z4/e5ab9vz4uxy/ORIENTAL.png', link: 'https://www.supalai.com/project/condo?brand=1605505819910613' + UTM },
+  { name: 'Supalai Vista', logo: 'https://www.supalai.com/stocks/brand/d150x110/ge/8f/edi9ge8fomr/Vista.png', link: 'https://www.supalai.com/project/condo?brand=1747644499212132' + UTM },
+  { name: 'Supalai City Home', logo: 'https://www.supalai.com/stocks/brand/d150x110/pv/ws/f8uxpvwsyby/city_home.svg', link: 'https://www.supalai.com/project/condo?brand=160205743769758' + UTM },
+  { name: 'City Home สนามบินน้ำ', logo: 'https://www.supalai.com/stocks/brand/d150x110/fj/ar/1mlxfjarkya/LOGO_CITY-HOME-SANAMBINNAM--RATTANATHIBETH_TH.png', link: 'https://www.supalai.com/project/condo?brand=1674029164469533' + UTM },
+  { name: 'Supalai Mare', logo: 'https://www.supalai.com/stocks/brand/d150x110/2o/bw/cvtq2obwdkl/MARE.png', link: 'https://www.supalai.com/project/condo?brand=1605506048038808' + UTM },
+  { name: 'Supalai Scenic Bay', logo: 'https://www.supalai.com/stocks/brand/d150x110/cg/bn/x4wycgbnh68/%e0%b9%82%e0%b8%a5%e0%b9%82%e0%b8%81%e0%b9%89-%e0%b9%80%e0%b8%81%e0%b9%88%e0%b8%b2.jpg', link: 'https://www.supalai.com/project/condo?brand=1653901936647728' + UTM },
+  { name: 'Supalai Blue Whale', logo: 'https://www.supalai.com/stocks/brand/d150x110/xs/pb/7xmtxspbtku/LOGO-SUPALAI-Blue-Whale-B1B.png', link: 'https://www.supalai.com/project/condo?brand=166453376660610' + UTM },
+  { name: 'Supalai Sense', logo: 'https://www.supalai.com/stocks/brand/d150x110/9a/wj/nc3l9awjxge/LOGO_1-1.png', link: 'https://www.supalai.com/project/condo?brand=1690431255456153' + UTM },
+  { name: 'Supalai Tyme', logo: 'https://www.supalai.com/stocks/brand/d150x110/nd/ny/mitundnyd8a/Logo_Tyme.png', link: 'https://www.supalai.com/project/condo?brand=1712818283066581' + UTM },
+  { name: 'Supalai Blu', logo: 'https://www.supalai.com/stocks/brand/d150x110/i5/bu/aiuai5buype/Logo-BLU-Thai.png', link: 'https://www.supalai.com/project/condo?brand=1724210441106953' + UTM },
+  { name: 'Supalai Kram', logo: 'https://www.supalai.com/stocks/brand/d150x110/cr/oi/ueh0croiamu/LOGO-KRAM-s.png', link: 'https://www.supalai.com/project/condo?brand=1728974513583555' + UTM },
+  { name: 'Supalai Icon', logo: 'https://www.supalai.com/stocks/brand/d150x110/bv/4t/l1j7bv4t2yd/I-CON.png', link: 'https://www.supalai.com/project/condo?brand=1605505923030375' + UTM },
 ];
 
 const BrandSection = () => {
@@ -59,8 +45,11 @@ const BrandSection = () => {
         <div ref={gridRef} className={`reveal ${gridVisible ? 'visible' : ''}`}>
           <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-5 gap-8">
             {brands.map((brand, i) => (
-              <div
+              <a
                 key={brand.name}
+                href={brand.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center hover:scale-105 transition-transform duration-300"
                 style={{ transitionDelay: `${i * 50}ms` }}
               >
@@ -68,8 +57,9 @@ const BrandSection = () => {
                   src={brand.logo}
                   alt={brand.name}
                   className="w-[200px] h-[100px] object-contain"
+                  loading="lazy"
                 />
-              </div>
+              </a>
             ))}
           </div>
         </div>
