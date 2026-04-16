@@ -20,7 +20,7 @@ const brands = [
   { name: 'Supalai Sense', logo: 'https://www.supalai.com/stocks/brand/d150x110/9a/wj/nc3l9awjxge/LOGO_1-1.png', link: 'https://www.supalai.com/project/condo?brand=1690431255456153' + UTM, scale: 'scale-90' },
   { name: 'Supalai Tyme', logo: 'https://www.supalai.com/stocks/brand/d150x110/nd/ny/mitundnyd8a/Logo_Tyme.png', link: 'https://www.supalai.com/project/condo?brand=1712818283066581' + UTM, scale: 'scale-90' },
   { name: 'Supalai Blu', logo: 'https://www.supalai.com/stocks/brand/d150x110/i5/bu/aiuai5buype/Logo-BLU-Thai.png', link: 'https://www.supalai.com/project/condo?brand=1724210441106953' + UTM, scale: 'scale-[0.8]' },
-  { name: 'Supalai Kram', logo: 'https://www.supalai.com/stocks/brand/d150x110/cr/oi/ueh0croiamu/LOGO-KRAM-s.png', link: 'https://www.supalai.com/project/condo?brand=1728974513583555' + UTM, scale: 'scale-[0.65]' },
+  { name: 'Supalai Kram', logo: 'https://www.supalai.com/stocks/brand/d150x110/cr/oi/ueh0croiamu/LOGO-KRAM-s.png', link: 'https://www.supalai.com/project/condo?brand=1728974513583555' + UTM, scale: 'scale-[0.8]' },
   { name: 'Supalai Icon', logo: 'https://www.supalai.com/stocks/brand/d150x110/bv/4t/l1j7bv4t2yd/I-CON.png', link: 'https://www.supalai.com/project/condo?brand=1605505923030375' + UTM, scale: 'scale-[0.65]' },
 ];
 
@@ -52,7 +52,7 @@ const BrandSection = () => {
                 className={`stagger-item ${gridVisible ? 'visible' : ''} flex items-center justify-center hover:scale-110 transition-transform duration-300`}
                 style={{ animationDelay: `${i * 80}ms` }}
               >
-                <div className="bg-white rounded-lg w-[250px] h-[150px] flex items-center justify-center p-6">
+                <div className="bg-white rounded-lg w-[250px] h-[130px] flex items-center justify-center p-6">
                   <img
                     src={brand.logo}
                     alt={brand.name}
