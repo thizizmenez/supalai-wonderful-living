@@ -56,7 +56,7 @@ const BrandSection = () => {
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    className="max-w-full max-h-full object-contain"
+                    className={`max-w-full max-h-full object-contain ${(brand as any).scale || ''}`}
                     loading="lazy"
                   />
                 </div>
