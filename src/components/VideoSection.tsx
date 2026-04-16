@@ -4,7 +4,7 @@ const VideoSection = () => {
   const { ref, visible } = useScrollReveal(0.1);
   
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background pt-3 pb-6 relative">
+    <section className="min-h-screen flex items-center justify-center bg-background pt-2 pb-4 relative">
       <div ref={ref} className={`reveal ${visible ? 'visible' : ''} relative z-10 w-full max-w-6xl mx-auto px-6`}>
         <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl group cursor-pointer"
           onClick={(e) => {
