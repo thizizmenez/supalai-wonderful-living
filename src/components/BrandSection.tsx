@@ -57,17 +57,17 @@ const BrandSection = () => {
         </div>
 
         <div ref={gridRef} className={`reveal ${gridVisible ? 'visible' : ''}`}>
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {brands.map((brand, i) => (
               <div
                 key={brand.name}
-                className="p-4 md:p-6 border border-border rounded-lg flex items-center justify-center hover:border-gold/50 hover:bg-surface-elevated transition-all duration-300"
+                className="p-6 md:p-8 bg-card rounded-lg flex items-center justify-center hover:scale-105 transition-all duration-300"
                 style={{ transitionDelay: `${i * 50}ms` }}
               >
                 <img
                   src={brand.logo}
                   alt={brand.name}
-                  className="w-full h-auto object-contain"
+                  className="w-full max-w-[140px] h-auto object-contain"
                 />
               </div>
             ))}
