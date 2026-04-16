@@ -4,7 +4,7 @@ import { MapPin, LayoutGrid, Trees, Shield } from 'lucide-react';
 
 const features = [
   { icon: MapPin, label: 'ทำเลคุณภาพ', desc: 'คัดเลือกทำเลศักยภาพอย่างพิถีพิถัน' },
-  { icon: LayoutGrid, label: 'ออกแบบที่ลงตัว', desc: 'ใส่ใจทุกพื้นที่ ทุกฟังก์ชันการใช้สอย' },
+  { icon: LayoutGrid, label: 'ออกแบบอย่างลงตัว', desc: 'ใส่ใจทุกพื้นที่ ทุกฟังก์ชันการใช้สอย' },
   { icon: Trees, label: 'ส่วนกลางครบครัน', desc: 'รองรับหลากหลายไลฟ์สไตล์' },
   { icon: Shield, label: 'มาตรฐานศุภาลัย', desc: 'ใส่ใจในทุกรายละเอียด' },
 ];
