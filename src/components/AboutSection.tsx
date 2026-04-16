@@ -1,11 +1,19 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import aboutDivider from '@/assets/about-divider.jpg';
 
+const features = [
+  { icon: '📍', label: 'โลเคชันคัดสรร', desc: 'เราเลือกโลเคชันมาอย่างดี' },
+  { icon: '🏠', label: 'ออกแบบทุกห้อง', desc: 'ตั้งใจออกแบบพื้นที่ในทุกห้อง' },
+  { icon: '🏊', label: 'ส่วนกลางครบครัน', desc: 'รองรับหลากหลายไลฟ์สไตล์' },
+  { icon: '⭐', label: 'มาตรฐานศุภาลัย', desc: 'ใส่ใจในทุกรายละเอียด' },
+];
+
 const AboutSection = () => {
   const { ref: r1, visible: v1 } = useScrollReveal(0.2);
   const { ref: r2, visible: v2 } = useScrollReveal(0.2);
   const { ref: r3, visible: v3 } = useScrollReveal(0.2);
   const { ref: r4, visible: v4 } = useScrollReveal(0.15);
+  const { ref: r5, visible: v5 } = useScrollReveal(0.15);
 
   return (
     <>
@@ -48,24 +56,61 @@ const AboutSection = () => {
         </div>
       </section>
 
-      {/* Part 2: Description */}
+      {/* Part 2: Description - redesigned */}
       <section className="min-h-[80vh] flex items-center justify-center bg-background py-24 px-6">
-        <div ref={r4} className={`reveal ${v4 ? 'visible' : ''} max-w-4xl mx-auto text-center space-y-6`}>
-          <p className="font-body text-base md:text-lg text-muted-foreground leading-loose">
-            ที่คอนโดศุภาลัย 18 แบรนด์ของเรา ไม่ว่าจะแบรนด์ไหน
-          </p>
-          <p className="font-body text-base md:text-lg text-muted-foreground leading-loose">
-            เราเลือกโลเคชันมาอย่างดี ตั้งใจออกแบบพื้นที่ในทุกห้อง
-          </p>
-          <p className="font-body text-base md:text-lg text-muted-foreground leading-loose">
-            มีส่วนกลางที่รองรับหลากหลายไลฟ์สไตล์ พร้อมบริการที่พัฒนามาให้ทุกคนสะดวกสบาย
-          </p>
-          <p className="font-body text-base md:text-lg text-muted-foreground leading-loose">
-            กับคุณภาพมาตรฐานศุภาลัยที่ใส่ใจในทุกรายละเอียด
-          </p>
-          <p className="font-body text-lg md:text-xl text-gold mt-8 leading-relaxed">
-            เพื่อให้ชีวิตของคุณที่นี่ <span className="font-display italic text-xl md:text-2xl gold-text">Wonderful</span> ได้ทุกวัน
-          </p>
+        <div className="max-w-5xl mx-auto space-y-16">
+          {/* Header */}
+          <div ref={r4} className={`reveal ${v4 ? 'visible' : ''} text-center`}>
+            <p className="font-body text-lg md:text-xl text-muted-foreground mb-3 tracking-widest uppercase">
+              18 Brands
+            </p>
+            <p className="font-body text-xl md:text-2xl text-foreground/80 leading-relaxed">
+              ที่คอนโดศุภาลัย 18 แบรนด์ของเรา ไม่ว่าจะแบรนด์ไหน
+            </p>
+            {/* Gold decorative line */}
+            <div className="flex items-center justify-center mt-8 gap-3">
+              <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary/60" />
+              <div className="w-2 h-2 rounded-full bg-primary/80" />
+              <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary/60" />
+            </div>
+          </div>
+
+          {/* Feature cards */}
+          <div ref={r5} className={`${v5 ? '' : ''}`}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {features.map((f, i) => (
+                <div
+                  key={f.label}
+                  className={`stagger-item ${v5 ? 'visible' : ''} group text-center p-6 rounded-xl border border-border/50 bg-card/50 hover:border-primary/40 hover:bg-card transition-all duration-500`}
+                  style={{ animationDelay: `${i * 150}ms` }}
+                >
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{f.icon}</div>
+                  <p className="font-display text-sm md:text-base text-foreground mb-2">{f.label}</p>
+                  <p className="font-body text-xs md:text-sm text-muted-foreground">{f.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom text with decorative lines */}
+          <div className={`reveal ${v5 ? 'visible' : ''} text-center space-y-4`}>
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px flex-1 max-w-[100px] bg-gradient-to-r from-transparent to-primary/40" />
+              <span className="text-primary/60 text-sm tracking-[0.3em] uppercase font-body">Quality Standard</span>
+              <div className="h-px flex-1 max-w-[100px] bg-gradient-to-l from-transparent to-primary/40" />
+            </div>
+            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
+              พร้อมบริการที่พัฒนามาให้ทุกคนสะดวกสบาย
+            </p>
+            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
+              กับคุณภาพมาตรฐานศุภาลัยที่ใส่ใจในทุกรายละเอียด
+            </p>
+            <div className="pt-6">
+              <p className="font-body text-lg md:text-xl text-foreground leading-relaxed">
+                เพื่อให้ชีวิตของคุณที่นี่ <span className="font-display italic text-xl md:text-2xl gold-shimmer">Wonderful</span> <span className="text-foreground/80">ได้ทุกวัน</span>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </>
