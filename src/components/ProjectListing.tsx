@@ -104,7 +104,7 @@ const ProjectListing = () => {
                 className={`stagger-item ${gridVisible ? 'visible' : ''} group block overflow-hidden rounded-lg border border-border hover:border-gold/50 hover:shadow-lg hover:shadow-gold/10 transition-all duration-300`}
                 style={{ animationDelay: `${i * 100}ms` }}
               >
-                <div className="w-[366px] h-[220px] max-w-full bg-surface-elevated overflow-hidden">
+                <div className="w-full aspect-video bg-surface-elevated overflow-hidden">
                   <img
                     src={project.thumbnail}
                     alt={project.name}

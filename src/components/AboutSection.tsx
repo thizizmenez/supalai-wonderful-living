@@ -85,7 +85,7 @@ const AboutSection = () => {
                   className={`stagger-item ${v5 ? 'visible' : ''} group text-center p-6 rounded-xl border border-border/50 bg-card/50 hover:border-primary/40 hover:bg-card transition-all duration-500`}
                   style={{ animationDelay: `${i * 150}ms` }}
                 >
-                  <f.icon className="w-8 h-8 text-foreground/70 mb-4 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                  <f.icon className="w-8 h-8 text-foreground/70 mb-4 mx-auto group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   <p className="font-display text-sm md:text-base text-foreground mb-2">{f.label}</p>
                   <p className="font-body text-xs md:text-sm text-muted-foreground">{f.desc}</p>
                 </div>
