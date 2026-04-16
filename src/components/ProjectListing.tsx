@@ -85,7 +85,7 @@ const ProjectListing = () => {
                 rel="noopener noreferrer"
                 className="group block overflow-hidden rounded-lg border border-border hover:border-gold/50 transition-all duration-300"
               >
-                <div className="aspect-[16/10] bg-surface-elevated overflow-hidden">
+                <div className="w-[366px] h-[220px] max-w-full bg-surface-elevated overflow-hidden">
                   <div className="w-full h-full bg-gradient-to-br from-secondary to-muted flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
                     <span className="font-display text-lg text-muted-foreground/50">SUPALAI</span>
                   </div>
