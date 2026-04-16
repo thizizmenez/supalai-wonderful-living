@@ -44,7 +44,7 @@ const BrandSection = () => {
         </div>
 
         <div ref={gridRef} className={`${gridVisible ? '' : ''}`}>
-          <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-8">
             {brands.map((brand, i) => (
               <a
                 key={brand.name}
