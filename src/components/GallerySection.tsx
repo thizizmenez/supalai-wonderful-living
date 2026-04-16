@@ -8,10 +8,10 @@ import galleryLocation from '@/assets/gallery-location.jpg';
 import gallerySkyview from '@/assets/gallery-skyview.jpg';
 
 const galleryItems = [
-  { img: galleryBalcony, text: 'Wonderful กับสวนส่วนตัว ที่ระเบียงกว้างๆ' },
-  { img: galleryLivingroom, text: 'Wonderful ที่นั่งดูทีวีได้แบบฟินๆ เพราะพื้นที่ระหว่างทีวีเยอะ' },
-  { img: galleryPet, text: 'Wonderful ตอนได้ทักทายเพื่อนบ้านตัวจิ๋ว' },
-  { img: galleryGarden, text: 'Wonderful อยู่ท่ามกลางบรรยากาศสีเขียว ที่สวนส่วนกลาง' },
+  { img: galleryLivingroom, text: 'Wonderful กับสวนส่วนตัว ที่ระเบียงกว้างๆ' },
+  { img: galleryBalcony, text: 'Wonderful ที่นั่งดูทีวีได้แบบฟินๆ เพราะพื้นที่ระหว่างทีวีเยอะ' },
+  { img: galleryGarden, text: 'Wonderful ตอนได้ทักทายเพื่อนบ้านตัวจิ๋ว' },
+  { img: galleryPet, text: 'Wonderful อยู่ท่ามกลางบรรยากาศสีเขียว ที่สวนส่วนกลาง' },
   { img: galleryJogging, text: 'Wonderful วิ่งดูวิวเมืองได้ทุกเย็น ที่ Sky Jogging Track' },
   { img: galleryLocation, text: 'Wonderful ที่ไปไหนมาไหนสะดวก เพราะอยู่ใกล้ทางด่วน ติดรถไฟฟ้า' },
   { img: gallerySkyview, text: 'Wonderful มองวิวท้องฟ้าทุกวันได้ไม่ซ้ำ' },
