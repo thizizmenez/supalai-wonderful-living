@@ -26,7 +26,7 @@ const GalleryItem = ({ img, text, index }: { img: string; text: string; index: n
       {/* Mobile: image on top, text below — shows full composition */}
       <div className="md:hidden">
         <div
-          className="w-full h-[70vh] bg-cover bg-center"
+          className="w-full h-[85vh] bg-cover bg-center"
           style={{ backgroundImage: `url(${img})` }}
         />
         <div
