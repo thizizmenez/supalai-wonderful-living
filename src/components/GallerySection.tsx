@@ -22,28 +22,49 @@ const GalleryItem = ({ img, text, index }: { img: string; text: string; index: n
   const isEven = index % 2 === 0;
 
   return (
-    <div
-      className="min-h-[100vh] relative flex items-center bg-fixed bg-cover bg-center"
-      style={{ backgroundImage: `url(${img})` }}
-    >
-      <div className="absolute inset-0 bg-black/20" />
-      <div
-        ref={ref}
-        className={`relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 flex ${isEven ? 'justify-start' : 'justify-end'} transition-all duration-1000 ease-out ${
-          visible
-            ? 'opacity-100 translate-x-0'
-            : isEven
-              ? 'opacity-0 -translate-x-16'
-              : 'opacity-0 translate-x-16'
-        }`}
-      >
-        <div className="max-w-lg p-8 md:p-12">
-          <p className={`font-display text-3xl md:text-5xl mb-3 ${visible ? 'animate-float' : ''}`}>
+    <div className="relative">
+      {/* Mobile: image on top, text below — shows full composition */}
+      <div className="md:hidden">
+        <div
+          className="w-full h-[55vh] bg-cover bg-center"
+          style={{ backgroundImage: `url(${img})` }}
+        />
+        <div
+          ref={ref}
+          className={`bg-background px-6 py-10 transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          <p className={`font-display text-3xl mb-3 ${visible ? 'animate-float' : ''}`}>
             <span className="gold-text italic">Wonderful</span>
           </p>
-          <p className="font-body text-lg md:text-xl text-foreground leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}>
+          <p className="font-body text-lg text-foreground leading-relaxed">
             {text.replace('Wonderful ', '')}
           </p>
+        </div>
+      </div>
+
+      {/* Desktop: parallax bg with overlaid text */}
+      <div
+        className="hidden md:flex min-h-[100vh] relative items-center bg-fixed bg-cover bg-center"
+        style={{ backgroundImage: `url(${img})` }}
+      >
+        <div className="absolute inset-0 bg-black/20" />
+        <div
+          className={`relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 flex ${isEven ? 'justify-start' : 'justify-end'} transition-all duration-1000 ease-out ${
+            visible
+              ? 'opacity-100 translate-x-0'
+              : isEven
+                ? 'opacity-0 -translate-x-16'
+                : 'opacity-0 translate-x-16'
+          }`}
+        >
+          <div className="max-w-lg p-8 md:p-12">
+            <p className={`font-display text-3xl md:text-5xl mb-3 ${visible ? 'animate-float' : ''}`}>
+              <span className="gold-text italic">Wonderful</span>
+            </p>
+            <p className="font-body text-lg md:text-xl text-foreground leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}>
+              {text.replace('Wonderful ', '')}
+            </p>
+          </div>
         </div>
       </div>
     </div>
