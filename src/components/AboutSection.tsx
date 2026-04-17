@@ -58,7 +58,7 @@ const AboutSection = () => {
       </section>
 
       {/* Part 2: Description - redesigned */}
-      <section className="min-h-[80vh] flex items-center justify-center bg-background bg-pattern py-24 px-6">
+      <section className="min-h-[80vh] flex items-center justify-center bg-background bg-pattern pt-24 pb-0 md:pb-24 px-6">
         <div className="max-w-5xl mx-auto space-y-16">
           {/* Header */}
           <div ref={r4} className={`reveal ${v4 ? 'visible' : ''} text-center`}>
