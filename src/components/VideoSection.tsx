@@ -4,8 +4,8 @@ const VideoSection = () => {
   const { ref, visible } = useScrollReveal(0.1);
   
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background pt-2 pb-4 relative">
-      <div ref={ref} className={`reveal ${visible ? 'visible' : ''} relative z-10 w-full max-w-6xl mx-auto px-6`}>
+    <section className="md:min-h-screen flex items-center justify-center bg-background py-2 md:pt-2 md:pb-4 relative">
+      <div ref={ref} className={`reveal ${visible ? 'visible' : ''} relative z-10 w-full max-w-6xl mx-auto px-2 md:px-6`}>
         <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl group cursor-pointer"
           onClick={(e) => {
             const iframe = (e.currentTarget.querySelector('iframe') as HTMLIFrameElement);
