@@ -121,10 +121,10 @@ const ProjectListing = () => {
                     loading="lazy"
                   />
                   <span
-                    className={`absolute top-3 left-3 px-3 py-1 text-xs font-body font-medium rounded-sm shadow-md ${
+                    className={`absolute top-3 left-3 z-10 px-3 py-1 text-xs font-body font-semibold rounded-sm shadow-lg ${
                       NEW_PROJECTS.has(project.name)
-                        ? 'bg-destructive text-destructive-foreground'
-                        : 'bg-gold text-primary-foreground'
+                        ? 'bg-red-600 text-white'
+                        : 'bg-emerald-600 text-white'
                     }`}
                   >
                     {NEW_PROJECTS.has(project.name) ? 'โครงการใหม่' : 'พร้อมอยู่'}
