@@ -38,7 +38,7 @@ const BrandSection = () => {
             The Brand of
           </p>
           <h2 className="font-display text-3xl md:text-5xl">
-            <span className="gold-text">SUPALAI</span>{' '}
+            <span className="text-gold-light">SUPALAI</span>{' '}
             <span className="text-foreground">CONDOMINIUM</span>
           </h2>
         </div>
