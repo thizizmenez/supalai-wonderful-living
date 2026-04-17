@@ -97,14 +97,11 @@ const AboutSection = () => {
           <div className={`reveal ${v5 ? 'visible' : ''} text-center space-y-4`}>
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="h-px flex-1 max-w-[100px] bg-gradient-to-r from-transparent to-primary/40" />
-              <span className="text-primary/60 text-sm tracking-[0.3em] uppercase font-body">Quality Standard</span>
+              <span className="text-primary/60 text-sm tracking-[0.3em] uppercase font-body">Standard Quality</span>
               <div className="h-px flex-1 max-w-[100px] bg-gradient-to-l from-transparent to-primary/40" />
             </div>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-              พร้อมบริการที่พัฒนามาให้ทุกคนสะดวกสบาย
-            </p>
-            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-              กับคุณภาพมาตรฐานศุภาลัยที่ใส่ใจในทุกรายละเอียด
+              และความใส่ใจในทุกรายละเอียด ที่ทำให้การอยู่อาศัยของคุณลงตัวกว่าที่เคย
             </p>
             <div className="pt-6">
               <p className="font-body text-lg md:text-xl text-foreground leading-relaxed">
