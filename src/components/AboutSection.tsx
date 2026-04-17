@@ -23,7 +23,7 @@ const AboutSection = () => {
         <div className="max-w-4xl mx-auto text-center space-y-12">
           <div ref={r1} className={`reveal ${v1 ? 'visible' : ''}`}>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight mb-4">
-              <span className="gold-text">SUPALAI</span>{' '}
+              <span className="text-gold-light">SUPALAI</span>{' '}
               <span className="text-foreground">CONDOMINIUM</span>
             </h2>
           </div>
