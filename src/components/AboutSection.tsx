@@ -19,7 +19,7 @@ const AboutSection = () => {
   return (
     <>
       {/* Part 1: Headline + tagline */}
-      <section className="min-h-screen flex items-center justify-center bg-background bg-pattern py-24 px-6">
+      <section className="min-h-screen flex items-center justify-center bg-background bg-pattern py-0 px-6">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           <div ref={r1} className={`reveal ${v1 ? 'visible' : ''}`}>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight mb-4">
