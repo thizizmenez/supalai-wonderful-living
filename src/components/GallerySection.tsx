@@ -22,7 +22,7 @@ const GalleryItem = ({ img, text, index }: { img: string; text: string; index: n
   const isEven = index % 2 === 0;
 
   return (
-    <div className="relative">
+    <div ref={ref} className="relative">
       {/* Mobile: image on top, text below — shows full composition */}
       <div className="md:hidden">
         <div
@@ -30,7 +30,6 @@ const GalleryItem = ({ img, text, index }: { img: string; text: string; index: n
           style={{ backgroundImage: `url(${img})` }}
         />
         <div
-          ref={ref}
           className={`bg-background px-6 py-10 transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
           <p className={`mb-3 ${visible ? 'animate-float' : ''}`} style={{ fontFamily: "'Prompt', sans-serif" }}>
