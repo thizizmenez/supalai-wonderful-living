@@ -83,10 +83,10 @@ const GallerySection = () => {
       <div className="min-h-[60vh] flex items-center justify-center bg-background bg-pattern py-24 px-6">
         <div ref={ref} className={`reveal ${visible ? 'visible' : ''} text-center max-w-3xl mx-auto space-y-6`}>
           <p className="font-display text-2xl md:text-4xl text-foreground">
-            ชีวิตจริงที่ <span className="gold-text italic">Wonderful</span> ได้ทุกวัน
+            ชีวิตจริงที่ <span className="gold-text-bright text-5xl md:text-6xl">Wonderful</span> ได้ทุกวัน
           </p>
           <p className="font-body text-xl md:text-2xl text-muted-foreground">
-            ที่ <span className="gold-text font-display">SUPALAI CONDOMINIUM</span>
+            ที่ <span className="font-display text-gold-light" style={{ fontFamily: "'Prompt', sans-serif" }}>SUPALAI CONDOMINIUM</span>
           </p>
         </div>
       </div>

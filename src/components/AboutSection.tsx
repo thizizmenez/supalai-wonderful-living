@@ -30,7 +30,7 @@ const AboutSection = () => {
 
           <div ref={r2} className={`reveal reveal-delay-1 ${v2 ? 'visible' : ''}`}>
             <p className="font-body text-xl md:text-2xl text-gold-light leading-relaxed mb-4">
-              เพราะความ <span className="font-display italic text-2xl md:text-3xl gold-text">Wonderful</span> ไม่ได้อยู่แค่ในช่วงเวลาพิเศษ
+              เพราะความ <span className="gold-text-bright text-4xl md:text-5xl">Wonderful</span> ไม่ได้อยู่แค่ในช่วงเวลาพิเศษ
             </p>
             <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed">
               แต่อยู่ในช่วงเวลาเล็กๆ ในวันธรรมดาๆ ด้วย
