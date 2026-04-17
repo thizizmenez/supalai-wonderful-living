@@ -9,6 +9,15 @@ interface Project {
 
 const UTM = '/?utm_source=website&utm_medium=landingpage&utm_campaign=supalaiwonderful';
 
+const NEW_PROJECTS = new Set([
+  'ศุภาลัย พรีเมียร์ ตากสิน-วงเวียนใหญ่',
+  'ศุภาลัย ลอฟท์ ท่าพระ อินเตอร์เชนจ์',
+  'ศุภาลัย บลู สาทร-ราชพฤกษ์',
+  'ศุภาลัย ธาม เจริญนคร',
+  'ศุภาลัย เซนส์ พัทยา',
+  'ศุภาลัย คราม ศรีสุนทร ภูเก็ต',
+]);
+
 const projectsByLocation: Record<string, Project[]> = {
   'กรุงเทพและปริมณฑล': [
     { name: 'ศุภาลัย เวอเรนด้า รามคำแหง', link: 'https://www.supalai.com/project/condo/%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2-%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B9%80%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%B2-%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%84%E0%B8%B3%E0%B9%81%E0%B8%AB%E0%B8%87' + UTM, thumbnail: 'https://www.supalai.com/stocks/project_child_point/o0x0/x8/r5/v9yix8r5cgm/DJI_0446.jpg' },
@@ -104,13 +113,22 @@ const ProjectListing = () => {
                 className={`stagger-item ${gridVisible ? 'visible' : ''} group block w-full overflow-hidden rounded-lg border border-border hover:border-gold/50 hover:shadow-lg hover:shadow-gold/10 transition-all duration-300`}
                 style={{ animationDelay: `${i * 100}ms` }}
               >
-                <div className="w-full aspect-video bg-surface-elevated overflow-hidden">
+                <div className="relative w-full aspect-video bg-surface-elevated overflow-hidden">
                   <img
                     src={project.thumbnail}
                     alt={project.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
+                  <span
+                    className={`absolute top-3 left-3 px-3 py-1 text-xs font-body font-medium rounded-sm shadow-md ${
+                      NEW_PROJECTS.has(project.name)
+                        ? 'bg-destructive text-destructive-foreground'
+                        : 'bg-gold text-primary-foreground'
+                    }`}
+                  >
+                    {NEW_PROJECTS.has(project.name) ? 'โครงการใหม่' : 'พร้อมอยู่'}
+                  </span>
                 </div>
                 <div className="p-4 bg-card">
                   <h3 className="font-body text-sm md:text-base text-card-foreground group-hover:text-gold transition-colors">
