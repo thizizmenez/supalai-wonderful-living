@@ -1,4 +1,15 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import Autoplay from 'embla-carousel-autoplay';
+import { useRef } from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+  type CarouselApi,
+} from '@/components/ui/carousel';
+import { useState, useEffect } from 'react';
 import galleryBalcony from '@/assets/gallery-balcony.jpg';
 import galleryLivingroom from '@/assets/gallery-livingroom.jpg';
 import galleryPet from '@/assets/gallery-pet.jpg';
@@ -17,53 +28,27 @@ const galleryItems = [
   { img: gallerySkyview, text: 'Wonderful มองวิวท้องฟ้าทุกวันได้ไม่ซ้ำ' },
 ];
 
-const GalleryItem = ({ img, text, index }: { img: string; text: string; index: number }) => {
-  const { ref, visible } = useScrollReveal(0.15);
+const GallerySlide = ({ img, text, index, isActive }: { img: string; text: string; index: number; isActive: boolean }) => {
   const isEven = index % 2 === 0;
-
   return (
-    <div ref={ref} className="relative">
-      {/* Mobile: image on top, text below — shows full composition */}
-      <div className="md:hidden">
+    <div className="relative w-full h-[100vh] md:h-[100vh] bg-cover bg-center" style={{ backgroundImage: `url(${img})` }}>
+      <div className="absolute inset-0 bg-black/30" />
+      <div className={`relative z-10 w-full h-full max-w-6xl mx-auto px-6 md:px-12 flex items-center ${isEven ? 'justify-start' : 'justify-end'}`}>
         <div
-          className="w-full h-[120vh] bg-cover bg-center"
-          style={{ backgroundImage: `url(${img})` }}
-        />
-        <div
-          className={`bg-background px-6 py-10 transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-        >
-          <p className={`mb-3 ${visible ? 'animate-float' : ''}`} style={{ fontFamily: "'Prompt', sans-serif" }}>
-            <span className="gold-text-bright text-5xl">Wonderful</span>
-          </p>
-          <p className="text-lg text-foreground leading-relaxed" style={{ fontFamily: "'Prompt', sans-serif" }}>
-            {text.replace('Wonderful ', '')}
-          </p>
-        </div>
-      </div>
-
-      {/* Desktop: parallax bg with overlaid text */}
-      <div
-        className="hidden md:flex min-h-[100vh] relative items-center bg-fixed bg-cover bg-center"
-        style={{ backgroundImage: `url(${img})` }}
-      >
-        <div className="absolute inset-0 bg-black/20" />
-        <div
-          className={`relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 flex ${isEven ? 'justify-start' : 'justify-end'} transition-all duration-1000 ease-out ${
-            visible
+          className={`max-w-lg p-6 md:p-12 transition-all duration-1000 ease-out ${
+            isActive
               ? 'opacity-100 translate-x-0'
               : isEven
                 ? 'opacity-0 -translate-x-16'
                 : 'opacity-0 translate-x-16'
           }`}
         >
-          <div className="max-w-lg p-8 md:p-12">
-            <p className={`mb-3 ${visible ? 'animate-float' : ''}`} style={{ fontFamily: "'Prompt', sans-serif" }}>
-              <span className="gold-text-bright text-6xl md:text-7xl">Wonderful</span>
-            </p>
-            <p className="text-lg md:text-xl text-foreground leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.7)', fontFamily: "'Prompt', sans-serif" }}>
-              {text.replace('Wonderful ', '')}
-            </p>
-          </div>
+          <p className={`mb-3 ${isActive ? 'animate-float' : ''}`} style={{ fontFamily: "'Prompt', sans-serif" }}>
+            <span className="gold-text-bright text-5xl md:text-7xl">Wonderful</span>
+          </p>
+          <p className="text-base md:text-xl text-foreground leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.7)', fontFamily: "'Prompt', sans-serif" }}>
+            {text.replace('Wonderful ', '')}
+          </p>
         </div>
       </div>
     </div>
@@ -72,12 +57,50 @@ const GalleryItem = ({ img, text, index }: { img: string; text: string; index: n
 
 const GallerySection = () => {
   const { ref, visible } = useScrollReveal(0.2);
+  const autoplay = useRef(Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true }));
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+    api.on('select', () => setCurrent(api.selectedScrollSnap()));
+  }, [api]);
 
   return (
     <section>
-      {galleryItems.map((item, i) => (
-        <GalleryItem key={i} img={item.img} text={item.text} index={i} />
-      ))}
+      <div className="relative">
+        <Carousel
+          setApi={setApi}
+          opts={{ loop: true }}
+          plugins={[autoplay.current]}
+          className="w-full"
+        >
+          <CarouselContent className="ml-0">
+            {galleryItems.map((item, i) => (
+              <CarouselItem key={i} className="pl-0 basis-full">
+                <GallerySlide img={item.img} text={item.text} index={i} isActive={current === i} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-4 md:left-8 h-10 w-10 md:h-12 md:w-12 bg-background/40 border-gold/40 text-gold hover:bg-background/60 hover:text-gold-light" />
+          <CarouselNext className="right-4 md:right-8 h-10 w-10 md:h-12 md:w-12 bg-background/40 border-gold/40 text-gold hover:bg-background/60 hover:text-gold-light" />
+        </Carousel>
+
+        {/* Dots */}
+        <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center gap-2">
+          {galleryItems.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => api?.scrollTo(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`h-2 rounded-full transition-all ${
+                current === i ? 'w-8 bg-gold' : 'w-2 bg-foreground/40 hover:bg-foreground/60'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
 
       <div className="min-h-[60vh] flex items-center justify-center bg-background bg-pattern py-24 px-6">
         <div ref={ref} className={`reveal ${visible ? 'visible' : ''} text-center max-w-3xl mx-auto space-y-6`}>
