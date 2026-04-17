@@ -6,7 +6,7 @@ const TransitionText = () => {
   return (
     <section className="min-h-[60vh] flex items-center justify-center bg-background bg-pattern pt-0 pb-24 md:pt-24 px-6">
       <div ref={ref} className={`reveal ${visible ? 'visible' : ''} text-center max-w-3xl mx-auto`}>
-        <p className="font-body text-xl md:text-2xl text-muted-foreground leading-relaxed mb-4">
+        <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
           เราเชื่อว่าคอนโดที่ดี คือคอนโดที่ให้ชีวิตจริง
         </p>
         <p className="font-display text-3xl md:text-5xl mt-8">
