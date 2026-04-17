@@ -17,6 +17,7 @@ export default {
         display: ['Prompt', 'sans-serif'],
         body: ['Prompt', 'sans-serif'],
         elegant: ['Playfair Display', 'serif'],
+        quentin: ['Quentin', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
