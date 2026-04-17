@@ -26,7 +26,7 @@ const HeroBanner = () => {
         </div>
         <div className={`transition-all duration-[1.5s] delay-500 ease-out ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="font-body text-lg md:text-xl text-foreground/80 tracking-wide">
-            ชีวิตจริงที่ Wonderful ได้ทุกวัน
+            ชีวิตจริงที่ <span className="gold-text text-3xl md:text-4xl">Wonderful</span> ได้ทุกวัน
           </p>
         </div>
         <div className={`mt-12 transition-all duration-[2s] delay-1000 ${loaded ? 'opacity-100' : 'opacity-0'}`}>

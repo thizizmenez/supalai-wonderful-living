@@ -13,10 +13,10 @@ const ClosingSection = () => {
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto space-y-10">
         <div ref={r1} className={`reveal ${v1 ? 'visible' : ''} space-y-6`}>
           <p className="font-display text-3xl md:text-5xl text-foreground leading-tight">
-            ชีวิตจริงที่ <span className={`${v1 ? 'gold-shimmer' : 'gold-text'} italic`}>Wonderful</span> ได้ทุกวัน
+            ชีวิตจริงที่ <span className="gold-text-bright text-5xl md:text-7xl">Wonderful</span> ได้ทุกวัน
           </p>
           <p className="font-body text-xl md:text-2xl text-foreground/70">
-            ที่ <span className="gold-text font-display tracking-wider">SUPALAI CONDOMINIUM</span>
+            ที่ <span className="font-display tracking-wider text-gold-light" style={{ fontFamily: "'Prompt', sans-serif" }}>SUPALAI CONDOMINIUM</span>
           </p>
         </div>
       </div>
