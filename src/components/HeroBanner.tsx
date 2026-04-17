@@ -18,9 +18,9 @@ const HeroBanner = () => {
       <div className="relative z-10 text-center px-6">
         <div className={`transition-all duration-[1.5s] ease-out ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl tracking-wider mb-6">
-            <span className={`${loaded ? 'gold-shimmer' : 'gold-text'}`} style={{ fontFamily: 'Prompt, sans-serif', fontStyle: 'normal' }}>SUPALAI</span>
+            <span className={`${loaded ? 'gold-shimmer' : 'gold-text'}`} style={{ fontFamily: "'Prompt', sans-serif", fontStyle: 'normal' }}>SUPALAI</span>
           </h1>
-          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl tracking-widest mb-8 text-foreground">
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl tracking-widest mb-8 text-foreground" style={{ fontFamily: "'Prompt', sans-serif" }}>
             CONDOMINIUM
           </h2>
         </div>
