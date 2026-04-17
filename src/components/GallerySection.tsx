@@ -33,10 +33,10 @@ const GalleryItem = ({ img, text, index }: { img: string; text: string; index: n
           ref={ref}
           className={`bg-background px-6 py-10 transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-          <p className={`font-display text-3xl mb-3 ${visible ? 'animate-float' : ''}`}>
-            <span className="gold-text italic">Wonderful</span>
+          <p className={`mb-3 ${visible ? 'animate-float' : ''}`} style={{ fontFamily: "'Prompt', sans-serif" }}>
+            <span className="gold-text-bright text-5xl">Wonderful</span>
           </p>
-          <p className="font-body text-lg text-foreground leading-relaxed">
+          <p className="text-lg text-foreground leading-relaxed" style={{ fontFamily: "'Prompt', sans-serif" }}>
             {text.replace('Wonderful ', '')}
           </p>
         </div>
@@ -58,10 +58,10 @@ const GalleryItem = ({ img, text, index }: { img: string; text: string; index: n
           }`}
         >
           <div className="max-w-lg p-8 md:p-12">
-            <p className={`font-display text-3xl md:text-5xl mb-3 ${visible ? 'animate-float' : ''}`}>
-              <span className="gold-text italic">Wonderful</span>
+            <p className={`mb-3 ${visible ? 'animate-float' : ''}`} style={{ fontFamily: "'Prompt', sans-serif" }}>
+              <span className="gold-text-bright text-6xl md:text-7xl">Wonderful</span>
             </p>
-            <p className="font-body text-lg md:text-xl text-foreground leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}>
+            <p className="text-lg md:text-xl text-foreground leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.7)', fontFamily: "'Prompt', sans-serif" }}>
               {text.replace('Wonderful ', '')}
             </p>
           </div>
