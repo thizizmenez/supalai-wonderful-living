@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Play } from 'lucide-react';
 
 const videos = [
-  { id: 'RGTs0c7Zq8A', title: 'Supalai Condominium' },
-  { id: 'RGTs0c7Zq8A', title: 'Supalai Condominium - Lifestyle' },
-  { id: 'RGTs0c7Zq8A', title: 'Supalai Condominium - Facilities' },
+  { id: 'RGTs0c7Zq8A', title: 'Supalai Condominium', subtitle: 'แนะนำโครงการ', label: 'Overview' },
+  { id: 'RGTs0c7Zq8A', title: 'Lifestyle', subtitle: 'ไลฟ์สไตล์ที่ลงตัว', label: 'Lifestyle' },
+  { id: 'RGTs0c7Zq8A', title: 'Facilities', subtitle: 'ส่วนกลางครบครัน', label: 'Facilities' },
 ];
 
 const VideoSection = () => {
@@ -13,6 +14,7 @@ const VideoSection = () => {
   const [playing, setPlaying] = useState(false);
 
   const handleSelect = (i: number) => {
+    if (i === activeIndex) return;
     setActiveIndex(i);
     setPlaying(false);
   };
@@ -20,70 +22,160 @@ const VideoSection = () => {
   const active = videos[activeIndex];
 
   return (
-    <section className="flex flex-col items-center justify-center bg-background pt-[60px] pb-12 md:py-12 relative">
-      <div ref={ref} className={`reveal ${visible ? 'visible' : ''} relative z-10 w-full max-w-6xl mx-auto px-0 md:px-6`}>
-        {/* Main video */}
-        <div
-          className="relative aspect-video rounded-lg overflow-hidden shadow-2xl group cursor-pointer"
-          onClick={() => setPlaying(true)}
-        >
-          {!playing ? (
-            <>
-              <img
-                src={`https://img.youtube.com/vi/${active.id}/maxresdefault.jpg`}
-                alt={active.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-background/40 flex items-center justify-center transition-colors group-hover:bg-background/30">
-                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-gold flex items-center justify-center transition-all group-hover:scale-110 group-hover:border-gold-light animate-glow-pulse">
-                  <svg className="w-8 h-8 md:w-10 md:h-10 text-gold ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
+    <section className="flex flex-col items-center justify-center bg-background pt-[60px] pb-16 md:py-20 relative overflow-hidden">
+      {/* Subtle background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[60%] bg-gold/5 blur-[120px] pointer-events-none" />
+
+      <div ref={ref} className={`reveal ${visible ? 'visible' : ''} relative z-10 w-full max-w-6xl mx-auto px-4 md:px-6`}>
+        {/* Section header */}
+        <div className="text-center mb-8 md:mb-12">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-gold/60" />
+            <span className="font-body text-xs tracking-[0.3em] uppercase text-gold-light">Watch the story</span>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold/60" />
+          </div>
+          <h3 className="font-display text-2xl md:text-4xl text-foreground">
+            สัมผัสประสบการณ์ <span className="gold-text-bright">Wonderful</span>
+          </h3>
+        </div>
+
+        {/* Main video with frame */}
+        <div className="relative">
+          {/* Decorative gold corners */}
+          <div className="absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-gold/60 z-20 pointer-events-none" />
+          <div className="absolute -top-2 -right-2 w-8 h-8 border-t-2 border-r-2 border-gold/60 z-20 pointer-events-none" />
+          <div className="absolute -bottom-2 -left-2 w-8 h-8 border-b-2 border-l-2 border-gold/60 z-20 pointer-events-none" />
+          <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-gold/60 z-20 pointer-events-none" />
+
+          <div
+            className="relative aspect-video rounded-lg overflow-hidden shadow-2xl group cursor-pointer ring-1 ring-gold/20"
+            onClick={() => !playing && setPlaying(true)}
+          >
+            {!playing ? (
+              <>
+                <img
+                  key={active.id + activeIndex}
+                  src={`https://img.youtube.com/vi/${active.id}/maxresdefault.jpg`}
+                  alt={active.title}
+                  className="w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105 animate-fade-in"
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-background/40 transition-opacity group-hover:from-background/70" />
+
+                {/* Play button */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="relative">
+                    <div className="absolute inset-0 rounded-full border border-gold/40 animate-ping" />
+                    <div className="absolute inset-0 rounded-full border border-gold/20 animate-ping" style={{ animationDelay: '0.5s' }} />
+                    <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-gold flex items-center justify-center bg-background/30 backdrop-blur-sm transition-all group-hover:scale-110 group-hover:border-gold-light group-hover:bg-background/50 animate-glow-pulse">
+                      <Play className="w-8 h-8 md:w-12 md:h-12 text-gold ml-1 group-hover:text-gold-light transition-colors" fill="currentColor" />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </>
-          ) : (
-            <iframe
-              key={active.id + activeIndex}
-              src={`https://www.youtube.com/embed/${active.id}?autoplay=1&rel=0`}
-              className="w-full h-full"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              title={active.title}
-            />
-          )}
+
+                {/* Video info bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
+                  <div className="flex items-end justify-between gap-4">
+                    <div className="animate-fade-in" key={`info-${activeIndex}`}>
+                      <p className="font-body text-xs tracking-[0.25em] uppercase text-gold-light mb-2">
+                        {active.label}
+                      </p>
+                      <h4 className="font-display text-xl md:text-3xl text-foreground mb-1">
+                        {active.title}
+                      </h4>
+                      <p className="font-body text-sm md:text-base text-foreground/70">
+                        {active.subtitle}
+                      </p>
+                    </div>
+                    <span className="hidden md:block font-display text-5xl gold-text-bright opacity-60">
+                      {String(activeIndex + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <iframe
+                key={active.id + activeIndex}
+                src={`https://www.youtube.com/embed/${active.id}?autoplay=1&rel=0`}
+                className="w-full h-full"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                title={active.title}
+              />
+            )}
+          </div>
         </div>
 
         {/* Thumbnails */}
-        <div className="grid grid-cols-3 gap-3 md:gap-5 mt-4 md:mt-6 px-4 md:px-0">
-          {videos.map((v, i) => (
-            <button
-              key={i}
-              onClick={() => handleSelect(i)}
-              aria-label={`Play ${v.title}`}
-              className={`relative aspect-video rounded-md overflow-hidden group transition-all ${
-                activeIndex === i
-                  ? 'ring-2 ring-gold shadow-lg shadow-gold/20'
-                  : 'ring-1 ring-border opacity-70 hover:opacity-100'
-              }`}
-            >
-              <img
-                src={`https://img.youtube.com/vi/${v.id}/mqdefault.jpg`}
-                alt={v.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className={`absolute inset-0 flex items-center justify-center transition-colors ${
-                activeIndex === i ? 'bg-background/20' : 'bg-background/50 group-hover:bg-background/30'
-              }`}>
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-gold flex items-center justify-center bg-background/40">
-                  <svg className="w-3 h-3 md:w-4 md:h-4 text-gold ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
+        <div className="grid grid-cols-3 gap-3 md:gap-6 mt-6 md:mt-10">
+          {videos.map((v, i) => {
+            const isActive = activeIndex === i;
+            return (
+              <button
+                key={i}
+                onClick={() => handleSelect(i)}
+                aria-label={`Play ${v.title}`}
+                className={`group relative text-left transition-all duration-500 ${
+                  isActive ? 'scale-100' : 'scale-95 hover:scale-100'
+                }`}
+              >
+                <div
+                  className={`relative aspect-video rounded-md overflow-hidden transition-all duration-500 ${
+                    isActive
+                      ? 'ring-2 ring-gold shadow-xl shadow-gold/30'
+                      : 'ring-1 ring-border opacity-60 group-hover:opacity-100 group-hover:ring-gold/40'
+                  }`}
+                >
+                  <img
+                    src={`https://img.youtube.com/vi/${v.id}/mqdefault.jpg`}
+                    alt={v.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className={`absolute inset-0 transition-all duration-500 ${
+                    isActive ? 'bg-gradient-to-t from-background/70 to-transparent' : 'bg-background/50 group-hover:bg-background/30'
+                  }`} />
+
+                  <div className={`absolute top-2 left-2 font-display text-lg md:text-xl transition-colors ${
+                    isActive ? 'gold-text-bright' : 'text-foreground/60'
+                  }`}>
+                    {String(i + 1).padStart(2, '0')}
+                  </div>
+
+                  {isActive && (
+                    <div className="absolute top-2 right-2 flex items-center gap-1.5 bg-background/70 backdrop-blur-sm px-2 py-1 rounded-full">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+                      <span className="text-[10px] tracking-widest uppercase text-gold-light font-body">Now</span>
+                    </div>
+                  )}
+
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                      isActive
+                        ? 'border-gold bg-background/40 scale-100'
+                        : 'border-gold/60 bg-background/30 scale-90 group-hover:scale-100 group-hover:border-gold'
+                    }`}>
+                      <Play className="w-3 h-3 md:w-4 md:h-4 text-gold ml-0.5" fill="currentColor" />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </button>
-          ))}
+
+                {/* Caption */}
+                <div className="mt-3 hidden md:block">
+                  <p className={`font-body text-[10px] tracking-[0.25em] uppercase transition-colors ${
+                    isActive ? 'text-gold-light' : 'text-muted-foreground group-hover:text-foreground/70'
+                  }`}>
+                    {v.label}
+                  </p>
+                  <p className={`font-display text-sm mt-0.5 transition-colors ${
+                    isActive ? 'text-foreground' : 'text-foreground/60 group-hover:text-foreground'
+                  }`}>
+                    {v.subtitle}
+                  </p>
+                </div>
+              </button>
+            );
+          })}
         </div>
       </div>
     </section>
