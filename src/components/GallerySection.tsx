@@ -90,7 +90,7 @@ const GallerySlide = ({
       >
         {/* Mobile: positioned at lower half with padding above progress bar; Desktop: centered */}
         <div
-          className={`max-w-xl transition-all duration-1000 ease-out mb-[25%] md:mb-0 md:pb-0 ${
+          className={`max-w-xl transition-all duration-1000 ease-out mb-[20%] md:mb-0 md:pb-0 ${
             isActive
               ? 'opacity-100 translate-y-0 blur-0'
               : 'opacity-0 translate-y-12 blur-sm'
