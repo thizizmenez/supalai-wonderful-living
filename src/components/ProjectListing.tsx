@@ -5,6 +5,8 @@ interface Project {
   name: string;
   link: string;
   thumbnail: string;
+  /** Optional mobile-specific thumbnail. Falls back to `thumbnail` when omitted. */
+  thumbnailMobile?: string;
 }
 
 const UTM = '/?utm_source=website&utm_medium=landingpage&utm_campaign=supalaiwonderful';
@@ -151,12 +153,18 @@ const ProjectListing = () => {
                 >
                   {/* Image */}
                   <div className="relative w-full aspect-video bg-surface-elevated overflow-hidden">
-                    <img
-                      src={project.thumbnail}
-                      alt={project.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      loading="lazy"
-                    />
+                    <picture>
+                      <source
+                        media="(max-width: 767px)"
+                        srcSet={project.thumbnailMobile ?? project.thumbnail}
+                      />
+                      <img
+                        src={project.thumbnail}
+                        alt={project.name}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                    </picture>
 
                     {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
