@@ -15,17 +15,22 @@ import galleryGarden from '@/assets/gallery-garden.jpg';
 import galleryJogging from '@/assets/gallery-jogging.jpg';
 import galleryLocation from '@/assets/gallery-location.jpg';
 import gallerySkyview from '@/assets/gallery-skyview.jpg';
+import galleryBalconyMobile from '@/assets/gallery-balcony-mobile.jpg';
+import galleryLivingroomMobile from '@/assets/gallery-livingroom-mobile.jpg';
+import galleryPetMobile from '@/assets/gallery-pet-mobile.jpg';
+import galleryGardenMobile from '@/assets/gallery-garden-mobile.jpg';
+import galleryJoggingMobile from '@/assets/gallery-jogging-mobile.jpg';
+import galleryLocationMobile from '@/assets/gallery-location-mobile.jpg';
+import gallerySkyviewMobile from '@/assets/gallery-skyview-mobile.jpg';
 
-// NOTE: imgMobile currently reuses the desktop image as a placeholder.
-// Replace each `imgMobile` with a portrait/mobile-optimized image when available.
 const galleryItems = [
-  { imgPc: galleryLivingroom, imgMobile: galleryLivingroom, text: 'กับสวนส่วนตัว ที่ระเบียงกว้างๆ' },
-  { imgPc: galleryBalcony, imgMobile: galleryBalcony, text: 'ที่นั่งดูทีวีได้แบบฟินๆ เพราะพื้นที่ระหว่างทีวีเยอะ' },
-  { imgPc: galleryGarden, imgMobile: galleryGarden, text: 'ตอนได้ทักทายเพื่อนบ้านตัวจิ๋ว' },
-  { imgPc: galleryPet, imgMobile: galleryPet, text: 'อยู่ท่ามกลางบรรยากาศสีเขียว ที่สวนส่วนกลาง' },
-  { imgPc: galleryJogging, imgMobile: galleryJogging, text: 'วิ่งดูวิวเมืองได้ทุกเย็น ที่ Sky Jogging Track' },
-  { imgPc: galleryLocation, imgMobile: galleryLocation, text: 'ที่ไปไหนมาไหนสะดวก เพราะอยู่ใกล้ทางด่วน ติดรถไฟฟ้า' },
-  { imgPc: gallerySkyview, imgMobile: gallerySkyview, text: 'มองวิวท้องฟ้าทุกวันได้ไม่ซ้ำ' },
+  { imgPc: galleryLivingroom, imgMobile: galleryLivingroomMobile, text: 'กับสวนส่วนตัว ที่ระเบียงกว้างๆ' },
+  { imgPc: galleryBalcony, imgMobile: galleryBalconyMobile, text: 'ที่นั่งดูทีวีได้แบบฟินๆ เพราะพื้นที่ระหว่างทีวีเยอะ' },
+  { imgPc: galleryGarden, imgMobile: galleryGardenMobile, text: 'ตอนได้ทักทายเพื่อนบ้านตัวจิ๋ว' },
+  { imgPc: galleryPet, imgMobile: galleryPetMobile, text: 'อยู่ท่ามกลางบรรยากาศสีเขียว ที่สวนส่วนกลาง' },
+  { imgPc: galleryJogging, imgMobile: galleryJoggingMobile, text: 'วิ่งดูวิวเมืองได้ทุกเย็น ที่ Sky Jogging Track' },
+  { imgPc: galleryLocation, imgMobile: galleryLocationMobile, text: 'ที่ไปไหนมาไหนสะดวก เพราะอยู่ใกล้ทางด่วน ติดรถไฟฟ้า' },
+  { imgPc: gallerySkyview, imgMobile: gallerySkyviewMobile, text: 'มองวิวท้องฟ้าทุกวันได้ไม่ซ้ำ' },
 ];
 
 const GallerySlide = ({
