@@ -72,77 +72,139 @@ const ProjectListing = () => {
   const { ref: titleRef, visible: titleVisible } = useScrollReveal(0.2);
   const { ref: gridRef, visible: gridVisible } = useScrollReveal(0.1);
 
+  const currentProjects = projectsByLocation[activeTab];
+  const newCount = currentProjects.filter((p) => NEW_PROJECTS.has(p.name)).length;
+  const readyCount = currentProjects.length - newCount;
+
   return (
-    <section className="py-24 px-6 bg-background">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-24 px-6 bg-background relative overflow-hidden">
+      {/* Decorative background glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-[400px] bg-gold/5 blur-[120px] pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto relative">
         <div ref={titleRef} className={`reveal ${titleVisible ? 'visible' : ''} text-center mb-12`}>
-          <p className="font-body text-lg text-muted-foreground mb-3 tracking-widest uppercase">
-            Our Projects
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl text-foreground">
-            โครงการคอนโด<span className="gold-text" style={{ fontFamily: "'Prompt', sans-serif" }}>ศุภาลัย</span>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-gold/60" />
+            <span className="font-body text-xs tracking-[0.3em] uppercase text-gold-light">Our Projects</span>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold/60" />
+          </div>
+          <h2 className="font-display text-3xl md:text-5xl text-foreground mb-4">
+            โครงการคอนโด<span className="gold-shimmer" style={{ fontFamily: "'Prompt', sans-serif" }}>ศุภาลัย</span>
           </h2>
+          <p className="font-body text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
+            เลือกโครงการที่ตอบโจทย์ไลฟ์สไตล์ของคุณ ในทำเลที่ใช่
+          </p>
         </div>
 
         {/* Location tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {locations.map((loc) => (
-            <button
-              key={loc}
-              onClick={() => setActiveTab(loc)}
-              className={`px-4 py-2 rounded-full text-sm font-body transition-all duration-300 border ${
-                activeTab === loc
-                  ? 'bg-gold text-primary-foreground border-gold shadow-lg shadow-gold/20'
-                  : 'border-border text-muted-foreground hover:border-gold/50 hover:text-foreground hover:shadow-md'
-              }`}
-            >
-              {loc}
-            </button>
-          ))}
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          {locations.map((loc) => {
+            const count = projectsByLocation[loc].length;
+            const isActive = activeTab === loc;
+            return (
+              <button
+                key={loc}
+                onClick={() => setActiveTab(loc)}
+                className={`group px-4 md:px-5 py-2 rounded-full text-sm font-body transition-all duration-300 border flex items-center gap-2 ${
+                  isActive
+                    ? 'bg-gold text-primary-foreground border-gold shadow-lg shadow-gold/30 scale-105'
+                    : 'border-border text-muted-foreground hover:border-gold/50 hover:text-foreground hover:bg-card'
+                }`}
+              >
+                <span>{loc}</span>
+                <span className={`text-[10px] px-1.5 py-0.5 rounded-full transition-colors ${
+                  isActive ? 'bg-primary-foreground/20 text-primary-foreground' : 'bg-muted text-muted-foreground group-hover:bg-gold/10 group-hover:text-gold-light'
+                }`}>
+                  {count}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Status legend */}
+        <div className="flex items-center justify-center gap-6 mb-10 text-xs font-body">
+          <div className="flex items-center gap-2 text-muted-foreground">
+            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+            <span>โครงการใหม่ <span className="text-foreground/70">({newCount})</span></span>
+          </div>
+          <div className="h-3 w-px bg-border" />
+          <div className="flex items-center gap-2 text-muted-foreground">
+            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+            <span>พร้อมอยู่ <span className="text-foreground/70">({readyCount})</span></span>
+          </div>
         </div>
 
         {/* Project grid */}
-        <div ref={gridRef}>
+        <div ref={gridRef} key={activeTab}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projectsByLocation[activeTab].map((project, i) => (
-              <a
-                key={project.name}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`stagger-item ${gridVisible ? 'visible' : ''} group block w-full overflow-hidden rounded-lg border border-border hover:border-gold/50 hover:shadow-lg hover:shadow-gold/10 transition-all duration-300`}
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <div className="relative w-full aspect-video bg-surface-elevated overflow-hidden">
-                  <img
-                    src={project.thumbnail}
-                    alt={project.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <span
-                    className={`absolute top-3 left-3 z-10 px-3 py-1 text-xs font-body font-semibold rounded-sm shadow-lg ${
-                      NEW_PROJECTS.has(project.name)
-                        ? 'bg-red-600 text-white'
-                        : 'bg-emerald-600 text-white'
-                    }`}
-                  >
-                    {NEW_PROJECTS.has(project.name) ? 'โครงการใหม่' : 'พร้อมอยู่'}
-                  </span>
-                </div>
-                <div className="p-4 bg-card">
-                  <h3 className="font-body text-sm md:text-base text-card-foreground group-hover:text-gold transition-colors">
-                    {project.name}
-                  </h3>
-                  <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
-                    ดูรายละเอียด
-                    <svg className="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </p>
-                </div>
-              </a>
-            ))}
+            {currentProjects.map((project, i) => {
+              const isNew = NEW_PROJECTS.has(project.name);
+              return (
+                <a
+                  key={project.name}
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`stagger-item ${gridVisible ? 'visible' : ''} group relative block w-full overflow-hidden rounded-xl border border-border/60 bg-card hover:border-gold/60 hover:shadow-2xl hover:shadow-gold/10 hover:-translate-y-1 transition-all duration-500`}
+                  style={{ animationDelay: `${i * 80}ms` }}
+                >
+                  {/* Image */}
+                  <div className="relative w-full aspect-video bg-surface-elevated overflow-hidden">
+                    <img
+                      src={project.thumbnail}
+                      alt={project.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                    />
+
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
+
+                    {/* Status badge */}
+                    <div className="absolute top-3 left-3 z-10">
+                      <span
+                        className={`flex items-center gap-1.5 px-3 py-1 text-[11px] font-body font-semibold rounded-full backdrop-blur-md shadow-lg border ${
+                          isNew
+                            ? 'bg-red-600/90 text-white border-red-400/50'
+                            : 'bg-emerald-600/90 text-white border-emerald-400/50'
+                        }`}
+                      >
+                        <span className={`w-1.5 h-1.5 rounded-full bg-white ${isNew ? 'animate-pulse' : ''}`} />
+                        {isNew ? 'โครงการใหม่' : 'พร้อมอยู่'}
+                      </span>
+                    </div>
+
+                    {/* Hover overlay with view button */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="px-5 py-2 rounded-full bg-gold/90 text-primary-foreground text-xs font-body font-semibold tracking-wider uppercase backdrop-blur-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-xl">
+                        ดูโครงการ
+                      </div>
+                    </div>
+
+                    {/* Title overlaid on image bottom */}
+                    <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
+                      <h3 className="font-display text-base md:text-lg text-foreground leading-tight group-hover:text-gold-light transition-colors duration-300" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
+                        {project.name}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* Card footer */}
+                  <div className="px-4 py-3 flex items-center justify-between border-t border-border/40">
+                    <span className="text-[11px] text-muted-foreground tracking-widest uppercase">
+                      {activeTab}
+                    </span>
+                    <span className="text-xs text-gold-light flex items-center gap-1 group-hover:gap-2 transition-all">
+                      ดูรายละเอียด
+                      <svg className="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -151,3 +213,4 @@ const ProjectListing = () => {
 };
 
 export default ProjectListing;
+
