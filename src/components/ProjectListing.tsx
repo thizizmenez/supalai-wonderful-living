@@ -182,9 +182,12 @@ const ProjectListing = () => {
                       </div>
                     </div>
 
+                    {/* Gradient overlay - darker bottom for white title readability */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-500" />
+
                     {/* Title overlaid on image bottom */}
                     <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
-                      <h3 className="font-display text-base md:text-lg text-foreground leading-tight group-hover:text-gold-light transition-colors duration-300" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
+                      <h3 className="font-display text-base md:text-lg text-white leading-tight group-hover:text-gold-light transition-colors duration-300" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
                         {project.name}
                       </h3>
                     </div>
