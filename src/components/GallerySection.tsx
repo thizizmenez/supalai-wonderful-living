@@ -50,22 +50,22 @@ const GallerySlide = ({
         style={{ backgroundImage: `url(${img})` }}
       />
 
-      {/* Cinematic gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/80" />
+      {/* Cinematic gradient overlays - dark for text readability on light theme */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/70" />
       <div
         className={`absolute inset-0 ${
           isEven
-            ? 'bg-gradient-to-r from-background/80 via-background/20 to-transparent'
-            : 'bg-gradient-to-l from-background/80 via-background/20 to-transparent'
+            ? 'bg-gradient-to-r from-black/70 via-black/20 to-transparent'
+            : 'bg-gradient-to-l from-black/70 via-black/20 to-transparent'
         }`}
       />
 
       {/* Slide counter */}
-      <div className="absolute top-6 md:top-10 right-6 md:right-12 z-20 flex items-center gap-3 text-foreground/70">
+      <div className="absolute top-6 md:top-10 right-6 md:right-12 z-20 flex items-center gap-3 text-white/80">
         <span className="font-display text-2xl md:text-4xl gold-text-bright">
           {String(index + 1).padStart(2, '0')}
         </span>
-        <div className="h-px w-10 md:w-16 bg-gold/50" />
+        <div className="h-px w-10 md:w-16 bg-white/40" />
         <span className="font-body text-xs md:text-sm tracking-widest">
           {String(total).padStart(2, '0')}
         </span>
@@ -90,8 +90,8 @@ const GallerySlide = ({
               isActive ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <div className="h-px w-16 md:w-24 bg-gradient-to-r from-gold to-transparent" />
-            <span className="font-body text-xs tracking-[0.3em] uppercase text-gold-light">
+            <div className="h-px w-16 md:w-24 bg-gradient-to-r from-gold-light to-transparent" />
+            <span className="font-body text-xs tracking-[0.3em] uppercase text-gold-light" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>
               Moment {String(index + 1).padStart(2, '0')}
             </span>
           </div>
@@ -102,10 +102,10 @@ const GallerySlide = ({
             } ${isActive ? 'animate-float' : ''}`}
             style={{ fontFamily: "'Prompt', sans-serif" }}
           >
-            <span className="gold-shimmer text-6xl md:text-8xl">Wonderful</span>
+            <span className="gold-shimmer text-6xl md:text-8xl" style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))' }}>Wonderful</span>
           </p>
           <p
-            className={`text-lg md:text-2xl text-foreground leading-relaxed font-light transition-all duration-1000 delay-500 ${
+            className={`text-lg md:text-2xl text-white leading-relaxed font-light transition-all duration-1000 delay-500 ${
               isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
             style={{

@@ -44,13 +44,13 @@ const AboutSection = () => {
         className="h-[70vh] relative bg-fixed bg-cover bg-center"
         style={{ backgroundImage: `url(${aboutDivider})` }}
       >
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div ref={r3} className={`reveal ${v3 ? 'visible' : ''} text-center px-6`}>
             <p className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight">
-              <span className="gold-text italic">Wonderful</span>
+              <span className="gold-text italic" style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))' }}>Wonderful</span>
             </p>
-            <p className="font-body text-lg md:text-xl text-foreground/90 mt-4">
+            <p className="font-body text-lg md:text-xl text-white/90 mt-4" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
               ในทุกช่วงเวลาของชีวิต
             </p>
           </div>
