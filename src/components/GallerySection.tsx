@@ -172,13 +172,13 @@ const GallerySection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-4 md:left-8 h-12 w-12 md:h-14 md:w-14 bg-background/30 backdrop-blur-md border-gold/40 text-gold hover:bg-background/60 hover:text-gold-light hover:scale-110 transition-all" />
-          <CarouselNext className="right-4 md:right-8 h-12 w-12 md:h-14 md:w-14 bg-background/30 backdrop-blur-md border-gold/40 text-gold hover:bg-background/60 hover:text-gold-light hover:scale-110 transition-all" />
+          <CarouselPrevious className="left-4 md:left-8 h-12 w-12 md:h-14 md:w-14 bg-black/30 backdrop-blur-md border-white/40 text-white hover:bg-black/50 hover:text-gold-light hover:scale-110 transition-all" />
+          <CarouselNext className="right-4 md:right-8 h-12 w-12 md:h-14 md:w-14 bg-black/30 backdrop-blur-md border-white/40 text-white hover:bg-black/50 hover:text-gold-light hover:scale-110 transition-all" />
         </Carousel>
 
         {/* Progress + Dots */}
         <div className="absolute bottom-8 left-0 right-0 z-20 flex flex-col items-center gap-4 px-6">
-          <div className="w-full max-w-md h-px bg-foreground/20 overflow-hidden">
+          <div className="w-full max-w-md h-px bg-white/30 overflow-hidden">
             <div
               className="h-full bg-gradient-to-r from-gold to-gold-light transition-all duration-100 ease-linear"
               style={{ width: `${progress}%` }}
@@ -193,7 +193,7 @@ const GallerySection = () => {
                 className={`h-1.5 rounded-full transition-all duration-500 ${
                   current === i
                     ? 'w-10 bg-gold'
-                    : 'w-1.5 bg-foreground/40 hover:bg-foreground/70'
+                    : 'w-1.5 bg-white/50 hover:bg-white/80'
                 }`}
               />
             ))}
