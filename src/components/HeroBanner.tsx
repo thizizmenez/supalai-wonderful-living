@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react';
 import heroBanner from '@/assets/hero-banner.jpg';
-
-// NOTE: heroBannerMobile currently reuses the desktop image as a placeholder.
-// Replace with a portrait/mobile-optimized image when available.
-const heroBannerMobile = heroBanner;
+import heroBannerMobile from '@/assets/hero-banner-mobile.jpg';
 
 const HeroBanner = () => {
   const [loaded, setLoaded] = useState(false);
