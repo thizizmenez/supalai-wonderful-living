@@ -182,8 +182,6 @@ const ProjectListing = () => {
                       </div>
                     </div>
 
-                    {/* Gradient overlay - darker bottom for white title readability */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-500" />
 
                     {/* Title overlaid on image bottom */}
                     <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
