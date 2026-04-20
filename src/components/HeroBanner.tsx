@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import heroBanner from '@/assets/hero-banner.jpg';
 
+// NOTE: heroBannerMobile currently reuses the desktop image as a placeholder.
+// Replace with a portrait/mobile-optimized image when available.
+const heroBannerMobile = heroBanner;
+
 const HeroBanner = () => {
   const [loaded, setLoaded] = useState(false);
 
@@ -10,10 +14,17 @@ const HeroBanner = () => {
   }, []);
 
   return (
-    <section
-      className="h-screen relative flex items-center justify-center bg-fixed bg-cover bg-center"
-      style={{ backgroundImage: `url(${heroBanner})` }}
-    >
+    <section className="h-screen relative flex items-center justify-center overflow-hidden">
+      {/* Mobile background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center md:hidden"
+        style={{ backgroundImage: `url(${heroBannerMobile})` }}
+      />
+      {/* Desktop background */}
+      <div
+        className="absolute inset-0 bg-fixed bg-cover bg-center hidden md:block"
+        style={{ backgroundImage: `url(${heroBanner})` }}
+      />
       <div className="absolute inset-0 bg-black/20" />
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto space-y-10">
         <div className={`transition-all duration-[1.5s] ease-out ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} space-y-6`}>

@@ -16,24 +16,28 @@ import galleryJogging from '@/assets/gallery-jogging.jpg';
 import galleryLocation from '@/assets/gallery-location.jpg';
 import gallerySkyview from '@/assets/gallery-skyview.jpg';
 
+// NOTE: imgMobile currently reuses the desktop image as a placeholder.
+// Replace each `imgMobile` with a portrait/mobile-optimized image when available.
 const galleryItems = [
-  { img: galleryLivingroom, text: 'กับสวนส่วนตัว ที่ระเบียงกว้างๆ' },
-  { img: galleryBalcony, text: 'ที่นั่งดูทีวีได้แบบฟินๆ เพราะพื้นที่ระหว่างทีวีเยอะ' },
-  { img: galleryGarden, text: 'ตอนได้ทักทายเพื่อนบ้านตัวจิ๋ว' },
-  { img: galleryPet, text: 'อยู่ท่ามกลางบรรยากาศสีเขียว ที่สวนส่วนกลาง' },
-  { img: galleryJogging, text: 'วิ่งดูวิวเมืองได้ทุกเย็น ที่ Sky Jogging Track' },
-  { img: galleryLocation, text: 'ที่ไปไหนมาไหนสะดวก เพราะอยู่ใกล้ทางด่วน ติดรถไฟฟ้า' },
-  { img: gallerySkyview, text: 'มองวิวท้องฟ้าทุกวันได้ไม่ซ้ำ' },
+  { imgPc: galleryLivingroom, imgMobile: galleryLivingroom, text: 'กับสวนส่วนตัว ที่ระเบียงกว้างๆ' },
+  { imgPc: galleryBalcony, imgMobile: galleryBalcony, text: 'ที่นั่งดูทีวีได้แบบฟินๆ เพราะพื้นที่ระหว่างทีวีเยอะ' },
+  { imgPc: galleryGarden, imgMobile: galleryGarden, text: 'ตอนได้ทักทายเพื่อนบ้านตัวจิ๋ว' },
+  { imgPc: galleryPet, imgMobile: galleryPet, text: 'อยู่ท่ามกลางบรรยากาศสีเขียว ที่สวนส่วนกลาง' },
+  { imgPc: galleryJogging, imgMobile: galleryJogging, text: 'วิ่งดูวิวเมืองได้ทุกเย็น ที่ Sky Jogging Track' },
+  { imgPc: galleryLocation, imgMobile: galleryLocation, text: 'ที่ไปไหนมาไหนสะดวก เพราะอยู่ใกล้ทางด่วน ติดรถไฟฟ้า' },
+  { imgPc: gallerySkyview, imgMobile: gallerySkyview, text: 'มองวิวท้องฟ้าทุกวันได้ไม่ซ้ำ' },
 ];
 
 const GallerySlide = ({
-  img,
+  imgPc,
+  imgMobile,
   text,
   index,
   isActive,
   total,
 }: {
-  img: string;
+  imgPc: string;
+  imgMobile: string;
   text: string;
   index: number;
   isActive: boolean;
@@ -42,12 +46,19 @@ const GallerySlide = ({
   const isEven = index % 2 === 0;
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* Image with slow Ken Burns zoom */}
+      {/* Mobile image */}
       <div
-        className={`absolute inset-0 bg-cover bg-center transition-transform duration-[8000ms] ease-out ${
+        className={`absolute inset-0 bg-cover bg-center transition-transform duration-[8000ms] ease-out md:hidden ${
           isActive ? 'scale-110' : 'scale-100'
         }`}
-        style={{ backgroundImage: `url(${img})` }}
+        style={{ backgroundImage: `url(${imgMobile})` }}
+      />
+      {/* Desktop image */}
+      <div
+        className={`absolute inset-0 bg-cover bg-center transition-transform duration-[8000ms] ease-out hidden md:block ${
+          isActive ? 'scale-110' : 'scale-100'
+        }`}
+        style={{ backgroundImage: `url(${imgPc})` }}
       />
 
       {/* Cinematic gradient overlays */}
@@ -163,7 +174,8 @@ const GallerySection = () => {
             {galleryItems.map((item, i) => (
               <CarouselItem key={i} className="pl-0 basis-full">
                 <GallerySlide
-                  img={item.img}
+                  imgPc={item.imgPc}
+                  imgMobile={item.imgMobile}
                   text={item.text}
                   index={i}
                   isActive={current === i}
