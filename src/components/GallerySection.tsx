@@ -84,12 +84,13 @@ const GallerySlide = ({
 
       {/* Content */}
       <div
-        className={`relative z-10 w-full h-full max-w-6xl mx-auto px-6 md:px-12 flex items-center ${
+        className={`relative z-10 w-full h-full max-w-6xl mx-auto px-6 md:px-12 flex items-end md:items-center ${
           isEven ? 'justify-start' : 'justify-end'
         }`}
       >
+        {/* Mobile: positioned at lower half with padding above progress bar; Desktop: centered */}
         <div
-          className={`max-w-xl transition-all duration-1000 ease-out ${
+          className={`max-w-xl transition-all duration-1000 ease-out mb-[25%] md:mb-0 md:pb-0 ${
             isActive
               ? 'opacity-100 translate-y-0 blur-0'
               : 'opacity-0 translate-y-12 blur-sm'
