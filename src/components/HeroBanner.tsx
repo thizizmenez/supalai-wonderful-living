@@ -33,7 +33,7 @@ const HeroBanner = () => {
             ได้ทุกวัน
           </p>
           <p className="font-body text-base text-white/90 sm:text-xl md:text-2xl" style={{ textShadow: '0 2px 8px hsl(220 20% 8% / 0.6)' }}>
-            ที่ <span className={`font-display tracking-[0.08em] md:tracking-wider ${loaded ? 'gold-shimmer-on-image' : 'gold-text'}`} style={{ fontFamily: "'Prompt', sans-serif", fontStyle: 'normal' }}>คอนโด SUPALAI</span>
+            ที่ <span className="gold-shimmer-on-supalai tracking-[0.08em] md:tracking-wider">คอนโด SUPALAI</span>
           </p>
         </div>
         <div className={`transition-all duration-[2s] delay-1000 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
