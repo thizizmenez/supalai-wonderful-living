@@ -69,14 +69,14 @@ const GallerySlide = ({
         style={{ backgroundImage: `url(${imgPc})` }}
       />
 
-      {/* Cinematic gradient overlays - darker for white text legibility */}
-      <div className="absolute inset-0 bg-black/30" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
+      {/* Cinematic gradient overlays - lighter to keep images brighter */}
+      <div className="absolute inset-0 bg-black/18" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/42" />
       <div
         className={`absolute inset-0 ${
           isEven
-            ? 'bg-gradient-to-r from-black/55 via-transparent to-transparent'
-            : 'bg-gradient-to-l from-black/55 via-transparent to-transparent'
+            ? 'bg-gradient-to-r from-black/36 via-transparent to-transparent'
+            : 'bg-gradient-to-l from-black/36 via-transparent to-transparent'
         }`}
       />
 
