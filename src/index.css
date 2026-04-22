@@ -259,3 +259,21 @@ html {
   position: relative;
   z-index: 1;
 }
+
+/* Starlight ambient glow — soft warm/cool light blending with dark BG */
+.starlight-bg {
+  position: relative;
+}
+.starlight-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 20% 15%, hsl(45 80% 70% / 0.10) 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 85%, hsl(220 70% 75% / 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, hsl(40 60% 50% / 0.05) 0%, transparent 60%);
+  animation: sky-drift 14s ease-in-out infinite;
+}
+
