@@ -168,8 +168,8 @@ const ProjectListing = () => {
                       />
                     </picture>
 
-                    {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
+                    {/* Gradient overlay - dark fade for white text legibility */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-90 group-hover:opacity-75 transition-opacity duration-500" />
 
                     {/* Status badge */}
                     <div className="absolute top-3 left-3 z-10">
