@@ -32,7 +32,7 @@ const BrandSection = () => {
   const { ref: gridRef, visible: gridVisible } = useScrollReveal(0.1);
 
   return (
-    <section className="py-24 px-6 bg-secondary bg-pattern relative overflow-hidden">
+    <section className="py-24 px-6 bg-secondary bg-pattern starlight-bg relative overflow-hidden">
       <SkyEffects starCount={60} showGlow={false} fullArea />
       <div className="relative z-10 max-w-6xl mx-auto">
         <div ref={titleRef} className={`reveal ${titleVisible ? 'visible' : ''} text-center mb-16`}>

@@ -80,7 +80,7 @@ const ProjectListing = () => {
   const readyCount = currentProjects.length - newCount;
 
   return (
-    <section className="py-24 px-6 bg-background relative overflow-hidden">
+    <section className="py-24 px-6 bg-background starlight-bg relative overflow-hidden">
       {/* Decorative background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-[400px] bg-gold/5 blur-[120px] pointer-events-none" />
       <SkyEffects starCount={80} showGlow={false} fullArea />
