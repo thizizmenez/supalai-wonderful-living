@@ -28,10 +28,10 @@ const galleryItems = [
   { imgPc: galleryLivingroom, imgMobile: galleryLivingroomMobile, mobilePosition: 'center 42%', text: 'กับสวนส่วนตัว ที่ระเบียงกว้างๆ' },
   { imgPc: galleryBalcony, imgMobile: galleryBalconyMobile, mobilePosition: 'center 38%', text: 'ที่นั่งดูทีวีได้แบบฟินๆ เพราะพื้นที่ระหว่างทีวีเยอะ' },
   { imgPc: galleryGarden, imgMobile: galleryGardenMobile, mobilePosition: 'center 36%', text: 'ตอนได้ทักทายเพื่อนบ้านตัวจิ๋ว' },
-  { imgPc: galleryPet, imgMobile: galleryPetMobile, mobilePosition: 'center 34%', text: 'อยู่ท่ามกลางบรรยากาศสีเขียว ที่สวนส่วนกลาง' },
+  { imgPc: galleryPet, imgMobile: galleryPetMobile, mobilePosition: 'center 18%', text: 'อยู่ท่ามกลางบรรยากาศสีเขียว ที่สวนส่วนกลาง' },
   { imgPc: galleryJogging, imgMobile: galleryJoggingMobile, mobilePosition: 'center 34%', text: 'วิ่งดูวิวเมืองได้ทุกเย็น ที่ Sky Jogging Track' },
   { imgPc: galleryLocation, imgMobile: galleryLocationMobile, mobilePosition: 'center 36%', text: 'ที่ไปไหนมาไหนสะดวก เพราะอยู่ใกล้ทางด่วน ติดรถไฟฟ้า' },
-  { imgPc: gallerySkyview, imgMobile: gallerySkyviewMobile, mobilePosition: 'center 40%', text: 'มองวิวท้องฟ้าทุกวันได้ไม่ซ้ำ' },
+  { imgPc: gallerySkyview, imgMobile: gallerySkyviewMobile, mobilePosition: 'center 15%', text: 'มองวิวท้องฟ้าทุกวันได้ไม่ซ้ำ' },
 ];
 
 const GallerySlide = ({
