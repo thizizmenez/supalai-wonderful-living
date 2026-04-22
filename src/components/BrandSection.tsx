@@ -1,4 +1,5 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import SkyEffects from './SkyEffects';
 
 const UTM = '/?utm_source=website&utm_medium=landingpage&utm_campaign=supalaiwonderful';
 
@@ -31,8 +32,9 @@ const BrandSection = () => {
   const { ref: gridRef, visible: gridVisible } = useScrollReveal(0.1);
 
   return (
-    <section className="py-24 px-6 bg-secondary bg-pattern">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-24 px-6 bg-secondary bg-pattern relative overflow-hidden">
+      <SkyEffects starCount={60} showGlow={false} fullArea />
+      <div className="relative z-10 max-w-6xl mx-auto">
         <div ref={titleRef} className={`reveal ${titleVisible ? 'visible' : ''} text-center mb-16`}>
           <p className="font-body text-lg text-muted-foreground mb-4 tracking-widest uppercase">
             The Brand of
