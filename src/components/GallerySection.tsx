@@ -22,6 +22,7 @@ import galleryGardenMobile from '@/assets/gallery-garden-mobile.jpg';
 import galleryJoggingMobile from '@/assets/gallery-jogging-mobile.jpg';
 import galleryLocationMobile from '@/assets/gallery-location-mobile.jpg';
 import gallerySkyviewMobile from '@/assets/gallery-skyview-mobile.jpg';
+import SkyEffects from './SkyEffects';
 
 const galleryItems = [
   { imgPc: galleryLivingroom, imgMobile: galleryLivingroomMobile, text: 'กับสวนส่วนตัว ที่ระเบียงกว้างๆ' },
@@ -65,6 +66,9 @@ const GallerySlide = ({
         }`}
         style={{ backgroundImage: `url(${imgPc})` }}
       />
+
+      {/* Twinkling stars + sky glow */}
+      <SkyEffects starCount={70} />
 
       {/* Cinematic gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/60" />
