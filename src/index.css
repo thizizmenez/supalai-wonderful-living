@@ -194,20 +194,45 @@
   text-shadow: 0 2px 10px hsl(220 20% 8% / 0.55);
 }
 
+/* Shimmer variant for "คอนโด SUPALAI" — same look as gold-shimmer-on-image but uses Prompt font */
+.gold-shimmer-on-supalai {
+  color: hsl(32 65% 65%);
+  background: linear-gradient(
+    90deg,
+    hsl(32 55% 50%) 0%,
+    hsl(35 70% 72%) 25%,
+    hsl(38 80% 85%) 50%,
+    hsl(35 70% 72%) 75%,
+    hsl(32 55% 50%) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+  display: inline-block;
+  font-family: 'Prompt', sans-serif;
+  font-style: normal;
+  line-height: 0.95;
+  text-shadow: 0 2px 10px hsl(220 20% 8% / 0.55);
+}
+
 @media (max-width: 767px) {
   .gold-text,
   .gold-text-bright,
   .gold-text-on-image,
   .gold-shimmer,
-  .gold-shimmer-on-image {
+  .gold-shimmer-on-image,
+  .gold-shimmer-on-supalai {
     background-size: 100% auto;
   }
   .gold-text,
   .gold-text-on-image,
-  .gold-shimmer-on-image {
+  .gold-shimmer-on-image,
+  .gold-shimmer-on-supalai {
     text-shadow: 0 2px 12px hsl(220 20% 8% / 0.6);
   }
-}  
+}
 
 /* Floating animation */
 @keyframes float {
