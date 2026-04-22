@@ -11,11 +11,11 @@ const HeroBanner = () => {
   }, []);
 
   return (
-    <section className="h-screen relative flex items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-screen h-[100svh] items-center justify-center overflow-hidden">
       {/* Mobile background */}
       <div
         className="absolute inset-0 bg-cover bg-center md:hidden"
-        style={{ backgroundImage: `url(${heroBannerMobile})` }}
+        style={{ backgroundImage: `url(${heroBannerMobile})`, backgroundPosition: 'center center' }}
       />
       {/* Desktop background */}
       <div
@@ -23,17 +23,21 @@ const HeroBanner = () => {
         style={{ backgroundImage: `url(${heroBanner})` }}
       />
       <div className="absolute inset-0 bg-black/15" />
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto space-y-10">
-        <div className={`transition-all duration-[1.5s] ease-out ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} space-y-6`}>
-          <p className="font-display text-3xl md:text-5xl text-foreground leading-tight">
-            ชีวิตจริงที่ <span className="gold-text-bright text-5xl md:text-7xl">Wonderful</span> ได้ทุกวัน
+      <div className="relative z-10 mx-auto max-w-[20rem] space-y-8 px-5 text-center md:max-w-4xl md:space-y-10 md:px-6">
+        <div className={`transition-all duration-[1.5s] ease-out ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} space-y-4 md:space-y-6`}>
+          <p className="font-display text-[2rem] leading-tight text-foreground sm:text-4xl md:text-5xl">
+            ชีวิตจริงที่{' '}
+            <span className="gold-text-bright mt-2 block text-[3.75rem] leading-[0.9] sm:text-6xl md:mt-0 md:inline-block md:text-7xl">
+              Wonderful
+            </span>{' '}
+            ได้ทุกวัน
           </p>
-          <p className="font-body text-xl md:text-2xl text-foreground/70">
-            ที่ <span className={`font-display tracking-wider ${loaded ? 'gold-shimmer' : 'gold-text'}`} style={{ fontFamily: "'Prompt', sans-serif", fontStyle: 'normal' }}>คอนโด SUPALAI</span>
+          <p className="font-body text-base text-foreground/80 sm:text-xl md:text-2xl">
+            ที่ <span className={`font-display tracking-[0.08em] md:tracking-wider ${loaded ? 'gold-shimmer' : 'gold-text'}`} style={{ fontFamily: "'Prompt', sans-serif", fontStyle: 'normal' }}>คอนโด SUPALAI</span>
           </p>
         </div>
         <div className={`transition-all duration-[2s] delay-1000 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
-          <div className="w-px h-16 bg-gold/50 mx-auto animate-pulse" />
+          <div className="mx-auto h-16 w-px animate-pulse bg-gold/50" />
         </div>
       </div>
     </section>

@@ -25,18 +25,19 @@ import gallerySkyviewMobile from '@/assets/gallery-skyview-mobile.jpg';
 
 
 const galleryItems = [
-  { imgPc: galleryLivingroom, imgMobile: galleryLivingroomMobile, text: 'กับสวนส่วนตัว ที่ระเบียงกว้างๆ' },
-  { imgPc: galleryBalcony, imgMobile: galleryBalconyMobile, text: 'ที่นั่งดูทีวีได้แบบฟินๆ เพราะพื้นที่ระหว่างทีวีเยอะ' },
-  { imgPc: galleryGarden, imgMobile: galleryGardenMobile, text: 'ตอนได้ทักทายเพื่อนบ้านตัวจิ๋ว' },
-  { imgPc: galleryPet, imgMobile: galleryPetMobile, text: 'อยู่ท่ามกลางบรรยากาศสีเขียว ที่สวนส่วนกลาง' },
-  { imgPc: galleryJogging, imgMobile: galleryJoggingMobile, text: 'วิ่งดูวิวเมืองได้ทุกเย็น ที่ Sky Jogging Track' },
-  { imgPc: galleryLocation, imgMobile: galleryLocationMobile, text: 'ที่ไปไหนมาไหนสะดวก เพราะอยู่ใกล้ทางด่วน ติดรถไฟฟ้า' },
-  { imgPc: gallerySkyview, imgMobile: gallerySkyviewMobile, text: 'มองวิวท้องฟ้าทุกวันได้ไม่ซ้ำ' },
+  { imgPc: galleryLivingroom, imgMobile: galleryLivingroomMobile, mobilePosition: 'center 42%', text: 'กับสวนส่วนตัว ที่ระเบียงกว้างๆ' },
+  { imgPc: galleryBalcony, imgMobile: galleryBalconyMobile, mobilePosition: 'center 38%', text: 'ที่นั่งดูทีวีได้แบบฟินๆ เพราะพื้นที่ระหว่างทีวีเยอะ' },
+  { imgPc: galleryGarden, imgMobile: galleryGardenMobile, mobilePosition: 'center 36%', text: 'ตอนได้ทักทายเพื่อนบ้านตัวจิ๋ว' },
+  { imgPc: galleryPet, imgMobile: galleryPetMobile, mobilePosition: 'center 34%', text: 'อยู่ท่ามกลางบรรยากาศสีเขียว ที่สวนส่วนกลาง' },
+  { imgPc: galleryJogging, imgMobile: galleryJoggingMobile, mobilePosition: 'center 34%', text: 'วิ่งดูวิวเมืองได้ทุกเย็น ที่ Sky Jogging Track' },
+  { imgPc: galleryLocation, imgMobile: galleryLocationMobile, mobilePosition: 'center 36%', text: 'ที่ไปไหนมาไหนสะดวก เพราะอยู่ใกล้ทางด่วน ติดรถไฟฟ้า' },
+  { imgPc: gallerySkyview, imgMobile: gallerySkyviewMobile, mobilePosition: 'center 40%', text: 'มองวิวท้องฟ้าทุกวันได้ไม่ซ้ำ' },
 ];
 
 const GallerySlide = ({
   imgPc,
   imgMobile,
+  mobilePosition,
   text,
   index,
   isActive,
@@ -44,6 +45,7 @@ const GallerySlide = ({
 }: {
   imgPc: string;
   imgMobile: string;
+  mobilePosition: string;
   text: string;
   index: number;
   isActive: boolean;
@@ -51,13 +53,13 @@ const GallerySlide = ({
 }) => {
   const isEven = index % 2 === 0;
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative h-[100svh] w-full overflow-hidden">
       {/* Mobile image */}
       <div
-        className={`absolute inset-0 bg-cover bg-center transition-transform duration-[8000ms] ease-out md:hidden ${
+        className={`absolute inset-0 bg-cover transition-transform duration-[8000ms] ease-out md:hidden ${
           isActive ? 'scale-110' : 'scale-100'
         }`}
-        style={{ backgroundImage: `url(${imgMobile})` }}
+        style={{ backgroundImage: `url(${imgMobile})`, backgroundPosition: mobilePosition }}
       />
       {/* Desktop image */}
       <div
@@ -66,7 +68,6 @@ const GallerySlide = ({
         }`}
         style={{ backgroundImage: `url(${imgPc})` }}
       />
-
 
       {/* Cinematic gradient overlays */}
       <div className="absolute inset-0 bg-black/10" />
@@ -80,56 +81,54 @@ const GallerySlide = ({
       />
 
       {/* Slide counter */}
-      <div className="absolute top-6 md:top-10 right-6 md:right-12 z-20 flex items-center gap-3 text-foreground/70">
-        <span className="font-display text-2xl md:text-4xl gold-text-bright">
+      <div className="absolute right-5 top-5 z-20 flex items-center gap-2.5 text-foreground/80 md:right-12 md:top-10 md:gap-3">
+        <span className="font-display text-xl gold-text-bright md:text-4xl">
           {String(index + 1).padStart(2, '0')}
         </span>
-        <div className="h-px w-10 md:w-16 bg-gold/50" />
-        <span className="font-body text-xs md:text-sm tracking-widest">
+        <div className="h-px w-8 bg-gold/50 md:w-16" />
+        <span className="font-body text-[10px] tracking-[0.24em] md:text-sm md:tracking-widest">
           {String(total).padStart(2, '0')}
         </span>
       </div>
 
       {/* Content */}
       <div
-        className={`relative z-10 w-full h-full max-w-6xl mx-auto px-6 md:px-12 flex items-end md:items-center ${
-          isEven ? 'justify-start' : 'justify-end'
+        className={`relative z-10 mx-auto flex h-full w-full max-w-6xl items-end px-5 md:items-center md:px-12 ${
+          isEven ? 'justify-start md:justify-start' : 'justify-start md:justify-end'
         }`}
       >
-        {/* Mobile: positioned at lower half with padding above progress bar; Desktop: centered */}
         <div
-          className={`max-w-xl transition-all duration-1000 ease-out mb-[30%] md:mb-0 md:pb-0 ${
+          className={`mb-24 max-w-[18rem] text-left transition-all duration-1000 ease-out sm:mb-[28%] sm:max-w-sm md:mb-0 md:max-w-xl md:pb-0 ${
             isActive
               ? 'opacity-100 translate-y-0 blur-0'
               : 'opacity-0 translate-y-12 blur-sm'
           }`}
         >
-          {/* Decorative line */}
           <div
-            className={`flex items-center gap-3 mb-6 transition-all duration-1000 delay-200 ${
+            className={`mb-4 flex items-center gap-3 transition-all duration-1000 delay-200 md:mb-6 ${
               isActive ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <div className="h-px w-16 md:w-24 bg-gradient-to-r from-gold to-transparent" />
-            <span className="font-body text-xs tracking-[0.3em] uppercase text-gold-light">
+            <div className="h-px w-12 bg-gradient-to-r from-gold to-transparent md:w-24" />
+            <span className="font-body text-[10px] uppercase tracking-[0.24em] text-gold-light md:text-xs md:tracking-[0.3em]">
               Moment {String(index + 1).padStart(2, '0')}
             </span>
           </div>
 
           <p
-            className={`mb-4 transition-all duration-1000 delay-300 ${
+            className={`mb-3 transition-all duration-1000 delay-300 md:mb-4 ${
               isActive ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
             } ${isActive ? 'animate-float' : ''}`}
             style={{ fontFamily: "'Prompt', sans-serif" }}
           >
-            <span className="gold-shimmer text-6xl md:text-8xl">Wonderful</span>
+            <span className="gold-shimmer text-[3.5rem] leading-[0.88] sm:text-6xl md:text-8xl">Wonderful</span>
           </p>
           <p
-            className={`text-lg md:text-2xl text-foreground leading-relaxed font-light transition-all duration-1000 delay-500 ${
+            className={`font-light text-base leading-snug text-foreground transition-all duration-1000 delay-500 sm:text-lg md:text-2xl md:leading-relaxed ${
               isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
             style={{
-              textShadow: '0 2px 8px rgba(0,0,0,0.6)',
+              textShadow: '0 2px 8px hsl(220 20% 8% / 0.6)',
               fontFamily: "'Prompt', sans-serif",
             }}
           >
@@ -185,6 +184,7 @@ const GallerySection = () => {
                 <GallerySlide
                   imgPc={item.imgPc}
                   imgMobile={item.imgMobile}
+                  mobilePosition={item.mobilePosition}
                   text={item.text}
                   index={i}
                   isActive={current === i}
@@ -193,13 +193,13 @@ const GallerySection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-4 md:left-8 h-12 w-12 md:h-14 md:w-14 bg-background/30 backdrop-blur-md border-gold/40 text-gold hover:bg-background/60 hover:text-gold-light hover:scale-110 transition-all" />
-          <CarouselNext className="right-4 md:right-8 h-12 w-12 md:h-14 md:w-14 bg-background/30 backdrop-blur-md border-gold/40 text-gold hover:bg-background/60 hover:text-gold-light hover:scale-110 transition-all" />
+          <CarouselPrevious className="left-4 h-12 w-12 border-gold/40 bg-background/30 text-gold backdrop-blur-md transition-all hover:scale-110 hover:bg-background/60 hover:text-gold-light md:left-8 md:h-14 md:w-14" />
+          <CarouselNext className="right-4 h-12 w-12 border-gold/40 bg-background/30 text-gold backdrop-blur-md transition-all hover:scale-110 hover:bg-background/60 hover:text-gold-light md:right-8 md:h-14 md:w-14" />
         </Carousel>
 
         {/* Progress + Dots */}
-        <div className="absolute bottom-8 left-0 right-0 z-20 flex flex-col items-center gap-4 px-6">
-          <div className="w-full max-w-md h-px bg-foreground/20 overflow-hidden">
+        <div className="absolute bottom-6 left-0 right-0 z-20 flex flex-col items-center gap-4 px-5 md:bottom-8 md:px-6">
+          <div className="h-px w-full max-w-md overflow-hidden bg-foreground/20">
             <div
               className="h-full bg-gradient-to-r from-gold to-gold-light transition-all duration-100 ease-linear"
               style={{ width: `${progress}%` }}
