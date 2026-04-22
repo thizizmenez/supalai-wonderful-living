@@ -199,9 +199,9 @@ const GallerySection = () => {
 
         {/* Progress + Dots */}
         <div className="absolute bottom-6 left-0 right-0 z-20 flex flex-col items-center gap-4 px-5 md:bottom-8 md:px-6">
-          <div className="h-px w-full max-w-md overflow-hidden bg-foreground/20">
+          <div className="h-px w-full max-w-md overflow-hidden bg-white/30">
             <div
-              className="h-full bg-gradient-to-r from-gold to-gold-light transition-all duration-100 ease-linear"
+              className="h-full bg-gradient-to-r from-gold-light to-white transition-all duration-100 ease-linear"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -213,8 +213,8 @@ const GallerySection = () => {
                 aria-label={`Go to slide ${i + 1}`}
                 className={`h-1.5 rounded-full transition-all duration-500 ${
                   current === i
-                    ? 'w-10 bg-gold'
-                    : 'w-1.5 bg-foreground/40 hover:bg-foreground/70'
+                    ? 'w-10 bg-gold-light'
+                    : 'w-1.5 bg-white/50 hover:bg-white/80'
                 }`}
               />
             ))}
