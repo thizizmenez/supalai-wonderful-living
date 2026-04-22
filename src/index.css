@@ -263,27 +263,27 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(220 20% 6%);
+  background: hsl(40 20% 94%);
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(40 60% 50% / 0.4);
+  background: hsl(40 65% 45% / 0.4);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(40 60% 50% / 0.6);
+  background: hsl(40 65% 45% / 0.6);
 }
 
-/* Twinkling stars */
+/* Twinkling stars - softened for light theme (warm gold sparkle) */
 @keyframes twinkle {
-  0%, 100% { opacity: 0.2; transform: scale(0.8); }
-  50% { opacity: 1; transform: scale(1.2); }
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50% { opacity: 0.55; transform: scale(1.2); }
 }
 
 .star {
   position: absolute;
-  background: white;
+  background: hsl(40 70% 55%);
   border-radius: 50%;
-  box-shadow: 0 0 6px rgba(255, 240, 200, 0.9), 0 0 12px rgba(255, 220, 150, 0.5);
+  box-shadow: 0 0 6px hsl(40 80% 60% / 0.5), 0 0 12px hsl(40 70% 50% / 0.25);
   animation: twinkle ease-in-out infinite;
   pointer-events: none;
 }
@@ -299,7 +299,7 @@ html {
   pointer-events: none;
 }
 
-/* Subtle pattern overlay for dark backgrounds */
+/* Subtle pattern overlay for light backgrounds */
 .bg-pattern {
   position: relative;
 }
@@ -307,11 +307,11 @@ html {
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.03;
+  opacity: 0.04;
   pointer-events: none;
   background-image:
-    radial-gradient(circle at 25% 25%, white 1px, transparent 1px),
-    radial-gradient(circle at 75% 75%, white 1px, transparent 1px);
+    radial-gradient(circle at 25% 25%, hsl(220 25% 15%) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, hsl(220 25% 15%) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: 0;
 }
@@ -320,7 +320,7 @@ html {
   z-index: 1;
 }
 
-/* Starlight ambient glow — soft warm/cool light blending with dark BG */
+/* Starlight ambient glow — soft warm tint for light theme */
 .starlight-bg {
   position: relative;
 }
@@ -331,9 +331,9 @@ html {
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(ellipse at 25% 20%, hsl(45 60% 75% / 0.06) 0%, transparent 55%),
-    radial-gradient(ellipse at 75% 80%, hsl(220 50% 80% / 0.05) 0%, transparent 60%),
-    radial-gradient(circle at 50% 50%, hsl(40 40% 65% / 0.04) 0%, transparent 70%);
+    radial-gradient(ellipse at 25% 20%, hsl(40 70% 60% / 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 80%, hsl(40 60% 55% / 0.06) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, hsl(40 50% 50% / 0.04) 0%, transparent 70%);
   animation: sky-drift 16s ease-in-out infinite;
 }
 
