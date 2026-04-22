@@ -42,12 +42,12 @@ const AboutSection = () => {
       </section>
 
       {/* Parallax image divider */}
-      <section className="h-[70vh] relative bg-background overflow-hidden">
-        <div
-          className="absolute inset-0 md:inset-x-[15%] bg-fixed bg-cover bg-center"
-          style={{ backgroundImage: `url(${aboutDivider})` }}
-        />
-        <div className="absolute inset-0 md:inset-x-[15%] bg-black/20" />
+      <section
+        className="h-[70vh] relative bg-fixed bg-cover bg-center overflow-hidden"
+        style={{ backgroundImage: `url(${aboutDivider})` }}
+      >
+        
+        <div className="absolute inset-0 bg-black/20" />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div ref={r3} className={`reveal ${v3 ? 'visible' : ''} text-center px-6`}>
             <p className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight">
