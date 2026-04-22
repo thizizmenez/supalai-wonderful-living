@@ -21,7 +21,7 @@ const AboutSection = () => {
     <>
       {/* Part 1: Headline + tagline */}
       <section className="min-h-screen flex items-center justify-center bg-background starlight-bg py-0 px-6 relative overflow-hidden">
-        <SkyEffects starCount={120} showGlow={false} fullArea brightness={1.15} maxSize={3.5} minSize={1} glowIntensity={1.2} />
+        <SkyEffects starCount={70} showGlow={false} fullArea brightness={0.85} maxSize={2.4} minSize={0.7} glowIntensity={0.7} />
         <div className="relative z-10 max-w-4xl mx-auto text-center space-y-12">
           <div ref={r1} className={`reveal ${v1 ? 'visible' : ''}`}>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight mb-4">
@@ -46,7 +46,7 @@ const AboutSection = () => {
         className="h-[70vh] relative bg-fixed bg-cover bg-center overflow-hidden"
         style={{ backgroundImage: `url(${aboutDivider})` }}
       >
-        <SkyEffects starCount={50} showGlow={false} fullArea />
+        
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div ref={r3} className={`reveal ${v3 ? 'visible' : ''} text-center px-6`}>
@@ -62,7 +62,7 @@ const AboutSection = () => {
 
       {/* Part 2: Description - redesigned */}
       <section className="min-h-[80vh] flex items-center justify-center bg-background starlight-bg pt-24 pb-0 md:pb-24 px-6 relative overflow-hidden">
-        <SkyEffects starCount={200} showGlow={false} fullArea brightness={1} maxSize={2.4} minSize={0.6} glowIntensity={0.8} />
+        <SkyEffects starCount={100} showGlow={false} fullArea brightness={0.8} maxSize={2} minSize={0.5} glowIntensity={0.6} />
         <div className="relative z-10 max-w-5xl mx-auto space-y-16">
           {/* Header */}
           <div ref={r4} className={`reveal ${v4 ? 'visible' : ''} text-center`}>
