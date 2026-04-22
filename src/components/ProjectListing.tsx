@@ -150,11 +150,11 @@ const ProjectListing = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`stagger-item ${gridVisible ? 'visible' : ''} group relative block w-full overflow-hidden rounded-xl border border-border/60 bg-card hover:border-gold/60 hover:shadow-2xl hover:shadow-gold/10 hover:-translate-y-1 transition-all duration-500`}
+                  className={`stagger-item ${gridVisible ? 'visible' : ''} group relative block w-full overflow-hidden rounded-2xl border border-border/60 bg-card hover:border-gold/60 hover:shadow-2xl hover:shadow-gold/10 hover:-translate-y-1 transition-all duration-500`}
                   style={{ animationDelay: `${i * 80}ms` }}
                 >
                   {/* Image */}
-                  <div className="relative w-full aspect-video bg-surface-elevated overflow-hidden">
+                  <div className="relative w-full aspect-[16/10] bg-surface-elevated overflow-hidden">
                     <picture>
                       <source
                         media="(max-width: 767px)"
@@ -168,51 +168,33 @@ const ProjectListing = () => {
                       />
                     </picture>
 
-                    {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-500" />
-
-                    {/* Status badge */}
+                    {/* Status badge - pill */}
                     <div className="absolute top-3 left-3 z-10">
                       <span
-                        className={`flex items-center gap-1.5 px-3 py-1 text-[11px] font-body font-semibold rounded-full backdrop-blur-md shadow-lg border ${
+                        className={`flex items-center gap-1.5 px-3 py-1 text-[11px] font-body font-semibold rounded-full backdrop-blur-md shadow-lg ${
                           isNew
-                            ? 'bg-red-600/90 text-white border-red-400/50'
-                            : 'bg-emerald-600/90 text-white border-emerald-400/50'
+                            ? 'bg-black/60 text-white'
+                            : 'bg-black/60 text-white'
                         }`}
                       >
-                        <span className={`w-1.5 h-1.5 rounded-full bg-white ${isNew ? 'animate-pulse' : ''}`} />
+                        <span className={`w-1.5 h-1.5 rounded-full ${isNew ? 'bg-red-500 animate-pulse' : 'bg-emerald-400'}`} />
                         {isNew ? 'โครงการใหม่' : 'พร้อมอยู่'}
                       </span>
                     </div>
 
                     {/* Hover overlay with view button */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                       <div className="px-5 py-2 rounded-full bg-gold/90 text-primary-foreground text-xs font-body font-semibold tracking-wider uppercase backdrop-blur-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-xl">
                         ดูโครงการ
                       </div>
                     </div>
 
-                    {/* Title overlaid on image bottom */}
-                    <div className="absolute bottom-3 left-3 right-3 z-10">
-                      <div className="rounded-lg bg-black/60 backdrop-blur-sm px-4 py-2.5">
-                        <h3 className="font-display text-base md:text-lg text-white leading-tight transition-colors duration-300 group-hover:text-gold-light">
-                          {project.name}
-                        </h3>
-                      </div>
+                    {/* Title - full-bleed bar at bottom */}
+                    <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/60 backdrop-blur-sm px-4 py-3">
+                      <h3 className="font-display text-base md:text-lg text-white leading-tight transition-colors duration-300 group-hover:text-gold-light">
+                        {project.name}
+                      </h3>
                     </div>
-                  </div>
-
-                  {/* Card footer */}
-                  <div className="px-4 py-3 flex items-center justify-between border-t border-border/40">
-                    <span className="text-[11px] text-muted-foreground tracking-widest uppercase">
-                      {activeTab}
-                    </span>
-                    <span className="text-xs text-gold-light flex items-center gap-1 group-hover:gap-2 transition-all">
-                      ดูรายละเอียด
-                      <svg className="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </span>
                   </div>
                 </a>
               );
