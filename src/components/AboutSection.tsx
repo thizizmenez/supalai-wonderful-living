@@ -51,7 +51,7 @@ const AboutSection = () => {
         <div className="relative z-10 h-full flex items-center justify-center">
           <div ref={r3} className={`reveal ${v3 ? 'visible' : ''} text-center px-6`}>
             <p className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight">
-              <span className="gold-text italic">Wonderful</span>
+              <span className="gold-shimmer-on-image italic">Wonderful</span>
             </p>
             <p className="font-body text-lg md:text-xl text-white/90 mt-4" style={{ textShadow: '0 2px 8px hsl(220 20% 8% / 0.6)' }}>
               ในทุกช่วงเวลาของชีวิต
