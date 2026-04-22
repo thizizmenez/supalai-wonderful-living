@@ -161,7 +161,6 @@ const VideoSection = () => {
                     </div>
                   </div>
                 </div>
-                </div>
 
                 {/* Caption */}
                 <div className="mt-3 hidden md:block">
