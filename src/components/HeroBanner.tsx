@@ -11,18 +11,21 @@ const HeroBanner = () => {
   }, []);
 
   return (
-    <section className="h-screen relative flex items-center justify-center overflow-hidden">
-      {/* Mobile background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center md:hidden"
-        style={{ backgroundImage: `url(${heroBannerMobile})` }}
-      />
-      {/* Desktop background */}
-      <div
-        className="absolute inset-0 bg-fixed bg-cover bg-center hidden md:block"
-        style={{ backgroundImage: `url(${heroBanner})` }}
-      />
-      <div className="absolute inset-0 bg-black/10" />
+    <section className="h-screen relative flex items-center justify-center overflow-hidden bg-background">
+      {/* Image container — 70% width on desktop, full width on mobile */}
+      <div className="absolute inset-0 md:inset-x-[15%] overflow-hidden">
+        {/* Mobile background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center md:hidden"
+          style={{ backgroundImage: `url(${heroBannerMobile})` }}
+        />
+        {/* Desktop background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center hidden md:block"
+          style={{ backgroundImage: `url(${heroBanner})` }}
+        />
+        <div className="absolute inset-0 bg-black/10" />
+      </div>
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto space-y-10">
         <div className={`transition-all duration-[1.5s] ease-out ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} space-y-6`}>
           <p className="font-display text-3xl md:text-5xl text-foreground leading-tight">
