@@ -22,7 +22,7 @@ const VideoSection = () => {
   const active = videos[activeIndex];
 
   return (
-    <section className="flex flex-col items-center justify-center pt-[60px] pb-16 md:py-20 relative overflow-hidden">
+    <section className="flex flex-col items-center justify-center bg-background pt-[60px] pb-16 md:py-20 relative overflow-hidden">
       {/* Subtle background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[60%] bg-gold/5 blur-[120px] pointer-events-none" />
 

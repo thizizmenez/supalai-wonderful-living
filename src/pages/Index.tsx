@@ -8,7 +8,7 @@ import ClosingSection from '@/components/ClosingSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative">
+    <div className="bg-background min-h-screen">
       <HeroBanner />
       <AboutSection />
       <VideoSection />
