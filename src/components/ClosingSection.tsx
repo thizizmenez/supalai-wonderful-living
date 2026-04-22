@@ -1,6 +1,7 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import gallerySkyview from '@/assets/gallery-skyview.jpg';
 import gallerySkyviewMobile from '@/assets/gallery-skyview-mobile.jpg';
+import SkyEffects from './SkyEffects';
 
 const ClosingSection = () => {
   const { ref: r1, visible: v1 } = useScrollReveal(0.2);
@@ -18,6 +19,7 @@ const ClosingSection = () => {
         style={{ backgroundImage: `url(${gallerySkyview})` }}
       />
       <div className="absolute inset-0 bg-black/10" />
+      <SkyEffects starCount={120} />
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto space-y-10">
         <div ref={r1} className={`reveal ${v1 ? 'visible' : ''} space-y-6`}>
           <p className="font-display text-3xl md:text-5xl text-foreground leading-tight">

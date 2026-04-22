@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import heroBanner from '@/assets/hero-banner.jpg';
 import heroBannerMobile from '@/assets/hero-banner-mobile.jpg';
+import SkyEffects from './SkyEffects';
 
 const HeroBanner = () => {
   const [loaded, setLoaded] = useState(false);
@@ -23,6 +24,7 @@ const HeroBanner = () => {
         style={{ backgroundImage: `url(${heroBanner})` }}
       />
       <div className="absolute inset-0 bg-black/10" />
+      <SkyEffects starCount={100} />
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto space-y-10">
         <div className={`transition-all duration-[1.5s] ease-out ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} space-y-6`}>
           <p className="font-display text-3xl md:text-5xl text-foreground leading-tight">
