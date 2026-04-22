@@ -135,18 +135,18 @@ const VideoSection = () => {
                     loading="lazy"
                   />
                   <div className={`absolute inset-0 transition-all duration-500 ${
-                    isActive ? 'bg-gradient-to-t from-background/70 to-transparent' : 'bg-background/50 group-hover:bg-background/30'
+                    isActive ? 'bg-gradient-to-t from-black/70 to-transparent' : 'bg-black/50 group-hover:bg-black/30'
                   }`} />
 
                   <div className={`absolute top-2 left-2 font-display text-lg md:text-xl transition-colors ${
-                    isActive ? 'gold-text-bright' : 'text-foreground/60'
+                    isActive ? 'gold-text-on-image' : 'text-white/70'
                   }`}>
                     {String(i + 1).padStart(2, '0')}
                   </div>
 
                   {isActive && (
-                    <div className="absolute top-2 right-2 flex items-center gap-1.5 bg-background/70 backdrop-blur-sm px-2 py-1 rounded-full">
-                      <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+                    <div className="absolute top-2 right-2 flex items-center gap-1.5 bg-black/60 backdrop-blur-sm px-2 py-1 rounded-full">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold-light animate-pulse" />
                       <span className="text-[10px] tracking-widest uppercase text-gold-light font-body">Now</span>
                     </div>
                   )}
@@ -154,12 +154,13 @@ const VideoSection = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${
                       isActive
-                        ? 'border-gold bg-background/40 scale-100'
-                        : 'border-gold/60 bg-background/30 scale-90 group-hover:scale-100 group-hover:border-gold'
+                        ? 'border-gold-light bg-black/40 scale-100'
+                        : 'border-gold-light/60 bg-black/30 scale-90 group-hover:scale-100 group-hover:border-gold-light'
                     }`}>
-                      <Play className="w-3 h-3 md:w-4 md:h-4 text-gold ml-0.5" fill="currentColor" />
+                      <Play className="w-3 h-3 md:w-4 md:h-4 text-gold-light ml-0.5" fill="currentColor" />
                     </div>
                   </div>
+                </div>
                 </div>
 
                 {/* Caption */}
