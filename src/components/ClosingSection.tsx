@@ -17,7 +17,7 @@ const ClosingSection = () => {
         className="absolute inset-0 bg-fixed bg-cover bg-center hidden md:block"
         style={{ backgroundImage: `url(${gallerySkyview})` }}
       />
-      <div className="absolute inset-0 bg-black/35" />
+      <div className="absolute inset-0 bg-black/15" />
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto space-y-10">
         <div ref={r1} className={`reveal ${v1 ? 'visible' : ''} space-y-6`}>
           <p className="font-display text-3xl md:text-5xl text-foreground leading-tight">
