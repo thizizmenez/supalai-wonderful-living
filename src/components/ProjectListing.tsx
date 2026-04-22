@@ -93,7 +93,7 @@ const ProjectListing = () => {
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold/60" />
           </div>
           <h2 className="font-display text-3xl md:text-5xl text-foreground mb-4">
-            โครงการคอนโด<span className="gold-shimmer" style={{ fontFamily: "'Prompt', sans-serif" }}>ศุภาลัย</span>
+            โครงการคอนโด<span className="gold-shimmer-supalai">ศุภาลัย</span>
           </h2>
           <p className="font-body text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
             เลือกโครงการที่ตอบโจทย์ไลฟ์สไตล์ของคุณ ในทำเลที่ใช่
@@ -194,9 +194,11 @@ const ProjectListing = () => {
 
                     {/* Title overlaid on image bottom */}
                     <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
-                      <h3 className="font-display text-base md:text-lg text-foreground leading-tight group-hover:text-gold-light transition-colors duration-300" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
-                        {project.name}
-                      </h3>
+                      <div className="inline-block rounded-md bg-black/55 backdrop-blur-sm px-3 py-1.5">
+                        <h3 className="font-display text-base md:text-lg text-white leading-tight transition-colors duration-300 group-hover:text-gold-light">
+                          {project.name}
+                        </h3>
+                      </div>
                     </div>
                   </div>
 
