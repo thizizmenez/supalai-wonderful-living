@@ -22,14 +22,14 @@ const HeroBanner = () => {
         className="absolute inset-0 bg-fixed bg-cover bg-center hidden md:block"
         style={{ backgroundImage: `url(${heroBanner})` }}
       />
-      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-black/10" />
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto space-y-10">
         <div className={`transition-all duration-[1.5s] ease-out ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} space-y-6`}>
           <p className="font-display text-3xl md:text-5xl text-foreground leading-tight">
             ชีวิตจริงที่ <span className="gold-text-bright text-5xl md:text-7xl">Wonderful</span> ได้ทุกวัน
           </p>
           <p className="font-body text-xl md:text-2xl text-foreground/70">
-            ที่ <span className={`font-display tracking-wider ${loaded ? 'gold-shimmer' : 'gold-text'}`} style={{ fontFamily: "'Prompt', sans-serif", fontStyle: 'normal' }}>SUPALAI CONDOMINIUM</span>
+            ที่ <span className={`font-display tracking-wider ${loaded ? 'gold-shimmer' : 'gold-text'}`} style={{ fontFamily: "'Prompt', sans-serif", fontStyle: 'normal' }}>คอนโด SUPALAI</span>
           </p>
         </div>
         <div className={`transition-all duration-[2s] delay-1000 ${loaded ? 'opacity-100' : 'opacity-0'}`}>

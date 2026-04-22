@@ -67,12 +67,12 @@ const GallerySlide = ({
       />
 
       {/* Cinematic gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/60" />
       <div
         className={`absolute inset-0 ${
           isEven
-            ? 'bg-gradient-to-r from-background/80 via-background/20 to-transparent'
-            : 'bg-gradient-to-l from-background/80 via-background/20 to-transparent'
+            ? 'bg-gradient-to-r from-background/60 via-background/10 to-transparent'
+            : 'bg-gradient-to-l from-background/60 via-background/10 to-transparent'
         }`}
       />
 
@@ -126,7 +126,7 @@ const GallerySlide = ({
               isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
             style={{
-              textShadow: '0 2px 12px rgba(0,0,0,0.8)',
+              textShadow: '0 2px 8px rgba(0,0,0,0.6)',
               fontFamily: "'Prompt', sans-serif",
             }}
           >
