@@ -62,15 +62,15 @@ const VideoSection = () => {
                   className="w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105 animate-fade-in"
                 />
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-background/40 transition-opacity group-hover:from-background/70" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/40 transition-opacity group-hover:from-black/70" />
 
                 {/* Play button */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative">
-                    <div className="absolute inset-0 rounded-full border border-gold/40 animate-ping" />
-                    <div className="absolute inset-0 rounded-full border border-gold/20 animate-ping" style={{ animationDelay: '0.5s' }} />
-                    <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-gold flex items-center justify-center bg-background/30 backdrop-blur-sm transition-all group-hover:scale-110 group-hover:border-gold-light group-hover:bg-background/50 animate-glow-pulse">
-                      <Play className="w-8 h-8 md:w-12 md:h-12 text-gold ml-1 group-hover:text-gold-light transition-colors" fill="currentColor" />
+                    <div className="absolute inset-0 rounded-full border border-gold-light/50 animate-ping" />
+                    <div className="absolute inset-0 rounded-full border border-gold-light/30 animate-ping" style={{ animationDelay: '0.5s' }} />
+                    <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-gold-light flex items-center justify-center bg-black/30 backdrop-blur-sm transition-all group-hover:scale-110 group-hover:border-white group-hover:bg-black/50 animate-glow-pulse">
+                      <Play className="w-8 h-8 md:w-12 md:h-12 text-gold-light ml-1 group-hover:text-white transition-colors" fill="currentColor" />
                     </div>
                   </div>
                 </div>
@@ -79,17 +79,17 @@ const VideoSection = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
                   <div className="flex items-end justify-between gap-4">
                     <div className="animate-fade-in" key={`info-${activeIndex}`}>
-                      <p className="font-body text-xs tracking-[0.25em] uppercase text-gold-light mb-2">
+                      <p className="font-body text-xs tracking-[0.25em] uppercase text-gold-light mb-2" style={{ textShadow: '0 1px 4px hsl(220 20% 8% / 0.6)' }}>
                         {active.label}
                       </p>
-                      <h4 className="font-display text-xl md:text-3xl text-foreground mb-1">
+                      <h4 className="font-display text-xl md:text-3xl text-white mb-1" style={{ textShadow: '0 2px 8px hsl(220 20% 8% / 0.6)' }}>
                         {active.title}
                       </h4>
-                      <p className="font-body text-sm md:text-base text-foreground/70">
+                      <p className="font-body text-sm md:text-base text-white/80" style={{ textShadow: '0 2px 6px hsl(220 20% 8% / 0.6)' }}>
                         {active.subtitle}
                       </p>
                     </div>
-                    <span className="hidden md:block font-display text-5xl gold-text-bright opacity-60">
+                    <span className="hidden md:block font-display text-5xl gold-text-on-image opacity-80">
                       {String(activeIndex + 1).padStart(2, '0')}
                     </span>
                   </div>
