@@ -62,7 +62,7 @@ const AboutSection = () => {
 
       {/* Part 2: Description - redesigned */}
       <section className="min-h-[80vh] flex items-center justify-center bg-background starlight-bg pt-24 pb-0 md:pb-24 px-6 relative overflow-hidden">
-        <SkyEffects starCount={200} showGlow={false} fullArea brightness={1} maxSize={2.4} minSize={0.6} glowIntensity={0.8} />
+        <SkyEffects starCount={100} showGlow={false} fullArea brightness={0.8} maxSize={2} minSize={0.5} glowIntensity={0.6} />
         <div className="relative z-10 max-w-5xl mx-auto space-y-16">
           {/* Header */}
           <div ref={r4} className={`reveal ${v4 ? 'visible' : ''} text-center`}>
