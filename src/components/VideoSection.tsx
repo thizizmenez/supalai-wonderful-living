@@ -62,15 +62,15 @@ const VideoSection = () => {
                   className="w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105 animate-fade-in"
                 />
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-background/40 transition-opacity group-hover:from-background/70" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/40 transition-opacity group-hover:from-black/70" />
 
                 {/* Play button */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative">
-                    <div className="absolute inset-0 rounded-full border border-gold/40 animate-ping" />
-                    <div className="absolute inset-0 rounded-full border border-gold/20 animate-ping" style={{ animationDelay: '0.5s' }} />
-                    <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-gold flex items-center justify-center bg-background/30 backdrop-blur-sm transition-all group-hover:scale-110 group-hover:border-gold-light group-hover:bg-background/50 animate-glow-pulse">
-                      <Play className="w-8 h-8 md:w-12 md:h-12 text-gold ml-1 group-hover:text-gold-light transition-colors" fill="currentColor" />
+                    <div className="absolute inset-0 rounded-full border border-gold-light/50 animate-ping" />
+                    <div className="absolute inset-0 rounded-full border border-gold-light/30 animate-ping" style={{ animationDelay: '0.5s' }} />
+                    <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-gold-light flex items-center justify-center bg-black/30 backdrop-blur-sm transition-all group-hover:scale-110 group-hover:border-white group-hover:bg-black/50 animate-glow-pulse">
+                      <Play className="w-8 h-8 md:w-12 md:h-12 text-gold-light ml-1 group-hover:text-white transition-colors" fill="currentColor" />
                     </div>
                   </div>
                 </div>
@@ -79,17 +79,17 @@ const VideoSection = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
                   <div className="flex items-end justify-between gap-4">
                     <div className="animate-fade-in" key={`info-${activeIndex}`}>
-                      <p className="font-body text-xs tracking-[0.25em] uppercase text-gold-light mb-2">
+                      <p className="font-body text-xs tracking-[0.25em] uppercase text-gold-light mb-2" style={{ textShadow: '0 1px 4px hsl(220 20% 8% / 0.6)' }}>
                         {active.label}
                       </p>
-                      <h4 className="font-display text-xl md:text-3xl text-foreground mb-1">
+                      <h4 className="font-display text-xl md:text-3xl text-white mb-1" style={{ textShadow: '0 2px 8px hsl(220 20% 8% / 0.6)' }}>
                         {active.title}
                       </h4>
-                      <p className="font-body text-sm md:text-base text-foreground/70">
+                      <p className="font-body text-sm md:text-base text-white/80" style={{ textShadow: '0 2px 6px hsl(220 20% 8% / 0.6)' }}>
                         {active.subtitle}
                       </p>
                     </div>
-                    <span className="hidden md:block font-display text-5xl gold-text-bright opacity-60">
+                    <span className="hidden md:block font-display text-5xl gold-text-on-image opacity-80">
                       {String(activeIndex + 1).padStart(2, '0')}
                     </span>
                   </div>
@@ -135,18 +135,18 @@ const VideoSection = () => {
                     loading="lazy"
                   />
                   <div className={`absolute inset-0 transition-all duration-500 ${
-                    isActive ? 'bg-gradient-to-t from-background/70 to-transparent' : 'bg-background/50 group-hover:bg-background/30'
+                    isActive ? 'bg-gradient-to-t from-black/70 to-transparent' : 'bg-black/50 group-hover:bg-black/30'
                   }`} />
 
                   <div className={`absolute top-2 left-2 font-display text-lg md:text-xl transition-colors ${
-                    isActive ? 'gold-text-bright' : 'text-foreground/60'
+                    isActive ? 'gold-text-on-image' : 'text-white/70'
                   }`}>
                     {String(i + 1).padStart(2, '0')}
                   </div>
 
                   {isActive && (
-                    <div className="absolute top-2 right-2 flex items-center gap-1.5 bg-background/70 backdrop-blur-sm px-2 py-1 rounded-full">
-                      <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+                    <div className="absolute top-2 right-2 flex items-center gap-1.5 bg-black/60 backdrop-blur-sm px-2 py-1 rounded-full">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold-light animate-pulse" />
                       <span className="text-[10px] tracking-widest uppercase text-gold-light font-body">Now</span>
                     </div>
                   )}
@@ -154,10 +154,10 @@ const VideoSection = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${
                       isActive
-                        ? 'border-gold bg-background/40 scale-100'
-                        : 'border-gold/60 bg-background/30 scale-90 group-hover:scale-100 group-hover:border-gold'
+                        ? 'border-gold-light bg-black/40 scale-100'
+                        : 'border-gold-light/60 bg-black/30 scale-90 group-hover:scale-100 group-hover:border-gold-light'
                     }`}>
-                      <Play className="w-3 h-3 md:w-4 md:h-4 text-gold ml-0.5" fill="currentColor" />
+                      <Play className="w-3 h-3 md:w-4 md:h-4 text-gold-light ml-0.5" fill="currentColor" />
                     </div>
                   </div>
                 </div>

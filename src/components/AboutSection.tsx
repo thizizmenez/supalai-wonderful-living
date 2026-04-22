@@ -47,13 +47,13 @@ const AboutSection = () => {
         style={{ backgroundImage: `url(${aboutDivider})` }}
       >
         
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div ref={r3} className={`reveal ${v3 ? 'visible' : ''} text-center px-6`}>
             <p className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight">
               <span className="gold-text italic">Wonderful</span>
             </p>
-            <p className="font-body text-lg md:text-xl text-foreground/90 mt-4">
+            <p className="font-body text-lg md:text-xl text-white/90 mt-4" style={{ textShadow: '0 2px 8px hsl(220 20% 8% / 0.6)' }}>
               ในทุกช่วงเวลาของชีวิต
             </p>
           </div>
@@ -86,10 +86,10 @@ const AboutSection = () => {
               {features.map((f, i) => (
                 <div
                   key={f.label}
-                  className={`stagger-item ${v5 ? 'visible' : ''} group flex flex-col items-center text-center p-6 rounded-xl border border-border/50 bg-card/50 hover:border-primary/40 hover:bg-card transition-all duration-500`}
+                  className={`stagger-item ${v5 ? 'visible' : ''} group flex flex-col items-center text-center p-6 rounded-xl border border-border bg-card shadow-sm hover:border-primary/60 hover:shadow-md transition-all duration-500`}
                   style={{ animationDelay: `${i * 150}ms` }}
                 >
-                  <f.icon className="w-8 h-8 text-foreground/70 mb-4 mx-auto group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                  <f.icon className="w-8 h-8 text-primary mb-4 mx-auto group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   <p className="font-display text-sm md:text-base text-foreground mb-2">{f.label}</p>
                   <p className="font-body text-xs md:text-sm text-muted-foreground">{f.desc}</p>
                 </div>
