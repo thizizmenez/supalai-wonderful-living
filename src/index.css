@@ -150,15 +150,17 @@
   100% { background-position: 200% center; }
 }
 
-.gold-shimmer {
-  color: hsl(40 80% 45%);
+/* Rich warm gold gradient — base palette inspired by #C8893D */
+/* Wonderful (script font) — light backgrounds */
+.gold-shimmer-wonderful {
+  color: hsl(34 65% 42%);
   background: linear-gradient(
     90deg,
-    hsl(40 75% 40%) 0%,
-    hsl(42 90% 55%) 25%,
-    hsl(38 70% 35%) 50%,
-    hsl(42 90% 55%) 75%,
-    hsl(40 75% 40%) 100%
+    hsl(32 70% 35%) 0%,
+    hsl(36 80% 50%) 25%,
+    hsl(40 90% 62%) 50%,
+    hsl(36 80% 50%) 75%,
+    hsl(32 70% 35%) 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -171,16 +173,105 @@
   line-height: 0.95;
 }
 
-/* Shimmer variant for use over images */
-.gold-shimmer-on-image {
-  color: hsl(45 90% 75%);
+/* Wonderful — over images (brighter for contrast) */
+.gold-shimmer-wonderful-on-image {
+  color: hsl(38 85% 65%);
   background: linear-gradient(
     90deg,
-    hsl(40 80% 70%) 0%,
-    hsl(40 90% 85%) 25%,
-    hsl(40 70% 60%) 50%,
-    hsl(40 90% 85%) 75%,
-    hsl(40 80% 70%) 100%
+    hsl(34 75% 55%) 0%,
+    hsl(38 90% 72%) 25%,
+    hsl(42 95% 80%) 50%,
+    hsl(38 90% 72%) 75%,
+    hsl(34 75% 55%) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+  display: inline-block;
+  font-family: 'Quentin', 'Playfair Display', cursive;
+  font-style: normal;
+  line-height: 0.95;
+  text-shadow: 0 2px 10px hsl(220 20% 8% / 0.55);
+}
+
+/* คอนโด SUPALAI — same shimmer but Prompt font, light bg */
+.gold-shimmer-supalai {
+  color: hsl(34 65% 42%);
+  background: linear-gradient(
+    90deg,
+    hsl(32 70% 35%) 0%,
+    hsl(36 80% 50%) 25%,
+    hsl(40 90% 62%) 50%,
+    hsl(36 80% 50%) 75%,
+    hsl(32 70% 35%) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+  display: inline-block;
+  font-family: 'Prompt', sans-serif;
+  font-style: normal;
+  line-height: 1.1;
+}
+
+/* คอนโด SUPALAI — over images */
+.gold-shimmer-supalai-on-image {
+  color: hsl(38 85% 65%);
+  background: linear-gradient(
+    90deg,
+    hsl(34 75% 55%) 0%,
+    hsl(38 90% 72%) 25%,
+    hsl(42 95% 80%) 50%,
+    hsl(38 90% 72%) 75%,
+    hsl(34 75% 55%) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+  display: inline-block;
+  font-family: 'Prompt', sans-serif;
+  font-style: normal;
+  line-height: 1.1;
+  text-shadow: 0 2px 10px hsl(220 20% 8% / 0.55);
+}
+
+/* Legacy aliases (kept for any remaining references) */
+.gold-shimmer {
+  color: hsl(34 65% 42%);
+  background: linear-gradient(
+    90deg,
+    hsl(32 70% 35%) 0%,
+    hsl(36 80% 50%) 25%,
+    hsl(40 90% 62%) 50%,
+    hsl(36 80% 50%) 75%,
+    hsl(32 70% 35%) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+  display: inline-block;
+  font-family: 'Quentin', 'Playfair Display', cursive;
+  font-style: normal;
+  line-height: 0.95;
+}
+
+.gold-shimmer-on-image {
+  color: hsl(38 85% 65%);
+  background: linear-gradient(
+    90deg,
+    hsl(34 75% 55%) 0%,
+    hsl(38 90% 72%) 25%,
+    hsl(42 95% 80%) 50%,
+    hsl(38 90% 72%) 75%,
+    hsl(34 75% 55%) 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -199,12 +290,18 @@
   .gold-text-bright,
   .gold-text-on-image,
   .gold-shimmer,
-  .gold-shimmer-on-image {
+  .gold-shimmer-on-image,
+  .gold-shimmer-wonderful,
+  .gold-shimmer-wonderful-on-image,
+  .gold-shimmer-supalai,
+  .gold-shimmer-supalai-on-image {
     background-size: 100% auto;
   }
   .gold-text,
   .gold-text-on-image,
-  .gold-shimmer-on-image {
+  .gold-shimmer-on-image,
+  .gold-shimmer-wonderful-on-image,
+  .gold-shimmer-supalai-on-image {
     text-shadow: 0 2px 12px hsl(220 20% 8% / 0.6);
   }
 }  
