@@ -290,12 +290,18 @@
   .gold-text-bright,
   .gold-text-on-image,
   .gold-shimmer,
-  .gold-shimmer-on-image {
+  .gold-shimmer-on-image,
+  .gold-shimmer-wonderful,
+  .gold-shimmer-wonderful-on-image,
+  .gold-shimmer-supalai,
+  .gold-shimmer-supalai-on-image {
     background-size: 100% auto;
   }
   .gold-text,
   .gold-text-on-image,
-  .gold-shimmer-on-image {
+  .gold-shimmer-on-image,
+  .gold-shimmer-wonderful-on-image,
+  .gold-shimmer-supalai-on-image {
     text-shadow: 0 2px 12px hsl(220 20% 8% / 0.6);
   }
 }  
