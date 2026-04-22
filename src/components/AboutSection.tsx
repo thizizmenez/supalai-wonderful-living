@@ -111,7 +111,7 @@ const AboutSection = () => {
             </p>
             <div className="pt-6">
               <p className="font-body text-lg md:text-xl text-foreground leading-relaxed">
-                เพื่อให้ชีวิตของคุณที่นี่ <span className="font-display italic text-xl md:text-2xl gold-shimmer-wonderful">Wonderful</span> <span className="text-foreground/80">ได้ทุกวัน</span>
+                เพื่อให้ชีวิตของคุณที่นี่ <span className="font-display italic text-xl md:text-2xl gold-shimmer">Wonderful</span> <span className="text-foreground/80">ได้ทุกวัน</span>
               </p>
             </div>
           </div>
