@@ -21,7 +21,7 @@ const AboutSection = () => {
     <>
       {/* Part 1: Headline + tagline */}
       <section className="min-h-screen flex items-center justify-center bg-background starlight-bg py-0 px-6 relative overflow-hidden">
-        <SkyEffects starCount={150} showGlow={false} fullArea />
+        <SkyEffects starCount={120} showGlow={false} fullArea brightness={1.15} maxSize={3.5} minSize={1} glowIntensity={1.2} />
         <div className="relative z-10 max-w-4xl mx-auto text-center space-y-12">
           <div ref={r1} className={`reveal ${v1 ? 'visible' : ''}`}>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight mb-4">
