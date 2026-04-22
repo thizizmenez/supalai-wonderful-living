@@ -10,7 +10,7 @@ const ClosingSection = () => {
       {/* Mobile background */}
       <div
         className="absolute inset-0 bg-cover bg-center md:hidden"
-        style={{ backgroundImage: `url(${gallerySkyviewMobile})`, backgroundPosition: 'center center' }}
+        style={{ backgroundImage: `url(${gallerySkyviewMobile})`, backgroundPosition: 'center 15%' }}
       />
       {/* Desktop background */}
       <div
