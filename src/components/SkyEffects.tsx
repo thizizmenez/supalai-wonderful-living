@@ -3,21 +3,22 @@ import { useMemo } from 'react';
 interface SkyEffectsProps {
   starCount?: number;
   showGlow?: boolean;
+  fullArea?: boolean;
 }
 
-const SkyEffects = ({ starCount = 80, showGlow = true }: SkyEffectsProps) => {
+const SkyEffects = ({ starCount = 80, showGlow = true, fullArea = false }: SkyEffectsProps) => {
   const stars = useMemo(
     () =>
       Array.from({ length: starCount }, (_, i) => ({
         id: i,
-        top: Math.random() * 70, // top 70% (sky area)
+        top: fullArea ? Math.random() * 100 : Math.random() * 70,
         left: Math.random() * 100,
         size: Math.random() * 2.5 + 0.8,
         delay: Math.random() * 4,
         duration: 2 + Math.random() * 3,
         opacity: 0.4 + Math.random() * 0.6,
       })),
-    [starCount]
+    [starCount, fullArea]
   );
 
   return (
