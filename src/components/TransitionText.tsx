@@ -10,7 +10,7 @@ const TransitionText = () => {
           เราเชื่อว่าคอนโดที่ดี คือคอนโดที่ให้ชีวิตจริง
         </p>
         <p className="font-display text-3xl md:text-5xl mt-8">
-          <span className="gold-text-bright text-5xl md:text-7xl">Wonderful</span>{' '}
+          <span className="gold-shimmer text-5xl md:text-7xl">Wonderful</span>{' '}
           <span className="text-foreground text-xl md:text-3xl">ได้ทุกวัน</span>{' '}
           <span className="text-lg md:text-2xl">✨</span>
         </p>

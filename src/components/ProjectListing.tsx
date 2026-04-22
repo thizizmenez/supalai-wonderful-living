@@ -194,7 +194,7 @@ const ProjectListing = () => {
 
                     {/* Title overlaid on image bottom */}
                     <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
-                      <h3 className="font-display text-base md:text-lg text-white leading-tight group-hover:text-gold-light transition-colors duration-300" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.9)' }}>
+                      <h3 className="font-display text-sm md:text-base text-white leading-tight group-hover:text-gold-light transition-colors duration-300" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.9)' }}>
                         {project.name}
                       </h3>
                     </div>

@@ -32,7 +32,7 @@ const AboutSection = () => {
 
           <div ref={r2} className={`reveal reveal-delay-1 ${v2 ? 'visible' : ''}`}>
             <p className="font-body text-xl md:text-2xl text-gold-light leading-relaxed mb-4">
-              เพราะความ <span className="gold-text-bright text-4xl md:text-5xl">Wonderful</span> ไม่ได้อยู่แค่ในช่วงเวลาพิเศษ
+              เพราะความ <span className="gold-shimmer text-4xl md:text-5xl">Wonderful</span> ไม่ได้อยู่แค่ในช่วงเวลาพิเศษ
             </p>
             <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed">
               แต่อยู่ในช่วงเวลาเล็กๆ ในวันธรรมดาๆ ด้วย
@@ -51,7 +51,7 @@ const AboutSection = () => {
         <div className="relative z-10 h-full flex items-center justify-center">
           <div ref={r3} className={`reveal ${v3 ? 'visible' : ''} text-center px-6`}>
             <p className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight">
-              <span className="gold-text italic">Wonderful</span>
+              <span className="gold-shimmer-on-image italic">Wonderful</span>
             </p>
             <p className="font-body text-lg md:text-xl text-white/90 mt-4" style={{ textShadow: '0 2px 8px hsl(220 20% 8% / 0.6)' }}>
               ในทุกช่วงเวลาของชีวิต
