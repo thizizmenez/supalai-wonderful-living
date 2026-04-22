@@ -60,13 +60,14 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Prompt', sans-serif;
-    background-color: hsl(220 15% 6%);
+    background-color: hsl(0 0% 4%);
     background-image:
-      radial-gradient(ellipse 80% 50% at 50% 0%, hsl(232 35% 18%) 0%, transparent 60%),
-      radial-gradient(ellipse 70% 40% at 50% 35%, hsl(220 12% 10%) 0%, transparent 70%),
-      radial-gradient(ellipse 90% 50% at 50% 70%, hsl(228 30% 14%) 0%, transparent 65%),
-      radial-gradient(ellipse 80% 40% at 50% 100%, hsl(220 10% 5%) 0%, transparent 70%),
-      linear-gradient(180deg, hsl(230 30% 14%) 0%, hsl(220 15% 8%) 30%, hsl(225 25% 12%) 60%, hsl(220 12% 6%) 100%);
+      radial-gradient(ellipse 60% 40% at 20% 10%, hsl(40 30% 18% / 0.5) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 50% at 80% 30%, hsl(0 0% 18%) 0%, transparent 65%),
+      radial-gradient(ellipse 80% 50% at 30% 60%, hsl(0 0% 10%) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 75% 80%, hsl(40 25% 15% / 0.4) 0%, transparent 65%),
+      radial-gradient(ellipse 90% 60% at 50% 100%, hsl(0 0% 3%) 0%, transparent 70%),
+      linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 30%, hsl(0 0% 6%) 60%, hsl(0 0% 3%) 100%);
     background-attachment: fixed;
     position: relative;
   }
