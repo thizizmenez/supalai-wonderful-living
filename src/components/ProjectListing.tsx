@@ -83,7 +83,7 @@ const ProjectListing = () => {
     <section className="py-24 px-6 bg-background starlight-bg relative overflow-hidden">
       {/* Decorative background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-[400px] bg-gold/5 blur-[120px] pointer-events-none" />
-      <SkyEffects starCount={80} showGlow={false} fullArea />
+      <SkyEffects starCount={50} showGlow={false} fullArea brightness={0.65} maxSize={1.8} minSize={0.5} glowIntensity={0.5} />
 
       <div className="max-w-6xl mx-auto relative">
         <div ref={titleRef} className={`reveal ${titleVisible ? 'visible' : ''} text-center mb-12`}>

@@ -33,7 +33,7 @@ const BrandSection = () => {
 
   return (
     <section className="py-24 px-6 bg-secondary bg-pattern starlight-bg relative overflow-hidden">
-      <SkyEffects starCount={60} showGlow={false} fullArea />
+      <SkyEffects starCount={45} showGlow={false} fullArea brightness={0.65} maxSize={1.8} minSize={0.5} glowIntensity={0.5} />
       <div className="relative z-10 max-w-6xl mx-auto">
         <div ref={titleRef} className={`reveal ${titleVisible ? 'visible' : ''} text-center mb-16`}>
           <p className="font-body text-lg text-muted-foreground mb-4 tracking-widest uppercase">
