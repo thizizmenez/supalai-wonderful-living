@@ -193,8 +193,8 @@ const ProjectListing = () => {
                     </div>
 
                     {/* Title overlaid on image bottom */}
-                    <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
-                      <div className="inline-block rounded-md bg-black/55 backdrop-blur-sm px-3 py-1.5">
+                    <div className="absolute bottom-3 left-3 right-3 z-10">
+                      <div className="rounded-lg bg-black/60 backdrop-blur-sm px-4 py-2.5">
                         <h3 className="font-display text-base md:text-lg text-white leading-tight transition-colors duration-300 group-hover:text-gold-light">
                           {project.name}
                         </h3>
