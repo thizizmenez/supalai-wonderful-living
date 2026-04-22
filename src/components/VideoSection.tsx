@@ -37,7 +37,7 @@ const VideoSection = () => {
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold/60" />
           </div>
           <h3 className="font-display text-2xl md:text-4xl text-foreground">
-            สัมผัสประสบการณ์ <span className="gold-text-bright">Wonderful</span>
+            สัมผัสประสบการณ์ <span className="gold-shimmer">Wonderful</span>
           </h3>
         </div>
 
