@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Play } from 'lucide-react';
+import SkyEffects from './SkyEffects';
 
 const videos = [
   { id: 'RGTs0c7Zq8A', title: 'Supalai Condominium', subtitle: 'แนะนำโครงการ', label: 'Overview' },
@@ -25,6 +26,7 @@ const VideoSection = () => {
     <section className="flex flex-col items-center justify-center bg-background pt-[60px] pb-16 md:py-20 relative overflow-hidden">
       {/* Subtle background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[60%] bg-gold/5 blur-[120px] pointer-events-none" />
+      <SkyEffects starCount={70} showGlow={false} />
 
       <div ref={ref} className={`reveal ${visible ? 'visible' : ''} relative z-10 w-full max-w-6xl mx-auto px-4 md:px-6`}>
         {/* Section header */}
