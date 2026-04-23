@@ -98,7 +98,7 @@ const ProjectListing = () => {
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold/60" />
           </div>
           <h2 className="font-display text-3xl md:text-5xl text-foreground mb-4">
-            โครงการคอนโด<span className="gold-shimmer" style={{ fontFamily: "'Prompt', sans-serif" }}>ศุภาลัย</span>
+            โครงการคอนโด<span className="gold-shimmer-on-supalai">ศุภาลัย</span>
           </h2>
           <p className="font-body text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
             เลือกโครงการที่ตอบโจทย์ไลฟ์สไตล์ของคุณ ในทำเลที่ใช่
@@ -135,17 +135,17 @@ const ProjectListing = () => {
         <div className="flex items-center justify-center gap-6 mb-10 text-xs font-body">
           <div className="flex items-center gap-2 text-muted-foreground">
             <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-            <span>โครงการใหม่ <span className="text-foreground/70">({newCount})</span></span>
+            <span>โครงการใหม่ <span className="text-foreground">({newCount})</span></span>
           </div>
           <div className="h-3 w-px bg-border" />
           <div className="flex items-center gap-2 text-muted-foreground">
             <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-            <span>Coming soon <span className="text-foreground/70">({comingSoonCount})</span></span>
+            <span>Coming soon <span className="text-foreground">({comingSoonCount})</span></span>
           </div>
           <div className="h-3 w-px bg-border" />
           <div className="flex items-center gap-2 text-muted-foreground">
             <span className="w-2 h-2 rounded-full bg-emerald-500" />
-            <span>พร้อมอยู่ <span className="text-foreground/70">({readyCount})</span></span>
+            <span>พร้อมอยู่ <span className="text-foreground">({readyCount})</span></span>
           </div>
         </div>
 
