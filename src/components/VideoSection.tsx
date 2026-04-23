@@ -4,9 +4,9 @@ import { Play } from 'lucide-react';
 import SkyEffects from './SkyEffects';
 
 const videos = [
-  { id: 'RGTs0c7Zq8A', title: 'Supalai Condominium', subtitle: 'แนะนำโครงการ', label: 'Overview' },
-  { id: 'RGTs0c7Zq8A', title: 'Lifestyle', subtitle: 'ไลฟ์สไตล์ที่ลงตัว', label: 'Lifestyle' },
-  { id: 'RGTs0c7Zq8A', title: 'Facilities', subtitle: 'ส่วนกลางครบครัน', label: 'Facilities' },
+  { id: 'RGTs0c7Zq8A', title: 'Supalai Wonderful Life', subtitle: 'คือชีวิตที่ดื่มด่ำกับธรรมชาติเล็กๆน้อยๆ ในชีวิตประจำวัน', label: 'SUPALAI WONDERFUL LIFE' },
+  { id: 'RGTs0c7Zq8A', title: 'Supalai Wonderful Life', subtitle: 'คือชีวิตที่ได้ใช้เวลากับทุกความสำคัญ', label: 'SUPALAI WONDERFUL LIFE' },
+  { id: 'RGTs0c7Zq8A', title: 'Supalai Wonderful Life', subtitle: 'คือชีวิตที่สร้างรอยยิ้มด้วยกันในทุกๆ วัน', label: 'SUPALAI WONDERFUL LIFE' },
 ];
 
 const VideoSection = () => {
