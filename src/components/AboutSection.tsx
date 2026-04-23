@@ -105,9 +105,8 @@ const AboutSection = () => {
               <div className="h-px flex-1 max-w-[100px] bg-gradient-to-l from-transparent to-primary/40" />
             </div>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-              พร้อมบริการที่พัฒนามาให้ทุกคนสะดวกสบาย<br />
-              และความใส่ใจในทุกรายละเอียด<br />
-              ที่ทำให้การอยู่อาศัยของคุณลงตัวกว่าที่เคย
+              เราเลือกโลเคชั่นมาอย่างดี ตั้งใจออกแบบพื้นที่ในทุกห้อง มีส่วนกลางที่รองรับหลากหลายไลฟ์สไตล์ พร้อมบริการที่พัฒนา<br />
+              มาให้ทุกคนสะดวกสบาย กับคุณภาพมาตรฐานศุภาลัยที่ใส่ใจในทุกรายละเอียด
             </p>
             <div className="pt-6">
               <p className="font-body text-lg md:text-xl text-foreground leading-relaxed">
