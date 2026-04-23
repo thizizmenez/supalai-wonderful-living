@@ -36,11 +36,6 @@ const AboutSection = () => {
             เราเลือกโลเคชั่นมาอย่างดี ตั้งใจออกแบบพื้นที่ในทุกห้อง มีส่วนกลางที่รองรับหลากหลายไลฟ์สไตล์ พร้อมบริการที่พัฒนา<br />
             มาให้ทุกคนสะดวกสบาย กับคุณภาพมาตรฐานศุภาลัยที่ใส่ใจในทุกรายละเอียด
           </p>
-          <div className="pt-6">
-            <p className="font-body text-lg md:text-xl text-foreground leading-relaxed">
-              เพื่อให้ชีวิตของคุณที่นี่ <span className="font-display italic text-xl md:text-2xl gold-shimmer">Wonderful</span> <span className="text-foreground/80">ได้ทุกวัน</span>
-            </p>
-          </div>
         </div>
       </div>
     </section>
