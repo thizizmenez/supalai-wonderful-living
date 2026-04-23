@@ -58,8 +58,8 @@ const projectsByLocation: Record<string, Project[]> = {
     { name: 'ศุภาลัย ซิตี้โฮม ระยอง', link: 'https://www.supalai.com/project/condo/%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2-%E0%B8%8B%E0%B8%B4%E0%B8%95%E0%B8%B5%E0%B9%89%E0%B9%82%E0%B8%AE%E0%B8%A1-%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87' + UTM, thumbnail: 'https://www.supalai.com/stocks/project_child_thumbnail/d370x220/v8/jh/fvy5v8jhd9w/Untitled-3.jpg' },
   ],
   'ภูเก็ต': [
-    { name: 'ศุภาลัย เซนส์ เขารัง ภูเก็ต', link: 'https://www.supalai.com/project/condo/%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2-%E0%B9%80%E0%B8%8B%E0%B8%99%E0%B8%AA%E0%B9%8C-%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%87-%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95' + UTM, thumbnail: 'https://www.supalai.com/stocks/project/o0x0/hs/2e/9ordhs2evxu/WEB_SnKRP_0967_SET.jpg' },
     { name: 'ศุภาลัย คราม ศรีสุนทร ภูเก็ต', link: 'https://www.supalai.com/project/condo/%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2-%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%A1-%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%AA%E0%B8%B8%E0%B8%99%E0%B8%97%E0%B8%A3-%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95' + UTM, thumbnail: 'https://www.supalai.com/stocks/project/o0x0/du/tg/kafzdutg39b/Banner_Web1200x680.jpg' },
+    { name: 'ศุภาลัย เซนส์ เขารัง ภูเก็ต', link: 'https://www.supalai.com/project/condo/%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2-%E0%B9%80%E0%B8%8B%E0%B8%99%E0%B8%AA%E0%B9%8C-%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%87-%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95' + UTM, thumbnail: 'https://www.supalai.com/stocks/project/o0x0/hs/2e/9ordhs2evxu/WEB_SnKRP_0967_SET.jpg' },
     { name: 'ศุภาลัย ซีนิค เบย์ คอนโด', link: 'https://www.supalai.com/project/condo/%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2-%E0%B8%8B%E0%B8%B5%E0%B8%99%E0%B8%B4%E0%B8%84-%E0%B9%80%E0%B8%9A%E0%B8%A2%E0%B9%8C-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94' + UTM, thumbnail: 'https://www.supalai.com/stocks/project/o0x0/av/3i/vgsnav3ikcy/TIVE_%e0%b8%a5%e0%b8%b2%e0%b8%a2%e0%b8%99%e0%b9%89%e0%b8%b3.jpg' },
     { name: 'ศุภาลัย วิสต้า ภูเก็ต', link: 'https://www.supalai.com/project/condo/%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2-%E0%B8%A7%E0%B8%B4%E0%B8%AA%E0%B8%95%E0%B9%89%E0%B8%B2-%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95' + UTM, thumbnail: 'https://www.supalai.com/stocks/project_child_thumbnail/d370x220/ge/4s/o83jge4s6xp/SUPALAI_VISTA%20PHUKET.jpg' },
   ],
@@ -81,7 +81,8 @@ const ProjectListing = () => {
 
   const currentProjects = projectsByLocation[activeTab];
   const newCount = currentProjects.filter((p) => NEW_PROJECTS.has(p.name)).length;
-  const readyCount = currentProjects.length - newCount;
+  const comingSoonCount = currentProjects.filter((p) => COMING_SOON_PROJECTS.has(p.name)).length;
+  const readyCount = currentProjects.length - newCount - comingSoonCount;
 
   return (
     <section className="py-24 px-6 bg-background starlight-bg relative overflow-hidden">
@@ -135,6 +136,11 @@ const ProjectListing = () => {
           <div className="flex items-center gap-2 text-muted-foreground">
             <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
             <span>โครงการใหม่ <span className="text-foreground/70">({newCount})</span></span>
+          </div>
+          <div className="h-3 w-px bg-border" />
+          <div className="flex items-center gap-2 text-muted-foreground">
+            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+            <span>Coming soon <span className="text-foreground/70">({comingSoonCount})</span></span>
           </div>
           <div className="h-3 w-px bg-border" />
           <div className="flex items-center gap-2 text-muted-foreground">
