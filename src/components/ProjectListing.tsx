@@ -148,6 +148,7 @@ const ProjectListing = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {currentProjects.map((project, i) => {
               const isNew = NEW_PROJECTS.has(project.name);
+              const isComingSoon = COMING_SOON_PROJECTS.has(project.name);
               return (
                 <a
                   key={project.name}
@@ -179,13 +180,15 @@ const ProjectListing = () => {
                     <div className="absolute top-3 left-3 z-10">
                       <span
                         className={`flex items-center gap-1.5 px-3 py-1 text-[11px] font-body font-semibold rounded-full backdrop-blur-md shadow-lg border ${
-                          isNew
-                            ? 'bg-red-600/90 text-white border-red-400/50'
-                            : 'bg-emerald-600/90 text-white border-emerald-400/50'
+                          isComingSoon
+                            ? 'bg-amber-500/90 text-white border-amber-400/50'
+                            : isNew
+                              ? 'bg-red-600/90 text-white border-red-400/50'
+                              : 'bg-emerald-600/90 text-white border-emerald-400/50'
                         }`}
                       >
-                        <span className={`w-1.5 h-1.5 rounded-full bg-white ${isNew ? 'animate-pulse' : ''}`} />
-                        {isNew ? 'โครงการใหม่' : 'พร้อมอยู่'}
+                        <span className={`w-1.5 h-1.5 rounded-full bg-white ${isNew || isComingSoon ? 'animate-pulse' : ''}`} />
+                        {isComingSoon ? 'Coming soon' : isNew ? 'โครงการใหม่' : 'พร้อมอยู่'}
                       </span>
                     </div>
 
