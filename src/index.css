@@ -191,7 +191,7 @@
   font-family: 'Quentin', 'Playfair Display', cursive;
   font-style: normal;
   line-height: 0.95;
-  text-shadow: 0 1px 3px hsl(220 20% 8% / 0.45);
+  text-shadow: none;
 }
 
 /* Shimmer variant for "คอนโด SUPALAI" — bright yellow palette, Prompt font */
@@ -214,7 +214,7 @@
   font-family: 'Prompt', sans-serif;
   font-style: normal;
   line-height: 0.95;
-  text-shadow: 0 1px 3px hsl(220 20% 8% / 0.45);
+  text-shadow: none;
 }
 
 @media (max-width: 767px) {
@@ -230,7 +230,7 @@
   .gold-text-on-image,
   .gold-shimmer-on-image,
   .gold-shimmer-on-supalai {
-    text-shadow: 0 1px 4px hsl(220 20% 8% / 0.5);
+    text-shadow: none;
   }
 }
 
