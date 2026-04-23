@@ -81,7 +81,8 @@ const ProjectListing = () => {
 
   const currentProjects = projectsByLocation[activeTab];
   const newCount = currentProjects.filter((p) => NEW_PROJECTS.has(p.name)).length;
-  const readyCount = currentProjects.length - newCount;
+  const comingSoonCount = currentProjects.filter((p) => COMING_SOON_PROJECTS.has(p.name)).length;
+  const readyCount = currentProjects.length - newCount - comingSoonCount;
 
   return (
     <section className="py-24 px-6 bg-background starlight-bg relative overflow-hidden">
