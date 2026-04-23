@@ -191,7 +191,8 @@
   display: inline-block;
   font-family: 'Quentin', 'Playfair Display', cursive;
   font-style: normal;
-  line-height: 0.95;
+  line-height: 1.15;
+  padding-bottom: 0.15em;
   text-shadow: none;
 }
 
@@ -214,7 +215,8 @@
   display: inline-block;
   font-family: 'Prompt', sans-serif;
   font-style: normal;
-  line-height: 0.95;
+  line-height: 1.15;
+  padding-bottom: 0.1em;
   text-shadow: none;
 }
 
