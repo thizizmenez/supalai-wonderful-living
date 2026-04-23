@@ -77,22 +77,17 @@ const VideoSection = () => {
 
                 {/* Video info bottom */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
-                  <div className="flex items-end justify-between gap-4">
-                    <div className="animate-fade-in" key={`info-${activeIndex}`}>
-                      <p className="font-body text-xs tracking-[0.25em] uppercase text-gold-light mb-2" style={{ textShadow: '0 1px 4px hsl(220 20% 8% / 0.6)' }}>
-                        {active.label}
-                      </p>
-                      <h4 className="font-display text-xl md:text-3xl text-white mb-1" style={{ textShadow: '0 2px 8px hsl(220 20% 8% / 0.6)' }}>
-                        {active.title}
-                      </h4>
-                      <p className="font-body text-sm md:text-base text-white/80" style={{ textShadow: '0 2px 6px hsl(220 20% 8% / 0.6)' }}>
-                        {active.subtitle}
-                      </p>
-                    </div>
-                    <span className="hidden md:block font-display text-5xl gold-text-on-image opacity-80">
-                      {String(activeIndex + 1).padStart(2, '0')}
-                    </span>
+                  <div className="animate-fade-in" key={`info-${activeIndex}`}>
+                    <p className="font-body text-xs tracking-[0.25em] uppercase text-gold-light mb-2" style={{ textShadow: '0 1px 4px hsl(220 20% 8% / 0.6)' }}>
+                      {active.label}
+                    </p>
+                    <p className="font-body text-sm md:text-base text-white/80" style={{ textShadow: '0 2px 6px hsl(220 20% 8% / 0.6)' }}>
+                      {active.subtitle}
+                    </p>
                   </div>
+                  <span className="hidden md:block absolute bottom-6 right-8 font-display text-5xl gold-text-on-image opacity-80">
+                    {String(activeIndex + 1).padStart(2, '0')}
+                  </span>
                 </div>
               </>
             ) : (
