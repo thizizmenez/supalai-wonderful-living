@@ -41,25 +41,6 @@ const AboutSection = () => {
         </div>
       </section>
 
-      {/* Parallax image divider */}
-      <section
-        className="h-[70vh] relative bg-fixed bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: `url(${aboutDivider})` }}
-      >
-        
-        <div className="absolute inset-0 bg-black/26" />
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <div ref={r3} className={`reveal ${v3 ? 'visible' : ''} text-center px-6`}>
-            <p className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight">
-              <span className="gold-shimmer-on-image italic">Wonderful</span>
-            </p>
-            <p className="font-body text-lg md:text-xl text-white/90 mt-4" style={{ textShadow: '0 2px 8px hsl(220 20% 8% / 0.6)' }}>
-              ในทุกช่วงเวลาของชีวิต
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Part 2: Description - redesigned */}
       <section className="min-h-[80vh] flex items-center justify-center bg-background starlight-bg pt-24 pb-0 md:pb-24 px-6 relative overflow-hidden">
         <SkyEffects starCount={50} showGlow={false} fullArea brightness={0.65} maxSize={1.8} minSize={0.5} glowIntensity={0.5} />
