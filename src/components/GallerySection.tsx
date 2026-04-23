@@ -121,7 +121,7 @@ const GallerySlide = ({
             } ${isActive ? 'animate-float' : ''}`}
             style={{ fontFamily: "'Prompt', sans-serif" }}
           >
-            <span className="gold-shimmer-on-image text-[3.5rem] leading-[0.88] sm:text-6xl md:text-8xl">Wonderful</span>
+            <span className="gold-shimmer-on-image text-[3.5rem] leading-[1.08] sm:text-6xl md:text-8xl">Wonderful</span>
           </p>
           <p
             className={`font-light text-base leading-snug text-white transition-all duration-1000 delay-500 sm:text-lg md:text-2xl md:leading-relaxed ${

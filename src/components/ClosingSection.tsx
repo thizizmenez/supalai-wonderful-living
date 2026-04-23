@@ -22,7 +22,7 @@ const ClosingSection = () => {
         <div ref={r1} className={`reveal ${v1 ? 'visible' : ''} space-y-4 md:space-y-6`}>
           <p className="font-display text-[2rem] leading-tight text-white sm:text-4xl md:text-5xl" style={{ textShadow: '0 2px 12px hsl(220 20% 8% / 0.6)' }}>
             ชีวิตจริงที่{' '}
-          <span className="gold-shimmer-on-image mt-2 block text-[3.75rem] leading-[0.9] sm:text-6xl md:mt-0 md:inline-block md:text-7xl">
+          <span className="gold-shimmer-on-image mt-2 block text-[3.75rem] leading-[1.08] sm:text-6xl md:mt-0 md:inline-block md:text-7xl">
             Wonderful
           </span>{' '}
             ได้ทุกวัน
