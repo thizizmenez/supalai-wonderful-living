@@ -230,7 +230,7 @@
   .gold-text-on-image,
   .gold-shimmer-on-image,
   .gold-shimmer-on-supalai {
-    text-shadow: 0 2px 12px hsl(220 20% 8% / 0.6);
+    text-shadow: 0 1px 4px hsl(220 20% 8% / 0.5);
   }
 }
 
