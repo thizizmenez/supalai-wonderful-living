@@ -139,6 +139,11 @@ const ProjectListing = () => {
           </div>
           <div className="h-3 w-px bg-border" />
           <div className="flex items-center gap-2 text-muted-foreground">
+            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+            <span>Coming soon <span className="text-foreground/70">({comingSoonCount})</span></span>
+          </div>
+          <div className="h-3 w-px bg-border" />
+          <div className="flex items-center gap-2 text-muted-foreground">
             <span className="w-2 h-2 rounded-full bg-emerald-500" />
             <span>พร้อมอยู่ <span className="text-foreground/70">({readyCount})</span></span>
           </div>
