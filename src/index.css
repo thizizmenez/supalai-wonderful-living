@@ -171,16 +171,16 @@
   line-height: 0.95;
 }
 
-/* Shimmer variant for use over images */
+/* Shimmer variant for use over images — bright yellow palette (Amber → Lemon → Sun Glow) */
 .gold-shimmer-on-image {
-  color: hsl(32 65% 65%);
+  color: hsl(48 100% 70%);
   background: linear-gradient(
     90deg,
-    hsl(32 55% 50%) 0%,
-    hsl(35 70% 72%) 25%,
-    hsl(38 80% 85%) 50%,
-    hsl(35 70% 72%) 75%,
-    hsl(32 55% 50%) 100%
+    hsl(40 95% 58%) 0%,
+    hsl(48 100% 70%) 25%,
+    hsl(55 100% 82%) 50%,
+    hsl(48 100% 70%) 75%,
+    hsl(40 95% 58%) 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -194,16 +194,16 @@
   text-shadow: 0 2px 10px hsl(220 20% 8% / 0.55);
 }
 
-/* Shimmer variant for "คอนโด SUPALAI" — same look as gold-shimmer-on-image but uses Prompt font */
+/* Shimmer variant for "คอนโด SUPALAI" — bright yellow palette, Prompt font */
 .gold-shimmer-on-supalai {
-  color: hsl(32 65% 65%);
+  color: hsl(48 100% 70%);
   background: linear-gradient(
     90deg,
-    hsl(32 55% 50%) 0%,
-    hsl(35 70% 72%) 25%,
-    hsl(38 80% 85%) 50%,
-    hsl(35 70% 72%) 75%,
-    hsl(32 55% 50%) 100%
+    hsl(40 95% 58%) 0%,
+    hsl(48 100% 70%) 25%,
+    hsl(55 100% 82%) 50%,
+    hsl(48 100% 70%) 75%,
+    hsl(40 95% 58%) 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
