@@ -20,6 +20,7 @@ const NEW_PROJECTS = new Set([
   'ศุภาลัย เซนส์ แจ้งวัฒนะ-หลักสี่',
   'ศุภาลัย เซนส์ พัทยา',
   'ศุภาลัย คราม ศรีสุนทร ภูเก็ต',
+  'ศุภาลัย เซนส์ เขารัง ภูเก็ต',
 ]);
 
 const projectsByLocation: Record<string, Project[]> = {
