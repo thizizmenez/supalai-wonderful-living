@@ -7,7 +7,7 @@ const AboutSection = () => {
   const { ref: r3, visible: v3 } = useScrollReveal(0.15);
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background starlight-bg py-24 px-6 relative overflow-hidden">
+    <section className="flex items-center justify-center bg-background starlight-bg pt-24 pb-12 md:pb-16 px-6 relative overflow-hidden">
       <SkyEffects starCount={45} showGlow={false} fullArea brightness={0.65} maxSize={1.8} minSize={0.5} glowIntensity={0.5} />
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-12">
         <div ref={r1} className={`reveal ${v1 ? 'visible' : ''}`}>
