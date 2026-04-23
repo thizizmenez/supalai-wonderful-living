@@ -9,7 +9,7 @@ const TransitionText = () => {
         <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
           เราเชื่อว่าคอนโดที่ดี คือคอนโดที่ให้ชีวิตจริง
         </p>
-        <p className="font-display text-3xl md:text-5xl mt-8">
+        <p className="font-display text-3xl md:text-5xl mt-8 leading-[1.08]">
           <span className="gold-shimmer text-5xl md:text-7xl">Wonderful</span>{' '}
           <span className="text-foreground text-xl md:text-3xl">ได้ทุกวัน</span>{' '}
           <span className="text-lg md:text-2xl">✨</span>
