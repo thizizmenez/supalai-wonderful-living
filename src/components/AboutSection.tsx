@@ -27,10 +27,10 @@ const AboutSection = () => {
         </div>
 
         <div ref={r3} className={`reveal reveal-delay-2 ${v3 ? 'visible' : ''} space-y-4`}>
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-px flex-1 max-w-[100px] bg-gradient-to-r from-transparent to-primary/40" />
-            <span className="text-primary/60 text-sm tracking-[0.3em] uppercase font-body">Standard Quality</span>
-            <div className="h-px flex-1 max-w-[100px] bg-gradient-to-l from-transparent to-primary/40" />
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="h-px w-24 md:w-32 bg-gradient-to-r from-transparent via-primary/60 to-primary/60" />
+            <div className="w-1.5 h-1.5 rounded-full bg-primary/80" />
+            <div className="h-px w-24 md:w-32 bg-gradient-to-l from-transparent via-primary/60 to-primary/60" />
           </div>
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
             เราเลือกโลเคชั่นมาอย่างดี ตั้งใจออกแบบพื้นที่ในทุกห้อง มีส่วนกลางที่รองรับหลากหลายไลฟ์สไตล์ พร้อมบริการที่พัฒนา<br />
