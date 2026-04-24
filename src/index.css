@@ -166,8 +166,6 @@
   background-clip: text;
   animation: shimmer 4s linear infinite;
   display: inline-block;
-  font-family: 'Quentin', 'Playfair Display', cursive;
-  font-style: normal;
   line-height: 1.15;
   padding-bottom: 0.15em;
 }
@@ -189,8 +187,6 @@
   background-clip: text;
   animation: shimmer 4s linear infinite;
   display: inline-block;
-  font-family: 'Quentin', 'Playfair Display', cursive;
-  font-style: normal;
   line-height: 1.15;
   padding-bottom: 0.15em;
   text-shadow: none;
