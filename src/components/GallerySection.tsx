@@ -110,9 +110,6 @@ const GallerySlide = ({
             }`}
           >
             <div className="h-px w-12 bg-gradient-to-r from-gold-light to-transparent md:w-24" />
-            <span className="font-body text-[10px] uppercase tracking-[0.24em] text-gold-light md:text-xs md:tracking-[0.3em]" style={{ textShadow: '0 1px 4px hsl(220 20% 8% / 0.6)' }}>
-              Moment {String(index + 1).padStart(2, '0')}
-            </span>
           </div>
 
           <p
