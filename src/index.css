@@ -181,10 +181,10 @@
   font-family: 'Quentin', 'Playfair Display', cursive;
   font-style: normal;
   line-height: 1.35;
-  padding-top: 0.55em;
+  padding-top: 0.65em;
   padding-bottom: 0.15em;
   padding-left: 0.3em;
-  padding-right: 0.5em;
+  padding-right: 0.65em;
   overflow: visible;
 }
 
@@ -206,10 +206,10 @@
   animation: shimmer 4s linear infinite;
   display: inline-block;
   line-height: 1.35;
-  padding-top: 0.55em;
+  padding-top: 0.65em;
   padding-bottom: 0.15em;
   padding-left: 0.3em;
-  padding-right: 0.5em;
+  padding-right: 0.65em;
   overflow: visible;
   text-shadow: none;
 }
