@@ -109,6 +109,8 @@
   font-style: normal;
   line-height: 1.2;
   padding-top: 0.15em;
+  padding-left: 0.14em;
+  padding-right: 0.14em;
   text-shadow: 0 2px 10px hsl(220 20% 8% / 0.45);
 }
 
@@ -124,6 +126,8 @@
   font-style: normal;
   line-height: 1.2;
   padding-top: 0.15em;
+  padding-left: 0.14em;
+  padding-right: 0.14em;
 }
 
 /* Variant for use over dark images - keeps the bright look */
@@ -138,6 +142,8 @@
   font-style: normal;
   line-height: 1.2;
   padding-top: 0.15em;
+  padding-left: 0.14em;
+  padding-right: 0.14em;
   text-shadow: 0 2px 10px hsl(220 20% 8% / 0.55);
 }
 
@@ -174,6 +180,8 @@
   line-height: 1.35;
   padding-top: 0.15em;
   padding-bottom: 0.15em;
+  padding-left: 0.14em;
+  padding-right: 0.14em;
 }
 
 /* Shimmer variant for use over images — bright yellow palette (Amber → Lemon → Sun Glow) */
@@ -196,6 +204,8 @@
   line-height: 1.35;
   padding-top: 0.15em;
   padding-bottom: 0.15em;
+  padding-left: 0.14em;
+  padding-right: 0.14em;
   text-shadow: none;
 }
 
