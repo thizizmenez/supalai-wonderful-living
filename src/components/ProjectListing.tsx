@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import SkyEffects from './SkyEffects';
+import senseePattayaThumb from '@/assets/project-sense-pattaya.jpg';
 
 interface Project {
   name: string;
@@ -46,7 +47,7 @@ const projectsByLocation: Record<string, Project[]> = {
     { name: 'ศุภาลัย เวอเรนด้า รัตนาธิเบศร์', link: 'https://www.supalai.com/project/condo/%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2-%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B9%80%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%B2-%E0%B8%A3%E0%B8%B1%E0%B8%95%E0%B8%99%E0%B8%B2%E0%B8%98%E0%B8%B4%E0%B9%80%E0%B8%9A%E0%B8%A8%E0%B8%A3%E0%B9%8C' + UTM, thumbnail: 'https://www.supalai.com/stocks/project/o0x0/qn/hk/iafbqnhkmvz/SVR-046.jpg' },
   ],
   'ชลบุรี': [
-    { name: 'ศุภาลัย เซนส์ พัทยา', link: 'https://www.supalai.com/project/condo/%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2-%E0%B9%80%E0%B8%8B%E0%B8%99%E0%B8%AA%E0%B9%8C-%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2' + UTM, thumbnail: 'https://www.supalai.com/stocks/project/o0x0/3n/ls/spxo3nlsqy4/City%e0%b8%8a%e0%b8%a5%e0%b8%9a%e0%b8%b8%e0%b8%a3%e0%b8%b5.jpg' },
+    { name: 'ศุภาลัย เซนส์ พัทยา', link: 'https://www.supalai.com/project/condo/%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2-%E0%B9%80%E0%B8%8B%E0%B8%99%E0%B8%AA%E0%B9%8C-%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2' + UTM, thumbnail: senseePattayaThumb },
     { name: 'ศุภาลัย ซิตี้ รีสอร์ท ชลบุรี', link: 'https://www.supalai.com/project/condo/%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2-%E0%B8%8B%E0%B8%B4%E0%B8%95%E0%B8%B5%E0%B9%89-%E0%B8%A3%E0%B8%B5%E0%B8%AA%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%97-%E0%B8%8A%E0%B8%A5%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5' + UTM, thumbnail: 'https://www.supalai.com/stocks/project_child_thumbnail/d370x220/ag/zk/yhjnagzkvsv/%E0%B8%8B%E0%B8%B4%E0%B8%95%E0%B8%B5%E0%B9%89.jpg' },
     { name: 'ศุภาลัย มาเรย์ พัทยา', link: 'https://www.supalai.com/project/condo/%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2-%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%A2%E0%B9%8C-%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2' + UTM, thumbnail: 'https://www.supalai.com/stocks/project_child_thumbnail/d370x220/tu/hr/yxlmtuhrvcb/MARE%40PATT-5-1.jpg' },
     { name: 'ศุภาลัย วิสต้า ศรีราชา-แยกท่าเรือแหลมฉบัง', link: 'https://www.supalai.com/project/condo/%E0%B8%A8%E0%B8%B8%E0%B8%A0%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2-%E0%B8%A7%E0%B8%B4%E0%B8%AA%E0%B8%95%E0%B9%89%E0%B8%B2-%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2-%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%87' + UTM, thumbnail: 'https://www.supalai.com/stocks/project_child_thumbnail/d370x220/f5/q3/lomzf5q39k8/%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B22-3.jpg' },
