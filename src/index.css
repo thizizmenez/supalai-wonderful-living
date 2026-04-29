@@ -107,7 +107,8 @@
   display: inline-block;
   font-family: 'Quentin', 'Playfair Display', cursive;
   font-style: normal;
-  line-height: 0.95;
+  line-height: 1.2;
+  padding-top: 0.15em;
   text-shadow: 0 2px 10px hsl(220 20% 8% / 0.45);
 }
 
@@ -121,7 +122,8 @@
   display: inline-block;
   font-family: 'Quentin', 'Playfair Display', cursive;
   font-style: normal;
-  line-height: 0.95;
+  line-height: 1.2;
+  padding-top: 0.15em;
 }
 
 /* Variant for use over dark images - keeps the bright look */
@@ -134,7 +136,8 @@
   display: inline-block;
   font-family: 'Quentin', 'Playfair Display', cursive;
   font-style: normal;
-  line-height: 0.95;
+  line-height: 1.2;
+  padding-top: 0.15em;
   text-shadow: 0 2px 10px hsl(220 20% 8% / 0.55);
 }
 
