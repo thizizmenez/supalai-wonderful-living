@@ -121,7 +121,16 @@ const GallerySlide = ({
             } ${isActive ? 'animate-float' : ''}`}
             style={{ fontFamily: "'Prompt', sans-serif" }}
           >
-            <span className="gold-shimmer-on-image text-[3.5rem] leading-[1.08] sm:text-6xl md:text-8xl">Wonderful</span>
+            <span
+              className="text-[3.5rem] leading-[1.08] text-white sm:text-6xl md:text-8xl"
+              style={{
+                fontFamily: "'Quentin', 'Playfair Display', cursive",
+                fontStyle: 'normal',
+                textShadow: '0 2px 12px hsl(220 20% 8% / 0.6)',
+              }}
+            >
+              Wonderful
+            </span>
           </p>
           <p
             className={`font-light text-base leading-snug text-white transition-all duration-1000 delay-500 sm:text-lg md:text-2xl md:leading-relaxed ${
