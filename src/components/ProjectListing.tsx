@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import SkyEffects from './SkyEffects';
 import senseePattayaThumb from '@/assets/project-sense-pattaya.jpg';
+import senseKhaorangThumb from '@/assets/project-sense-khaorang-phuket.jpg';
 
 interface Project {
   name: string;
