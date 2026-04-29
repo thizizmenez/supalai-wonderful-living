@@ -183,8 +183,9 @@
   line-height: 1.35;
   padding-top: 0.15em;
   padding-bottom: 0.15em;
-  padding-left: 0.14em;
-  padding-right: 0.14em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  overflow: visible;
 }
 
 /* Shimmer variant for use over images — bright yellow palette (Amber → Lemon → Sun Glow) */
@@ -207,8 +208,9 @@
   line-height: 1.35;
   padding-top: 0.15em;
   padding-bottom: 0.15em;
-  padding-left: 0.14em;
-  padding-right: 0.14em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  overflow: visible;
   text-shadow: none;
 }
 
