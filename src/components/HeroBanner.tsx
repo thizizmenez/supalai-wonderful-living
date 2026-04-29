@@ -28,7 +28,7 @@ const HeroBanner = () => {
           <p className="font-display text-[2rem] leading-tight text-white sm:text-4xl md:text-5xl" style={{ textShadow: '0 2px 12px hsl(220 20% 8% / 0.6)' }}>
             ชีวิตจริงที่
           </p>
-          <p className="font-display text-[3.75rem] leading-[1.08] text-white sm:text-6xl md:text-7xl" style={{ textShadow: '0 2px 12px hsl(220 20% 8% / 0.6)' }}>
+          <p className="text-[3.75rem] leading-[1.08] text-white sm:text-6xl md:text-7xl" style={{ fontFamily: "'Quentin', 'Playfair Display', cursive", fontStyle: 'normal', textShadow: '0 2px 12px hsl(220 20% 8% / 0.6)' }}>
             Wonderful
           </p>
           <p className="font-display text-[2rem] leading-tight text-white sm:text-4xl md:text-5xl" style={{ textShadow: '0 2px 12px hsl(220 20% 8% / 0.6)' }}>
