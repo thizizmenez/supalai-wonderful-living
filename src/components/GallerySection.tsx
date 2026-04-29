@@ -178,8 +178,8 @@ const GallerySection = () => {
   return (
     <section>
       <div className="bg-background starlight-bg py-16 px-6 text-center relative overflow-hidden">
-        <p className="relative z-10 font-body text-sm md:text-2xl text-foreground leading-relaxed">
-          เพื่อให้ชีวิตของคุณที่นี่ <span className="font-display italic text-base md:text-3xl gold-shimmer">Wonderful</span> <span className="text-foreground/80">ได้ทุกวัน</span>
+        <p className="relative z-10 font-body text-lg md:text-2xl text-foreground leading-relaxed">
+          เพื่อให้ชีวิตของคุณที่นี่ <span className="font-display italic text-xl md:text-3xl gold-shimmer">Wonderful</span> <span className="text-foreground/80">ได้ทุกวัน</span>
         </p>
       </div>
       <div className="relative">
